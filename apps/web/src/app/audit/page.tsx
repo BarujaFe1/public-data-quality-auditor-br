@@ -3,17 +3,22 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api, IS_LAB } from "@/lib/api";
+import { DEMO_CATALOG } from "@/lib/demo-store";
 import type { DemoDataset } from "@/types/audit";
 import { EmptyState, ErrorState } from "@/components/panels";
 
 export default function AuditEntryPage() {
   const router = useRouter();
-  const [demos, setDemos] = useState<DemoDataset[]>([]);
+  const [demos, setDemos] = useState<DemoDataset[]>(IS_LAB ? DEMO_CATALOG : []);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busyLabel, setBusyLabel] = useState<string | null>(null);
 
   useEffect(() => {
+    if (IS_LAB) {
+      setDemos(DEMO_CATALOG);
+      return;
+    }
     api
       .listDemos()
       .then(setDemos)
