@@ -1,0 +1,27 @@
+id_contrato,orgao,fornecedor,cnpj,valor_contrato,data_inicio,data_fim,modalidade
+CTR-2024-001,Prefeitura de São Paulo,Tech Solutions Ltda,12.345.678/0001-90,150000.00,2024-01-10,2024-12-31,Pregão Eletrônico
+CTR-2024-002,Secretaria de Educação RJ,Papelaria Brasil SA,98.765.432/0001-10,45000.50,2024-02-01,2024-08-31,Dispensa
+CTR-2024-003,Ministério da Saúde,Medicamentos Unidos,11.222.333/0001-44,980000.00,2024-03-15,2025-03-14,Concorrência
+CTR-2024-004,Prefeitura de Belo Horizonte,Construtora Alfa,22.333.444/0001-55,2500000.00,2024-01-20,2024-11-30,Tomada de Preços
+CTR-2024-005,Secretaria de Obras SP,Asfalto Rápido ME,33.444.555/0001-66,320000.00,2024-04-01,2024-09-30,Pregão Eletrônico
+CTR-2024-006,Prefeitura de Curitiba,Limpeza Total Ltda,44.555.666/0001-77,78000.00,2024-02-15,2024-12-15,pregão eletrônico
+CTR-2024-007,Secretaria de Cultura BA,Eventos Cultura SA,55.666.777/0001-88,125000.00,2024-05-01,2024-10-31,Inexigibilidade
+CTR-2024-008,Prefeitura de Recife,TI Nordeste,66.777.888/0001-99,210000.00,2024-03-01,2024-12-31,Pregão Eletrônico
+CTR-2024-009,Governo do DF,Consultoria Pública,77.888.999/0001-11,89000.00,2024-06-01,2024-12-01,Dispensa
+CTR-2024-010,Prefeitura de Manaus,Amazônia Serviços,88.999.000/0001-22,156000.00,2024-01-05,2024-07-05,Concorrência
+CTR-2024-011,Secretaria de Transporte PR,Ônibus Sul,99.000.111/0001-33,4500000.00,2024-02-20,2025-02-19,Concorrência
+CTR-2024-012,Prefeitura de Fortaleza,Segurança Plus,10.111.222/0001-44,67000.00,2024-04-10,2024-10-10,Pregão Eletrônico
+CTR-2024-013,Ministério da Educação,Livros Educacionais,12.345.678/0001-90,340000.00,2024-03-20,2024-12-20,Pregão Eletrônico
+CTR-2024-014,Prefeitura de Salvador,Alimentação Escolar,21.321.432/0001-55,890000.00,2024-01-15,2024-12-15,Concorrência
+CTR-2024-015,Secretaria de Saúde MG,Hospitalar Beta,32.432.543/0001-66,1200000.00,2024-05-15,2025-05-14,Tomada de Preços
+CTR-2024-016,Prefeitura de Porto Alegre,Software Gov,43.543.654/0001-77,-50000.00,2024-02-01,2024-08-01,Pregão Eletrônico
+CTR-2024-017,Prefeitura de Goiânia,Obras Rápidas,54.654.765/0001-88,780000.00,2024-08-01,2024-03-01,Concorrência
+CTR-2024-018,Secretaria de Esporte SC,Esportes Total,INVALIDO,95000.00,2024-03-10,2024-09-10,Dispensa
+CTR-2024-019,Prefeitura de Natal,Limpeza Urbana,65.765.876/0001-99,112000.00,2024-04-20,2024-10-20,PREGAO ELETRONICO
+CTR-2024-020,Governo do AM,Floresta Tech,76.876.987/0001-00,230000.00,2024-01-30,2024-12-30,Pregão Eletrônico
+CTR-2024-001,Prefeitura de São Paulo,Tech Solutions Ltda,12.345.678/0001-90,150000.00,2024-01-10,2024-12-31,Pregão Eletrônico
+CTR-2024-021,Prefeitura de Vitória,Consultoria Leste,87.987.098/0001-11,45000.00,2024-06-15,2024-12-15,Dispensa
+CTR-2024-022,Secretaria de Habitação PE,Construção Habitar,98.098.109/0001-22,3500000.00,2024-02-28,2025-02-27,Concorrência
+CTR-2024-023,Prefeitura de Maceió,Serviços Gerais AL,09.109.210/0001-33,56000.00,2024-05-01,2024-11-01,Inexigibilidade
+CTR-2024-024,Ministério da Justiça,Segurança Nacional,19.210.321/0001-44,2100000.00,2024-03-05,2025-03-04,Tomada de Preços
+CTR-2024-025,Prefeitura de João Pessoa,TI Paraíba,29.321.432/0001-55,134000.00,2024-07-01,2024-01-01,Pregão Eletrônico

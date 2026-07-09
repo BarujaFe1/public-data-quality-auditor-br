@@ -1,0 +1,27 @@
+id_escola,nome_escola,municipio,uf,rede,alunos_matriculados,etapa_ensino,data_censo
+ESC001,Escola Municipal João Silva,São Paulo,SP,Municipal,450,Fundamental,2023-05-01
+ESC002,Colégio Estadual Maria Santos,Rio de Janeiro,RJ,Estadual,820,Médio,2023-05-01
+ESC003,EMEF Centro,Belo Horizonte,MG,municipal,320,Fundamental,2023-05-01
+ESC004,Instituto Federal Norte,Manaus,AM,Federal,1100,Técnico,2023-05-01
+ESC005,Escola Particular Horizonte,Curitiba,PR,Privada,280,Fundamental,2023-05-01
+ESC006,CEFET Sul,Porto Alegre,RS,Federal,950,Técnico,2023-05-01
+ESC007,Escola Municipal Paz,Salvador,BA,Municipal,,Fundamental,2023-05-01
+ESC008,Colégio Dom Pedro,Recife,PE,Estadual,600,Médio,2023-05-01
+ESC009,EMEF Liberdade,Fortaleza,CE,Municipal,410,fundamental,2023-05-01
+ESC010,Escola Técnica Central,Goiânia,GO,Estadual,730,Técnico,2023-05-01
+ESC011,Colégio Alpha,Brasília,DF,Privada,550,Médio,2023-05-01
+ESC012,Escola Rural Sol,Campo Grande,MS,Municipal,95,Fundamental,2023-05-01
+ESC013,Instituto Educacional Beta,Florianópolis,SC,Privada,340,Fundamental,2023-05-01
+ESC014,CEEM Norte,Belém,PA,Estadual,480,Médio,2023-05-01
+ESC015,Escola Municipal Verde,Natal,RN,Municipal,210,Fundamental,2023-05-01
+ESC002,Colégio Estadual Maria Santos,Rio de Janeiro,RJ,Estadual,820,Médio,2023-05-01
+ESC016,EMEF Sem Nome,,SP,Municipal,150,Fundamental,2023-05-01
+ESC017,Colégio Futuro,Campinas,SP,PRIVADA,abc,Médio,2023-05-01
+ESC018,Escola Municipal Leste,Vitória,ES,Municipal,275,Fundamental,2023-13-99
+ESC019,Instituto Gamma,Maceió,AL,Federal,890,Técnico,2023-05-01
+ESC020,Escola Municipal Oeste,João Pessoa,PB,Municipal,180,Fundamental,2023-05-01
+ESC021,Colégio Delta,Teresina,PI,Estadual,520,médio,2023-05-01
+ESC022,EMEF Norte,São Luís,MA,Municipal,300,Fundamental,2023-05-01
+ESC023,Escola Técnica Litoral,Santos,SP,Estadual,670,Técnico,2023-05-01
+ESC024,Colégio Épsilon,Aracaju,SE,Privada,410,Fundamental,2023-05-01
+ESC025,,,XX,Municipal,-50,Fundamental,2023-05-01

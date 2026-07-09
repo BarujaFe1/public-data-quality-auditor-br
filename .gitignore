@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+.next/
+out/
+dist/
+npm-debug.log*
+yarn-error.log*
+apps/web/.env.local
+apps/web/.env*.local
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+!**/.env.local.example
+
+# Data outputs (keep folder, ignore generated audits)
+data/audit_outputs/*.json
+data/audit_outputs/*.md
+!data/audit_outputs/.gitkeep
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/workspace
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PROJECT_ROOT=/workspace
+      - DEMO_DIR=/workspace/data/demo
+      - AUDIT_OUTPUT_DIR=/workspace/data/audit_outputs
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - api
