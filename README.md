@@ -480,7 +480,7 @@ Desenvolvido por **Felipe Alirio Baruja**.
 
 - **Portfolio:** [barujafe.vercel.app](https://barujafe.vercel.app/)
 - **GitHub:** [@BarujaFe1](https://github.com/BarujaFe1)
-- **LinkedIn:** [Gustavo Felipe Alirio Baruja](https://www.linkedin.com/in/barujafe/)
+- **LinkedIn:** [Felipe Alirio Baruja](https://www.linkedin.com/in/barujafe/)
 
 ---
 
