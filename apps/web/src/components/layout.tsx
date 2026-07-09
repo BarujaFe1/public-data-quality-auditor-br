@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { IS_LAB } from "@/lib/api";
+import { LabBanner } from "@/components/LabBanner";
 
 export function SiteHeader() {
   return (
     <header className="border-b border-ink/10 bg-paper/80 backdrop-blur-md sticky top-0 z-40">
+      <LabBanner />
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link href="/" className="group">
           <p className="font-display text-xl tracking-tight text-ink group-hover:text-forest transition-colors">
@@ -18,14 +21,20 @@ export function SiteHeader() {
           <Link href="/methodology" className="hover:text-forest transition-colors">
             Metodologia
           </Link>
-          <a
-            href={`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/docs`}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-forest transition-colors"
-          >
-            API
-          </a>
+          {IS_LAB ? (
+            <Link href="/methodology" className="hover:text-forest transition-colors">
+              Limitações
+            </Link>
+          ) : (
+            <a
+              href={`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/docs`}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-forest transition-colors"
+            >
+              API
+            </a>
+          )}
         </nav>
       </div>
     </header>

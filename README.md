@@ -17,6 +17,9 @@
   </p>
 
   <p>
+    <a href="https://public-data-quality-auditor-br.vercel.app">
+      <img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+    </a>
     <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs" />
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-React-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
     <img alt="Python" src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -25,6 +28,8 @@
     <img alt="Data Quality" src="https://img.shields.io/badge/Data%20Quality-Explainable%20Score-1F6F5B?style=for-the-badge" />
   </p>
 </div>
+
+<p align="center"><strong>Live demo:</strong> <a href="https://public-data-quality-auditor-br.vercel.app">https://public-data-quality-auditor-br.vercel.app</a> · Lab / portfolio (snapshots sintéticos)</p>
 
 <p align="center">
   <img src="./assets/hero-cover.jpg" alt="Public Data Quality Auditor BR product overview" width="100%" />
@@ -312,43 +317,46 @@ Dashboard / Markdown-HTML report / datapackage.json
 
 ## 🚀 Quick Start / Início Rápido
 
-### Pré-requisitos
+### Live demo (one-click)
+
+**https://public-data-quality-auditor-br.vercel.app**
+
+Demo pública no padrão DataOps Control Tower: frontend Next.js com **snapshots pré-computados** dos demos (municípios / escolas / contratos). Sem FastAPI no Vercel. Banner **Lab / portfolio demo**. Upload CSV fica para a stack local.
+
+### Pré-requisitos (local)
 - **Node.js** 20+ (testado com 24)
 - **Python** 3.12
 - **Git**
 
-### 1. Backend FastAPI (`apps/api`)
-
-```bash
-cd apps/api
-python -m venv .venv
-.venv\Scripts\activate            # Windows
-# source .venv/bin/activate       # Linux/macOS
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
-
-Se a porta `8000` estiver ocupada:
-
-```bash
-uvicorn app.main:app --reload --port 8001
-```
-
-API: [http://127.0.0.1:8000](http://127.0.0.1:8000) · OpenAPI: `/docs`
-
-### 2. Frontend Next.js (`apps/web`)
+### Lab frontend only (igual à demo pública)
 
 ```bash
 cd apps/web
-copy .env.local.example .env.local   # Windows
-# cp .env.local.example .env.local   # Linux/macOS
 npm install
 npm run dev
 ```
 
-Ajuste `NEXT_PUBLIC_API_URL` se a API não estiver em `http://localhost:8000`.
+Deixe `NEXT_PUBLIC_USE_API` **unset**. UI: [http://localhost:3000](http://localhost:3000)
 
-UI: [http://localhost:3000](http://localhost:3000)
+### Full stack local (API real + upload)
+
+```bash
+# API
+cd apps/api
+python -m venv .venv
+.venv\Scripts\activate            # Windows
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+
+# Web (outro terminal)
+cd apps/web
+copy .env.local.example .env.local
+# defina:
+# NEXT_PUBLIC_USE_API=true
+# NEXT_PUBLIC_API_URL=http://localhost:8000
+npm install
+npm run dev
+```
 
 ### Docker (opcional)
 

@@ -123,7 +123,11 @@ export default function AuditDetailPage() {
               ))}
             </ul>
           </div>
-          <ReportExportButton auditId={audit.id} reportMarkdown={audit.report_markdown} />
+          <ReportExportButton
+            auditId={audit.id}
+            reportMarkdown={audit.report_markdown}
+            datapackage={audit.datapackage}
+          />
         </div>
       )}
 

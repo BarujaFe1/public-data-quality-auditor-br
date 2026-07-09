@@ -1,6 +1,6 @@
 "use client";
 
-import { API_BASE } from "@/lib/api";
+import { API_BASE, IS_LAB } from "@/lib/api";
 
 export function RecommendationPanel({ text }: { text: string }) {
   return (
@@ -44,9 +44,11 @@ export function ErrorState({ message }: { message: string }) {
 export function ReportExportButton({
   auditId,
   reportMarkdown,
+  datapackage,
 }: {
   auditId: string;
   reportMarkdown: string;
+  datapackage?: Record<string, unknown>;
 }) {
   const download = (filename: string, content: string, type: string) => {
     const blob = new Blob([content], { type });
@@ -58,6 +60,19 @@ export function ReportExportButton({
     URL.revokeObjectURL(url);
   };
 
+  const openHtml = () => {
+    const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Relatório ${auditId}</title>
+<style>body{font-family:Georgia,serif;max-width:900px;margin:2rem auto;padding:0 1rem;line-height:1.5;background:#f7f4ef;color:#1a1a1a}
+pre{white-space:pre-wrap;background:#fff;padding:1.5rem;border:1px solid #ddd}</style></head>
+<body><pre>${reportMarkdown
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")}</pre></body></html>`;
+    const blob = new Blob([html], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="flex flex-wrap gap-3">
       <button
@@ -67,22 +82,48 @@ export function ReportExportButton({
       >
         Exportar Markdown
       </button>
-      <a
-        href={`${API_BASE}/audit/${auditId}/report?format=html`}
-        target="_blank"
-        rel="noreferrer"
-        className="rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm text-ink hover:border-forest hover:text-forest transition-colors"
-      >
-        Abrir HTML
-      </a>
-      <a
-        href={`${API_BASE}/audit/${auditId}/datapackage.json`}
-        target="_blank"
-        rel="noreferrer"
-        className="rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm text-ink hover:border-forest hover:text-forest transition-colors"
-      >
-        datapackage.json
-      </a>
+      {IS_LAB || datapackage ? (
+        <button
+          type="button"
+          onClick={openHtml}
+          className="rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm text-ink hover:border-forest hover:text-forest transition-colors"
+        >
+          Abrir HTML
+        </button>
+      ) : (
+        <a
+          href={`${API_BASE}/audit/${auditId}/report?format=html`}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm text-ink hover:border-forest hover:text-forest transition-colors"
+        >
+          Abrir HTML
+        </a>
+      )}
+      {datapackage ? (
+        <button
+          type="button"
+          onClick={() =>
+            download(
+              `datapackage-${auditId}.json`,
+              JSON.stringify(datapackage, null, 2),
+              "application/json"
+            )
+          }
+          className="rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm text-ink hover:border-forest hover:text-forest transition-colors"
+        >
+          datapackage.json
+        </button>
+      ) : (
+        <a
+          href={`${API_BASE}/audit/${auditId}/datapackage.json`}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm text-ink hover:border-forest hover:text-forest transition-colors"
+        >
+          datapackage.json
+        </a>
+      )}
     </div>
   );
 }
