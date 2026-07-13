@@ -9,7 +9,7 @@ from typing import Any
 import pandas as pd
 
 from app.quality.checks import run_all_checks
-from app.quality.profiling import infer_series_type, is_nullish, serialize_value, try_parse_number
+from app.quality.profiling import infer_series_type, serialize_value, try_parse_number
 from app.quality.scoring import compute_all_scores, executive_recommendation
 from app.reports.datapackage import build_datapackage
 from app.reports.markdown_report import build_markdown_report

@@ -22,13 +22,18 @@ export default function MethodologyPage() {
         </ul>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="font-display text-2xl">O que a ferramenta não faz</h2>
+      <section id="limitations" className="space-y-3 scroll-mt-28">
+        <h2 className="font-display text-2xl">Limitações</h2>
         <ul className="list-disc pl-5 text-slate space-y-1">
           <li>Não valida se os fatos são verdadeiros no mundo real.</li>
           <li>Não corrige dados automaticamente de forma irreversível.</li>
           <li>Não avalia viés político do conteúdo.</li>
           <li>Não substitui revisão humana do dicionário e da licença.</li>
+          <li>
+            A demo pública usa snapshots pré-computados (lab). Upload CSV e API live exigem stack
+            local com <code className="rounded bg-sand px-1">NEXT_PUBLIC_USE_API=true</code>.
+          </li>
+          <li>Checks são heurísticos — podem gerar falsos positivos/negativos.</li>
         </ul>
       </section>
 

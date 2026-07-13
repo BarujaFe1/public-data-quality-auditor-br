@@ -1,1 +1,897 @@
-{"id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","dataset_name":"Contratos p├║blicos (demo)","uploaded_filename":"contratos_demo.csv","row_count":26,"column_count":8,"overall_score":78.72,"completeness_score":100.0,"uniqueness_score":26.0,"validity_score":84.0,"consistency_score":87.6,"documentation_score":100.0,"created_at":"2026-07-09T18:53:39.536015Z","status":"completed","executive_recommendation":"A base ├® utiliz├ível com ressalvas. Priorize corre├º├úo de issues de severidade alta/cr├¡tica e normalize categorias e datas antes de an├ílises sens├¡veis.","columns":[{"id":"492a59e9-8a85-4c05-8c39-58eb76e7a049","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"id_contrato","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":25,"distinct_rate":0.9615,"sample_values":["CTR-2024-001","CTR-2024-002","CTR-2024-003","CTR-2024-004","CTR-2024-005"],"min_value":null,"max_value":null,"most_common_values":[{"value":"CTR-2024-001","count":2},{"value":"CTR-2024-002","count":1},{"value":"CTR-2024-003","count":1},{"value":"CTR-2024-004","count":1},{"value":"CTR-2024-005","count":1}],"warnings":[]},{"id":"b1e9ef08-8752-4a21-8b99-fcaa458e6070","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"orgao","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":25,"distinct_rate":0.9615,"sample_values":["Prefeitura de S├úo Paulo","Secretaria de Educa├º├úo RJ","Minist├®rio da Sa├║de","Prefeitura de Belo Horizonte","Secretaria de Obras SP"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Prefeitura de S├úo Paulo","count":2},{"value":"Secretaria de Educa├º├úo RJ","count":1},{"value":"Minist├®rio da Sa├║de","count":1},{"value":"Prefeitura de Belo Horizonte","count":1},{"value":"Secretaria de Obras SP","count":1}],"warnings":[]},{"id":"6709f6d9-73ff-404c-8287-942fb5ddf695","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"fornecedor","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":25,"distinct_rate":0.9615,"sample_values":["Tech Solutions Ltda","Papelaria Brasil SA","Medicamentos Unidos","Construtora Alfa","Asfalto R├ípido ME"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Tech Solutions Ltda","count":2},{"value":"Papelaria Brasil SA","count":1},{"value":"Medicamentos Unidos","count":1},{"value":"Construtora Alfa","count":1},{"value":"Asfalto R├ípido ME","count":1}],"warnings":[]},{"id":"64473a77-7b01-4156-92e7-3c838a5c999e","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"cnpj","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":24,"distinct_rate":0.9231,"sample_values":["12.345.678/0001-90","98.765.432/0001-10","11.222.333/0001-44","22.333.444/0001-55","33.444.555/0001-66"],"min_value":null,"max_value":null,"most_common_values":[{"value":"12.345.678/0001-90","count":3},{"value":"98.765.432/0001-10","count":1},{"value":"11.222.333/0001-44","count":1},{"value":"22.333.444/0001-55","count":1},{"value":"33.444.555/0001-66","count":1}],"warnings":[]},{"id":"74e46b6d-2875-4730-b2a2-db1c9b1ec91c","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"valor_contrato","inferred_type":"number","null_count":0,"null_rate":0.0,"distinct_count":25,"distinct_rate":0.9615,"sample_values":["150000.00","45000.50","980000.00","2500000.00","320000.00"],"min_value":-50000.0,"max_value":4500000.0,"most_common_values":[{"value":"150000.00","count":2},{"value":"45000.50","count":1},{"value":"980000.00","count":1},{"value":"2500000.00","count":1},{"value":"320000.00","count":1}],"warnings":[]},{"id":"36f0c462-f31f-41e6-908f-0adfc0b46203","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"data_inicio","inferred_type":"date","null_count":0,"null_rate":0.0,"distinct_count":23,"distinct_rate":0.8846,"sample_values":["2024-01-10","2024-02-01","2024-03-15","2024-01-20","2024-04-01"],"min_value":"2024-01-05T00:00:00","max_value":"2024-08-01T00:00:00","most_common_values":[{"value":"2024-01-10","count":2},{"value":"2024-02-01","count":2},{"value":"2024-05-01","count":2},{"value":"2024-03-15","count":1},{"value":"2024-01-20","count":1}],"warnings":[]},{"id":"b71a9337-48c2-40b1-b2f6-0ba73270395a","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"data_fim","inferred_type":"date","null_count":0,"null_rate":0.0,"distinct_count":22,"distinct_rate":0.8462,"sample_values":["2024-12-31","2024-08-31","2025-03-14","2024-11-30","2024-09-30"],"min_value":"2024-01-01T00:00:00","max_value":"2025-05-14T00:00:00","most_common_values":[{"value":"2024-12-31","count":3},{"value":"2024-12-15","count":3},{"value":"2024-08-31","count":1},{"value":"2025-03-14","count":1},{"value":"2024-11-30","count":1}],"warnings":[]},{"id":"e766daca-1abd-4c0d-b417-c402f55f41ec","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"modalidade","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":7,"distinct_rate":0.2692,"sample_values":["Preg├úo Eletr├┤nico","Dispensa","Concorr├¬ncia","Tomada de Pre├ºos","Preg├úo Eletr├┤nico"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Preg├úo Eletr├┤nico","count":9},{"value":"Concorr├¬ncia","count":6},{"value":"Dispensa","count":4},{"value":"Tomada de Pre├ºos","count":3},{"value":"Inexigibilidade","count":2}],"warnings":[]}],"issues":[{"id":"ae84b349-b4ca-4655-a057-98810a7b0f97","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":null,"issue_type":"duplicate_rows","dimension":"uniqueness","severity":"high","message":"H├í 2 linha(s) envolvida(s) em duplicidade completa.","affected_rows_count":2,"affected_rows_sample":[{"_row_index":0,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"},{"_row_index":20,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"}],"recommendation":"Deduplique com chave de neg├│cio ou remova c├│pias exatas.","created_at":"2026-07-09T18:53:40.461341Z"},{"id":"e1c18b50-a1ec-4c72-880e-1a22c54ccc36","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"id_contrato","issue_type":"duplicate_id","dimension":"uniqueness","severity":"critical","message":"Poss├¡vel chave 'id_contrato' com 2 valor(es) duplicado(s).","affected_rows_count":2,"affected_rows_sample":[{"_row_index":0,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"},{"_row_index":20,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"}],"recommendation":"Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.","created_at":"2026-07-09T18:53:40.462355Z"},{"id":"b0352780-836d-4d0e-add5-39f0670bd5b9","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"cnpj","issue_type":"duplicate_id","dimension":"uniqueness","severity":"critical","message":"Poss├¡vel chave 'cnpj' com 3 valor(es) duplicado(s).","affected_rows_count":3,"affected_rows_sample":[{"_row_index":0,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"},{"_row_index":12,"id_contrato":"CTR-2024-013","orgao":"Minist├®rio da Educa├º├úo","fornecedor":"Livros Educacionais","cnpj":"12.345.678/0001-90","valor_contrato":"340000.00","data_inicio":"2024-03-20","data_fim":"2024-12-20","modalidade":"Preg├úo Eletr├┤nico"},{"_row_index":20,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"}],"recommendation":"Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.","created_at":"2026-07-09T18:53:40.471435Z"},{"id":"d257fd56-ade6-409b-b3dd-2ab09dbd7cc3","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"modalidade","issue_type":"duplicate_id","dimension":"uniqueness","severity":"critical","message":"Poss├¡vel chave 'modalidade' com 24 valor(es) duplicado(s).","affected_rows_count":24,"affected_rows_sample":[{"_row_index":0,"id_contrato":"CTR-2024-001","orgao":"Prefeitura de S├úo Paulo","fornecedor":"Tech Solutions Ltda","cnpj":"12.345.678/0001-90","valor_contrato":"150000.00","data_inicio":"2024-01-10","data_fim":"2024-12-31","modalidade":"Preg├úo Eletr├┤nico"},{"_row_index":1,"id_contrato":"CTR-2024-002","orgao":"Secretaria de Educa├º├úo RJ","fornecedor":"Papelaria Brasil SA","cnpj":"98.765.432/0001-10","valor_contrato":"45000.50","data_inicio":"2024-02-01","data_fim":"2024-08-31","modalidade":"Dispensa"},{"_row_index":2,"id_contrato":"CTR-2024-003","orgao":"Minist├®rio da Sa├║de","fornecedor":"Medicamentos Unidos","cnpj":"11.222.333/0001-44","valor_contrato":"980000.00","data_inicio":"2024-03-15","data_fim":"2025-03-14","modalidade":"Concorr├¬ncia"},{"_row_index":3,"id_contrato":"CTR-2024-004","orgao":"Prefeitura de Belo Horizonte","fornecedor":"Construtora Alfa","cnpj":"22.333.444/0001-55","valor_contrato":"2500000.00","data_inicio":"2024-01-20","data_fim":"2024-11-30","modalidade":"Tomada de Pre├ºos"},{"_row_index":4,"id_contrato":"CTR-2024-005","orgao":"Secretaria de Obras SP","fornecedor":"Asfalto R├ípido ME","cnpj":"33.444.555/0001-66","valor_contrato":"320000.00","data_inicio":"2024-04-01","data_fim":"2024-09-30","modalidade":"Preg├úo Eletr├┤nico"}],"recommendation":"Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.","created_at":"2026-07-09T18:53:40.506242Z"},{"id":"3bc92c1e-04c6-48b3-88d8-1b743e43a414","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"valor_contrato","issue_type":"negative_quantity","dimension":"validity","severity":"high","message":"A coluna 'valor_contrato' tem 1 valor(es) negativo(s) suspeito(s).","affected_rows_count":1,"affected_rows_sample":[{"_row_index":15,"id_contrato":"CTR-2024-016","orgao":"Prefeitura de Porto Alegre","fornecedor":"Software Gov","cnpj":"43.543.654/0001-77","valor_contrato":"-50000.00","data_inicio":"2024-02-01","data_fim":"2024-08-01","modalidade":"Preg├úo Eletr├┤nico"}],"recommendation":"Valide se negativos fazem sentido; para popula├º├úo/valor/quantidade, corrija ou documente.","created_at":"2026-07-09T18:53:40.892538Z"},{"id":"4146c92a-a220-4aaa-9b20-63894f3be5d5","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"cnpj","issue_type":"invalid_cnpj","dimension":"validity","severity":"high","message":"A coluna 'cnpj' tem 1 CNPJ(s) com formato inv├ílido.","affected_rows_count":1,"affected_rows_sample":[{"_row_index":17,"id_contrato":"CTR-2024-018","orgao":"Secretaria de Esporte SC","fornecedor":"Esportes Total","cnpj":"INVALIDO","valor_contrato":"95000.00","data_inicio":"2024-03-10","data_fim":"2024-09-10","modalidade":"Dispensa"}],"recommendation":"Armazene CNPJ com 14 d├¡gitos e valide d├¡gitos verificadores quando poss├¡vel.","created_at":"2026-07-09T18:53:40.895537Z"},{"id":"dccf69bc-0abc-4d92-8fdd-9a510a877770","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"modalidade","issue_type":"inconsistent_category","dimension":"consistency","severity":"warning","message":"A coluna 'modalidade' tem categorias com varia├º├úo de caixa/acento (3 variantes em 1 grupo(s)). Exemplos: [['PREGAO ELETRONICO', 'Preg├úo Eletr├┤nico', 'preg├úo eletr├┤nico']].","affected_rows_count":11,"affected_rows_sample":[],"recommendation":"Normalize categorias (caixa, acentos) com um dicion├írio can├┤nico.","created_at":"2026-07-09T18:53:40.990417Z"},{"id":"5de62e8f-44ce-491a-8640-5ad9874f0cee","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"data_fim","issue_type":"date_order_violation","dimension":"consistency","severity":"high","message":"H├í 2 registro(s) com 'data_fim' anterior a 'data_inicio'.","affected_rows_count":2,"affected_rows_sample":[{"_row_index":16,"id_contrato":"CTR-2024-017","orgao":"Prefeitura de Goi├ónia","fornecedor":"Obras R├ípidas","cnpj":"54.654.765/0001-88","valor_contrato":"780000.00","data_inicio":"2024-08-01","data_fim":"2024-03-01","modalidade":"Concorr├¬ncia"},{"_row_index":25,"id_contrato":"CTR-2024-025","orgao":"Prefeitura de Jo├úo Pessoa","fornecedor":"TI Para├¡ba","cnpj":"29.321.432/0001-55","valor_contrato":"134000.00","data_inicio":"2024-07-01","data_fim":"2024-01-01","modalidade":"Preg├úo Eletr├┤nico"}],"recommendation":"Corrija a ordem temporal ou revise o cadastro da vig├¬ncia.","created_at":"2026-07-09T18:53:41.374430Z"}],"data_dictionary":[{"id":"73359ade-f86e-4a8d-95cd-5c2c51ac9931","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"id_contrato","inferred_type":"string","nullable":false,"description_suggestion":"Identificador do contrato.","example_values":["CTR-2024-001","CTR-2024-002","CTR-2024-003"],"quality_notes":"Issues: duplicate_id"},{"id":"62913476-b1cc-41a0-b0cb-15918fa57561","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"orgao","inferred_type":"string","nullable":false,"description_suggestion":"├ôrg├úo contratante.","example_values":["Prefeitura de S├úo Paulo","Secretaria de Educa├º├úo RJ","Minist├®rio da Sa├║de"],"quality_notes":""},{"id":"53c3d725-1c15-4e58-b348-b4c1a603dbbd","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"fornecedor","inferred_type":"string","nullable":false,"description_suggestion":"Raz├úo social do fornecedor.","example_values":["Tech Solutions Ltda","Papelaria Brasil SA","Medicamentos Unidos"],"quality_notes":""},{"id":"5716f5b4-e5a6-4c80-8f96-8dad8e6481d3","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"cnpj","inferred_type":"string","nullable":false,"description_suggestion":"CNPJ do fornecedor.","example_values":["12.345.678/0001-90","98.765.432/0001-10","11.222.333/0001-44"],"quality_notes":"Issues: duplicate_id, invalid_cnpj"},{"id":"fe5e41d2-07c3-40ab-a504-1b9bbfedda0a","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"valor_contrato","inferred_type":"number","nullable":false,"description_suggestion":"Valor contratado em reais.","example_values":["150000.00","45000.50","980000.00"],"quality_notes":"Issues: negative_quantity"},{"id":"9576d5ec-780c-4a16-82a2-8a3b7c71a9b0","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"data_inicio","inferred_type":"date","nullable":false,"description_suggestion":"Data de in├¡cio da vig├¬ncia.","example_values":["2024-01-10","2024-02-01","2024-03-15"],"quality_notes":""},{"id":"b5ed89f7-5ae4-4718-9bed-40d1d4f5c88a","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"data_fim","inferred_type":"date","nullable":false,"description_suggestion":"Data de fim da vig├¬ncia.","example_values":["2024-12-31","2024-08-31","2025-03-14"],"quality_notes":"Issues: date_order_violation"},{"id":"098af218-d012-4d64-b5bc-c091b1e9edf7","audit_run_id":"bed1899d-93c2-4b9a-849a-fc4d5249f128","column_name":"modalidade","inferred_type":"string","nullable":false,"description_suggestion":"Modalidade de licita├º├úo/contrata├º├úo.","example_values":["Preg├úo Eletr├┤nico","Dispensa","Concorr├¬ncia"],"quality_notes":"Issues: duplicate_id, inconsistent_category"}],"report_markdown":"# Relat├│rio de Qualidade ÔÇö Contratos p├║blicos (demo)\n\n- **Arquivo:** `contratos_demo.csv`\n- **Data da auditoria:** 2026-07-09T18:53:39.536015+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 78.72/100\n\n## Scores por dimens├úo\n\n| Dimens├úo | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 26.0 |\n| Validade | 84.0 |\n| Consist├¬ncia | 87.6 |\n| Documentabilidade | 100.0 |\n\n## Recomenda├º├úo executiva\n\nA base ├® utiliz├ível com ressalvas. Priorize corre├º├úo de issues de severidade alta/cr├¡tica e normalize categorias e datas antes de an├ílises sens├¡veis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `modalidade` (uniqueness) ÔÇö Poss├¡vel chave 'modalidade' com 24 valor(es) duplicado(s).\n   - Recomenda├º├úo: Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.\n2. **[critical]** `duplicate_id` em `cnpj` (uniqueness) ÔÇö Poss├¡vel chave 'cnpj' com 3 valor(es) duplicado(s).\n   - Recomenda├º├úo: Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.\n3. **[critical]** `duplicate_id` em `id_contrato` (uniqueness) ÔÇö Poss├¡vel chave 'id_contrato' com 2 valor(es) duplicado(s).\n   - Recomenda├º├úo: Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.\n4. **[high]** `duplicate_rows` em `ÔÇö` (uniqueness) ÔÇö H├í 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomenda├º├úo: Deduplique com chave de neg├│cio ou remova c├│pias exatas.\n5. **[high]** `date_order_violation` em `data_fim` (consistency) ÔÇö H├í 2 registro(s) com 'data_fim' anterior a 'data_inicio'.\n   - Recomenda├º├úo: Corrija a ordem temporal ou revise o cadastro da vig├¬ncia.\n6. **[high]** `negative_quantity` em `valor_contrato` (validity) ÔÇö A coluna 'valor_contrato' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomenda├º├úo: Valide se negativos fazem sentido; para popula├º├úo/valor/quantidade, corrija ou documente.\n7. **[high]** `invalid_cnpj` em `cnpj` (validity) ÔÇö A coluna 'cnpj' tem 1 CNPJ(s) com formato inv├ílido.\n   - Recomenda├º├úo: Armazene CNPJ com 14 d├¡gitos e valide d├¡gitos verificadores quando poss├¡vel.\n8. **[warning]** `inconsistent_category` em `modalidade` (consistency) ÔÇö A coluna 'modalidade' tem categorias com varia├º├úo de caixa/acento (3 variantes em 1 grupo(s)). Exemplos: [['PREGAO ELETRONICO', 'Preg├úo Eletr├┤nico', 'preg├úo eletr├┤nico']].\n   - Recomenda├º├úo: Normalize categorias (caixa, acentos) com um dicion├írio can├┤nico.\n\n## Colunas mais problem├íticas\n\n- `cnpj`: 2 issue(s)\n- `modalidade`: 2 issue(s)\n- `id_contrato`: 1 issue(s)\n- `valor_contrato`: 1 issue(s)\n- `data_fim`: 1 issue(s)\n\n## Recomenda├º├Áes gerais\n\n1. Trate issues cr├¡ticos e de alta severidade antes de an├ílises p├║blicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicion├írio de dados revisado por um humano.\n4. Documente licen├ºa, frequ├¬ncia de atualiza├º├úo e origem.\n5. Reexecute a auditoria ap├│s limpeza.\n\n## Dicion├írio resumido\n\n| Coluna | Tipo | Nullable | Descri├º├úo sugerida |\n|---|---|---|---|\n| `id_contrato` | string | n├úo | Identificador do contrato. |\n| `orgao` | string | n├úo | ├ôrg├úo contratante. |\n| `fornecedor` | string | n├úo | Raz├úo social do fornecedor. |\n| `cnpj` | string | n├úo | CNPJ do fornecedor. |\n| `valor_contrato` | number | n├úo | Valor contratado em reais. |\n| `data_inicio` | date | n├úo | Data de in├¡cio da vig├¬ncia. |\n| `data_fim` | date | n├úo | Data de fim da vig├¬ncia. |\n| `modalidade` | string | n├úo | Modalidade de licita├º├úo/contrata├º├úo. |\n\n## Limita├º├Áes\n\n- O score ├® **diagn├│stico**, n├úo certifica├º├úo absoluta.\n- A auditoria **n├úo valida a verdade factual** dos dados.\n- Checks s├úo heur├¡sticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Pr├│ximos passos\n\n1. Exportar este relat├│rio e o `datapackage.json`.\n2. Corrigir issues priorit├írios na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n","datapackage":{"name":"contratos-p├║blicos-(demo)","title":"Contratos p├║blicos (demo)","description":"Descriptor gerado automaticamente pela auditoria bed1899d-93c2-4b9a-849a-fc4d5249f128. Revise tipos e descri├º├Áes antes de publicar.","profile":"tabular-data-package","resources":[{"name":"contratos-p├║blicos-(demo)","path":"contratos_demo.csv","format":"csv","mediatype":"text/csv","schema":{"fields":[{"name":"id_contrato","type":"string","description":"Identificador do contrato.","constraints":{"required":true},"examples":["CTR-2024-001","CTR-2024-002","CTR-2024-003"]},{"name":"orgao","type":"string","description":"├ôrg├úo contratante.","constraints":{"required":true},"examples":["Prefeitura de S├úo Paulo","Secretaria de Educa├º├úo RJ","Minist├®rio da Sa├║de"]},{"name":"fornecedor","type":"string","description":"Raz├úo social do fornecedor.","constraints":{"required":true},"examples":["Tech Solutions Ltda","Papelaria Brasil SA","Medicamentos Unidos"]},{"name":"cnpj","type":"string","description":"CNPJ do fornecedor.","constraints":{"required":true},"examples":["12.345.678/0001-90","98.765.432/0001-10","11.222.333/0001-44"]},{"name":"valor_contrato","type":"number","description":"Valor contratado em reais.","constraints":{"required":true},"examples":["150000.00","45000.50","980000.00"]},{"name":"data_inicio","type":"date","description":"Data de in├¡cio da vig├¬ncia.","constraints":{"required":true},"examples":["2024-01-10","2024-02-01","2024-03-15"]},{"name":"data_fim","type":"date","description":"Data de fim da vig├¬ncia.","constraints":{"required":true},"examples":["2024-12-31","2024-08-31","2025-03-14"]},{"name":"modalidade","type":"string","description":"Modalidade de licita├º├úo/contrata├º├úo.","constraints":{"required":true},"examples":["Preg├úo Eletr├┤nico","Dispensa","Concorr├¬ncia"]}]},"dialect":{"delimiter":",","header":true}}],"licenses":[{"name":"UNKNOWN","title":"Licen├ºa n├úo informada no MVP","path":""}],"contributors":[{"title":"Public Data Quality Auditor BR","role":"author"}]}}
+{
+  "id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+  "dataset_name": "Contratos públicos (demo)",
+  "uploaded_filename": "contratos_demo.csv",
+  "row_count": 26,
+  "column_count": 8,
+  "overall_score": 78.72,
+  "completeness_score": 100.0,
+  "uniqueness_score": 26.0,
+  "validity_score": 84.0,
+  "consistency_score": 87.6,
+  "documentation_score": 100.0,
+  "created_at": "2026-07-13T17:46:57.817932Z",
+  "status": "completed",
+  "executive_recommendation": "A base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.",
+  "columns": [
+    {
+      "id": "8ca67d17-e054-45f0-845a-d21f0a875ce5",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "id_contrato",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 25,
+      "distinct_rate": 0.9615,
+      "sample_values": [
+        "CTR-2024-001",
+        "CTR-2024-002",
+        "CTR-2024-003",
+        "CTR-2024-004",
+        "CTR-2024-005"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "CTR-2024-001",
+          "count": 2
+        },
+        {
+          "value": "CTR-2024-002",
+          "count": 1
+        },
+        {
+          "value": "CTR-2024-003",
+          "count": 1
+        },
+        {
+          "value": "CTR-2024-004",
+          "count": 1
+        },
+        {
+          "value": "CTR-2024-005",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "0db799c6-818b-40b9-853a-c50f83afac39",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "orgao",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 25,
+      "distinct_rate": 0.9615,
+      "sample_values": [
+        "Prefeitura de São Paulo",
+        "Secretaria de Educação RJ",
+        "Ministério da Saúde",
+        "Prefeitura de Belo Horizonte",
+        "Secretaria de Obras SP"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Prefeitura de São Paulo",
+          "count": 2
+        },
+        {
+          "value": "Secretaria de Educação RJ",
+          "count": 1
+        },
+        {
+          "value": "Ministério da Saúde",
+          "count": 1
+        },
+        {
+          "value": "Prefeitura de Belo Horizonte",
+          "count": 1
+        },
+        {
+          "value": "Secretaria de Obras SP",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "2050aa05-6a64-4499-b6ed-c4153ee4e001",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "fornecedor",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 25,
+      "distinct_rate": 0.9615,
+      "sample_values": [
+        "Tech Solutions Ltda",
+        "Papelaria Brasil SA",
+        "Medicamentos Unidos",
+        "Construtora Alfa",
+        "Asfalto Rápido ME"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Tech Solutions Ltda",
+          "count": 2
+        },
+        {
+          "value": "Papelaria Brasil SA",
+          "count": 1
+        },
+        {
+          "value": "Medicamentos Unidos",
+          "count": 1
+        },
+        {
+          "value": "Construtora Alfa",
+          "count": 1
+        },
+        {
+          "value": "Asfalto Rápido ME",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "c7c8cc2d-5c64-484d-b193-b65dd7ca62ae",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "cnpj",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 24,
+      "distinct_rate": 0.9231,
+      "sample_values": [
+        "12.345.678/0001-90",
+        "98.765.432/0001-10",
+        "11.222.333/0001-44",
+        "22.333.444/0001-55",
+        "33.444.555/0001-66"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "12.345.678/0001-90",
+          "count": 3
+        },
+        {
+          "value": "98.765.432/0001-10",
+          "count": 1
+        },
+        {
+          "value": "11.222.333/0001-44",
+          "count": 1
+        },
+        {
+          "value": "22.333.444/0001-55",
+          "count": 1
+        },
+        {
+          "value": "33.444.555/0001-66",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ae847153-3900-453b-8a2c-31806bc94ab0",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "valor_contrato",
+      "inferred_type": "number",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 25,
+      "distinct_rate": 0.9615,
+      "sample_values": [
+        "150000.00",
+        "45000.50",
+        "980000.00",
+        "2500000.00",
+        "320000.00"
+      ],
+      "min_value": -50000.0,
+      "max_value": 4500000.0,
+      "most_common_values": [
+        {
+          "value": "150000.00",
+          "count": 2
+        },
+        {
+          "value": "45000.50",
+          "count": 1
+        },
+        {
+          "value": "980000.00",
+          "count": 1
+        },
+        {
+          "value": "2500000.00",
+          "count": 1
+        },
+        {
+          "value": "320000.00",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "0ede73b8-a618-4b6d-b277-f9e129ee5454",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "data_inicio",
+      "inferred_type": "date",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 23,
+      "distinct_rate": 0.8846,
+      "sample_values": [
+        "2024-01-10",
+        "2024-02-01",
+        "2024-03-15",
+        "2024-01-20",
+        "2024-04-01"
+      ],
+      "min_value": "2024-01-05T00:00:00",
+      "max_value": "2024-08-01T00:00:00",
+      "most_common_values": [
+        {
+          "value": "2024-01-10",
+          "count": 2
+        },
+        {
+          "value": "2024-02-01",
+          "count": 2
+        },
+        {
+          "value": "2024-05-01",
+          "count": 2
+        },
+        {
+          "value": "2024-03-15",
+          "count": 1
+        },
+        {
+          "value": "2024-01-20",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "f30ee3bb-4c41-4c81-a660-da205db5d898",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "data_fim",
+      "inferred_type": "date",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 22,
+      "distinct_rate": 0.8462,
+      "sample_values": [
+        "2024-12-31",
+        "2024-08-31",
+        "2025-03-14",
+        "2024-11-30",
+        "2024-09-30"
+      ],
+      "min_value": "2024-01-01T00:00:00",
+      "max_value": "2025-05-14T00:00:00",
+      "most_common_values": [
+        {
+          "value": "2024-12-31",
+          "count": 3
+        },
+        {
+          "value": "2024-12-15",
+          "count": 3
+        },
+        {
+          "value": "2024-08-31",
+          "count": 1
+        },
+        {
+          "value": "2025-03-14",
+          "count": 1
+        },
+        {
+          "value": "2024-11-30",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "9eb3e3dc-25b5-457e-899a-c1d9e82f2d77",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "modalidade",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 7,
+      "distinct_rate": 0.2692,
+      "sample_values": [
+        "Pregão Eletrônico",
+        "Dispensa",
+        "Concorrência",
+        "Tomada de Preços",
+        "Pregão Eletrônico"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Pregão Eletrônico",
+          "count": 9
+        },
+        {
+          "value": "Concorrência",
+          "count": 6
+        },
+        {
+          "value": "Dispensa",
+          "count": 4
+        },
+        {
+          "value": "Tomada de Preços",
+          "count": 3
+        },
+        {
+          "value": "Inexigibilidade",
+          "count": 2
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "issues": [
+    {
+      "id": "5f3baeb2-aa50-498f-ae67-84cfbe5a84be",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": null,
+      "issue_type": "duplicate_rows",
+      "dimension": "uniqueness",
+      "severity": "high",
+      "message": "Há 2 linha(s) envolvida(s) em duplicidade completa.",
+      "affected_rows_count": 2,
+      "affected_rows_sample": [
+        {
+          "_row_index": 0,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        },
+        {
+          "_row_index": 20,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        }
+      ],
+      "recommendation": "Deduplique com chave de negócio ou remova cópias exatas.",
+      "created_at": "2026-07-13T17:46:57.909385Z"
+    },
+    {
+      "id": "37385e33-c916-46e1-ab2a-bfe9aec94acb",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "id_contrato",
+      "issue_type": "duplicate_id",
+      "dimension": "uniqueness",
+      "severity": "critical",
+      "message": "Possível chave 'id_contrato' com 2 valor(es) duplicado(s).",
+      "affected_rows_count": 2,
+      "affected_rows_sample": [
+        {
+          "_row_index": 0,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        },
+        {
+          "_row_index": 20,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        }
+      ],
+      "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
+      "created_at": "2026-07-13T17:46:57.911972Z"
+    },
+    {
+      "id": "0b2b10e0-af6c-468a-aac7-cf204269007b",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "cnpj",
+      "issue_type": "duplicate_id",
+      "dimension": "uniqueness",
+      "severity": "critical",
+      "message": "Possível chave 'cnpj' com 3 valor(es) duplicado(s).",
+      "affected_rows_count": 3,
+      "affected_rows_sample": [
+        {
+          "_row_index": 0,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        },
+        {
+          "_row_index": 12,
+          "id_contrato": "CTR-2024-013",
+          "orgao": "Ministério da Educação",
+          "fornecedor": "Livros Educacionais",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "340000.00",
+          "data_inicio": "2024-03-20",
+          "data_fim": "2024-12-20",
+          "modalidade": "Pregão Eletrônico"
+        },
+        {
+          "_row_index": 20,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        }
+      ],
+      "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
+      "created_at": "2026-07-13T17:46:57.913974Z"
+    },
+    {
+      "id": "80289208-ae74-4a46-ba9e-08fa5e433e1e",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "modalidade",
+      "issue_type": "duplicate_id",
+      "dimension": "uniqueness",
+      "severity": "critical",
+      "message": "Possível chave 'modalidade' com 24 valor(es) duplicado(s).",
+      "affected_rows_count": 24,
+      "affected_rows_sample": [
+        {
+          "_row_index": 0,
+          "id_contrato": "CTR-2024-001",
+          "orgao": "Prefeitura de São Paulo",
+          "fornecedor": "Tech Solutions Ltda",
+          "cnpj": "12.345.678/0001-90",
+          "valor_contrato": "150000.00",
+          "data_inicio": "2024-01-10",
+          "data_fim": "2024-12-31",
+          "modalidade": "Pregão Eletrônico"
+        },
+        {
+          "_row_index": 1,
+          "id_contrato": "CTR-2024-002",
+          "orgao": "Secretaria de Educação RJ",
+          "fornecedor": "Papelaria Brasil SA",
+          "cnpj": "98.765.432/0001-10",
+          "valor_contrato": "45000.50",
+          "data_inicio": "2024-02-01",
+          "data_fim": "2024-08-31",
+          "modalidade": "Dispensa"
+        },
+        {
+          "_row_index": 2,
+          "id_contrato": "CTR-2024-003",
+          "orgao": "Ministério da Saúde",
+          "fornecedor": "Medicamentos Unidos",
+          "cnpj": "11.222.333/0001-44",
+          "valor_contrato": "980000.00",
+          "data_inicio": "2024-03-15",
+          "data_fim": "2025-03-14",
+          "modalidade": "Concorrência"
+        },
+        {
+          "_row_index": 3,
+          "id_contrato": "CTR-2024-004",
+          "orgao": "Prefeitura de Belo Horizonte",
+          "fornecedor": "Construtora Alfa",
+          "cnpj": "22.333.444/0001-55",
+          "valor_contrato": "2500000.00",
+          "data_inicio": "2024-01-20",
+          "data_fim": "2024-11-30",
+          "modalidade": "Tomada de Preços"
+        },
+        {
+          "_row_index": 4,
+          "id_contrato": "CTR-2024-005",
+          "orgao": "Secretaria de Obras SP",
+          "fornecedor": "Asfalto Rápido ME",
+          "cnpj": "33.444.555/0001-66",
+          "valor_contrato": "320000.00",
+          "data_inicio": "2024-04-01",
+          "data_fim": "2024-09-30",
+          "modalidade": "Pregão Eletrônico"
+        }
+      ],
+      "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
+      "created_at": "2026-07-13T17:46:57.915971Z"
+    },
+    {
+      "id": "45b81b56-5883-4bfa-b6e8-6a77aff4ced2",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "valor_contrato",
+      "issue_type": "negative_quantity",
+      "dimension": "validity",
+      "severity": "high",
+      "message": "A coluna 'valor_contrato' tem 1 valor(es) negativo(s) suspeito(s).",
+      "affected_rows_count": 1,
+      "affected_rows_sample": [
+        {
+          "_row_index": 15,
+          "id_contrato": "CTR-2024-016",
+          "orgao": "Prefeitura de Porto Alegre",
+          "fornecedor": "Software Gov",
+          "cnpj": "43.543.654/0001-77",
+          "valor_contrato": "-50000.00",
+          "data_inicio": "2024-02-01",
+          "data_fim": "2024-08-01",
+          "modalidade": "Pregão Eletrônico"
+        }
+      ],
+      "recommendation": "Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.",
+      "created_at": "2026-07-13T17:46:57.972349Z"
+    },
+    {
+      "id": "04466242-4c71-4ac6-b075-08d405abaf15",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "cnpj",
+      "issue_type": "invalid_cnpj",
+      "dimension": "validity",
+      "severity": "high",
+      "message": "A coluna 'cnpj' tem 1 CNPJ(s) com formato inválido.",
+      "affected_rows_count": 1,
+      "affected_rows_sample": [
+        {
+          "_row_index": 17,
+          "id_contrato": "CTR-2024-018",
+          "orgao": "Secretaria de Esporte SC",
+          "fornecedor": "Esportes Total",
+          "cnpj": "INVALIDO",
+          "valor_contrato": "95000.00",
+          "data_inicio": "2024-03-10",
+          "data_fim": "2024-09-10",
+          "modalidade": "Dispensa"
+        }
+      ],
+      "recommendation": "Armazene CNPJ com 14 dígitos e valide dígitos verificadores quando possível.",
+      "created_at": "2026-07-13T17:46:57.974354Z"
+    },
+    {
+      "id": "f4dc5803-7ade-4e08-8b32-24ea2e4b61a7",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "modalidade",
+      "issue_type": "inconsistent_category",
+      "dimension": "consistency",
+      "severity": "warning",
+      "message": "A coluna 'modalidade' tem categorias com variação de caixa/acento (3 variantes em 1 grupo(s)). Exemplos: [['PREGAO ELETRONICO', 'Pregão Eletrônico', 'pregão eletrônico']].",
+      "affected_rows_count": 11,
+      "affected_rows_sample": [],
+      "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
+      "created_at": "2026-07-13T17:46:57.980861Z"
+    },
+    {
+      "id": "a47aa3c9-ba65-429b-bab7-99f91fd6bdd7",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "data_fim",
+      "issue_type": "date_order_violation",
+      "dimension": "consistency",
+      "severity": "high",
+      "message": "Há 2 registro(s) com 'data_fim' anterior a 'data_inicio'.",
+      "affected_rows_count": 2,
+      "affected_rows_sample": [
+        {
+          "_row_index": 16,
+          "id_contrato": "CTR-2024-017",
+          "orgao": "Prefeitura de Goiânia",
+          "fornecedor": "Obras Rápidas",
+          "cnpj": "54.654.765/0001-88",
+          "valor_contrato": "780000.00",
+          "data_inicio": "2024-08-01",
+          "data_fim": "2024-03-01",
+          "modalidade": "Concorrência"
+        },
+        {
+          "_row_index": 25,
+          "id_contrato": "CTR-2024-025",
+          "orgao": "Prefeitura de João Pessoa",
+          "fornecedor": "TI Paraíba",
+          "cnpj": "29.321.432/0001-55",
+          "valor_contrato": "134000.00",
+          "data_inicio": "2024-07-01",
+          "data_fim": "2024-01-01",
+          "modalidade": "Pregão Eletrônico"
+        }
+      ],
+      "recommendation": "Corrija a ordem temporal ou revise o cadastro da vigência.",
+      "created_at": "2026-07-13T17:46:58.055590Z"
+    }
+  ],
+  "data_dictionary": [
+    {
+      "id": "924d06a6-7605-4ca1-941a-b6a9cd9eb344",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "id_contrato",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Identificador do contrato.",
+      "example_values": [
+        "CTR-2024-001",
+        "CTR-2024-002",
+        "CTR-2024-003"
+      ],
+      "quality_notes": "Issues: duplicate_id"
+    },
+    {
+      "id": "4caef736-6fcc-4e06-8303-a7f5095e4176",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "orgao",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Órgão contratante.",
+      "example_values": [
+        "Prefeitura de São Paulo",
+        "Secretaria de Educação RJ",
+        "Ministério da Saúde"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "0934a72c-4e45-43dc-aa91-58aabec8c82f",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "fornecedor",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Razão social do fornecedor.",
+      "example_values": [
+        "Tech Solutions Ltda",
+        "Papelaria Brasil SA",
+        "Medicamentos Unidos"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "15cef538-0bce-4238-954a-74379caa7de7",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "cnpj",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "CNPJ do fornecedor.",
+      "example_values": [
+        "12.345.678/0001-90",
+        "98.765.432/0001-10",
+        "11.222.333/0001-44"
+      ],
+      "quality_notes": "Issues: duplicate_id, invalid_cnpj"
+    },
+    {
+      "id": "729b8c22-ba13-43a3-bba7-94afcd52398e",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "valor_contrato",
+      "inferred_type": "number",
+      "nullable": false,
+      "description_suggestion": "Valor contratado em reais.",
+      "example_values": [
+        "150000.00",
+        "45000.50",
+        "980000.00"
+      ],
+      "quality_notes": "Issues: negative_quantity"
+    },
+    {
+      "id": "d627eb63-ce08-45cb-84cd-d8559558071d",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "data_inicio",
+      "inferred_type": "date",
+      "nullable": false,
+      "description_suggestion": "Data de início da vigência.",
+      "example_values": [
+        "2024-01-10",
+        "2024-02-01",
+        "2024-03-15"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "9f0cc2a5-9fb8-45db-92a3-b22ca4e25fc4",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "data_fim",
+      "inferred_type": "date",
+      "nullable": false,
+      "description_suggestion": "Data de fim da vigência.",
+      "example_values": [
+        "2024-12-31",
+        "2024-08-31",
+        "2025-03-14"
+      ],
+      "quality_notes": "Issues: date_order_violation"
+    },
+    {
+      "id": "505719eb-5cd4-40cd-91ff-b734abb47ac0",
+      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "column_name": "modalidade",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Modalidade de licitação/contratação.",
+      "example_values": [
+        "Pregão Eletrônico",
+        "Dispensa",
+        "Concorrência"
+      ],
+      "quality_notes": "Issues: duplicate_id, inconsistent_category"
+    }
+  ],
+  "report_markdown": "# Relatório de Qualidade — Contratos públicos (demo)\n\n- **Arquivo:** `contratos_demo.csv`\n- **Data da auditoria:** 2026-07-13T17:46:57.817932+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 78.72/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 26.0 |\n| Validade | 84.0 |\n| Consistência | 87.6 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `modalidade` (uniqueness) — Possível chave 'modalidade' com 24 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[critical]** `duplicate_id` em `cnpj` (uniqueness) — Possível chave 'cnpj' com 3 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n3. **[critical]** `duplicate_id` em `id_contrato` (uniqueness) — Possível chave 'id_contrato' com 2 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n4. **[high]** `duplicate_rows` em `—` (uniqueness) — Há 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomendação: Deduplique com chave de negócio ou remova cópias exatas.\n5. **[high]** `date_order_violation` em `data_fim` (consistency) — Há 2 registro(s) com 'data_fim' anterior a 'data_inicio'.\n   - Recomendação: Corrija a ordem temporal ou revise o cadastro da vigência.\n6. **[high]** `negative_quantity` em `valor_contrato` (validity) — A coluna 'valor_contrato' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n7. **[high]** `invalid_cnpj` em `cnpj` (validity) — A coluna 'cnpj' tem 1 CNPJ(s) com formato inválido.\n   - Recomendação: Armazene CNPJ com 14 dígitos e valide dígitos verificadores quando possível.\n8. **[warning]** `inconsistent_category` em `modalidade` (consistency) — A coluna 'modalidade' tem categorias com variação de caixa/acento (3 variantes em 1 grupo(s)). Exemplos: [['PREGAO ELETRONICO', 'Pregão Eletrônico', 'pregão eletrônico']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `cnpj`: 2 issue(s)\n- `modalidade`: 2 issue(s)\n- `id_contrato`: 1 issue(s)\n- `valor_contrato`: 1 issue(s)\n- `data_fim`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `id_contrato` | string | não | Identificador do contrato. |\n| `orgao` | string | não | Órgão contratante. |\n| `fornecedor` | string | não | Razão social do fornecedor. |\n| `cnpj` | string | não | CNPJ do fornecedor. |\n| `valor_contrato` | number | não | Valor contratado em reais. |\n| `data_inicio` | date | não | Data de início da vigência. |\n| `data_fim` | date | não | Data de fim da vigência. |\n| `modalidade` | string | não | Modalidade de licitação/contratação. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "datapackage": {
+    "name": "contratos-públicos-(demo)",
+    "title": "Contratos públicos (demo)",
+    "description": "Descriptor gerado automaticamente pela auditoria 58c0dc3c-f873-49ce-aea3-6f6443ec8231. Revise tipos e descrições antes de publicar.",
+    "profile": "tabular-data-package",
+    "resources": [
+      {
+        "name": "contratos-públicos-(demo)",
+        "path": "contratos_demo.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+          "fields": [
+            {
+              "name": "id_contrato",
+              "type": "string",
+              "description": "Identificador do contrato.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "CTR-2024-001",
+                "CTR-2024-002",
+                "CTR-2024-003"
+              ]
+            },
+            {
+              "name": "orgao",
+              "type": "string",
+              "description": "Órgão contratante.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Prefeitura de São Paulo",
+                "Secretaria de Educação RJ",
+                "Ministério da Saúde"
+              ]
+            },
+            {
+              "name": "fornecedor",
+              "type": "string",
+              "description": "Razão social do fornecedor.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Tech Solutions Ltda",
+                "Papelaria Brasil SA",
+                "Medicamentos Unidos"
+              ]
+            },
+            {
+              "name": "cnpj",
+              "type": "string",
+              "description": "CNPJ do fornecedor.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "12.345.678/0001-90",
+                "98.765.432/0001-10",
+                "11.222.333/0001-44"
+              ]
+            },
+            {
+              "name": "valor_contrato",
+              "type": "number",
+              "description": "Valor contratado em reais.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "150000.00",
+                "45000.50",
+                "980000.00"
+              ]
+            },
+            {
+              "name": "data_inicio",
+              "type": "date",
+              "description": "Data de início da vigência.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "2024-01-10",
+                "2024-02-01",
+                "2024-03-15"
+              ]
+            },
+            {
+              "name": "data_fim",
+              "type": "date",
+              "description": "Data de fim da vigência.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "2024-12-31",
+                "2024-08-31",
+                "2025-03-14"
+              ]
+            },
+            {
+              "name": "modalidade",
+              "type": "string",
+              "description": "Modalidade de licitação/contratação.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Pregão Eletrônico",
+                "Dispensa",
+                "Concorrência"
+              ]
+            }
+          ]
+        },
+        "dialect": {
+          "delimiter": ",",
+          "header": true
+        }
+      }
+    ],
+    "licenses": [
+      {
+        "name": "UNKNOWN",
+        "title": "Licença não informada no MVP",
+        "path": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Public Data Quality Auditor BR",
+        "role": "author"
+      }
+    ]
+  }
+}

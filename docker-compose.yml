@@ -1,3 +1,6 @@
+# Lab profile (web only) vs full stack notes:
+# - Public Vercel demo deploys apps/web with embedded snapshots (no API).
+# - Full local stack: set NEXT_PUBLIC_USE_API=true at web *build* time and point API_URL to the API.
 services:
   api:
     build:
@@ -13,13 +16,15 @@ services:
       - PROJECT_ROOT=/workspace
       - DEMO_DIR=/workspace/data/demo
       - AUDIT_OUTPUT_DIR=/workspace/data/audit_outputs
+      - CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
   web:
     build:
       context: ./apps/web
       dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=http://localhost:8000
+        # Leave USE_API unset for lab-like container; rebuild with true for full stack.
     ports:
       - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:8000
     depends_on:
       - api
