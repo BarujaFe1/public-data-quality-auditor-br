@@ -28,6 +28,7 @@ export default function HomePage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/audit"
+              data-testid="cta-run-demo"
               className="rounded-full bg-forest px-6 py-3 text-paper shadow-soft hover:bg-ink transition-colors"
             >
               Rodar demo
