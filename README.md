@@ -17,7 +17,7 @@
   </p>
 
   <p>
-    <a href="https://public-data-quality-auditor-br.vercel.app">
+    <a href="https://public-data-quality-auditor-br-nu.vercel.app">
       <img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
     </a>
     <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs" />
@@ -29,7 +29,8 @@
   </p>
 </div>
 
-<p align="center"><strong>Live demo:</strong> <a href="https://public-data-quality-auditor-br.vercel.app">https://public-data-quality-auditor-br.vercel.app</a> · Lab / portfolio (snapshots sintéticos)</p>
+<p align="center"><strong>Live demo (atual):</strong> <a href="https://public-data-quality-auditor-br-nu.vercel.app">https://public-data-quality-auditor-br-nu.vercel.app</a> · Lab / portfolio (snapshots + amostra IBGE)</p>
+<p align="center"><em>Nota:</em> a URL antiga <code>public-data-quality-auditor-br.vercel.app</code> pode ainda servir um build pré-quality-pass até a migração de domínio.</p>
 
 <p align="center">
   <img src="./assets/hero-cover.jpg" alt="Public Data Quality Auditor BR product overview" width="100%" />
@@ -112,15 +113,15 @@ O **Public Data Quality Auditor BR** cria uma camada auditável entre o CSV brut
 ## 🧩 Proposta / Analytical Pipeline
 
 ```txt
-CSV Upload / Demo Dataset (municípios, escolas, contratos)
+CSV Upload / Demo Dataset (municípios, escolas, contratos, amostra IBGE)
   ↓
-Parsing (encoding + separador)
+Parsing (encoding + separador best-of)
   ↓
 Schema & type inference
   ↓
 Profiling (nulos, distintos, amostras, min/max)
   ↓
-Quality checks (12+ regras testáveis)
+Quality checks (regras testáveis)
   ↓
 Dimension scores + overall score (0–100)
   ↓
@@ -129,33 +130,36 @@ Issues Register + recommendations
 Data dictionary + Markdown/HTML report + datapackage.json
 ```
 
+Relatório metodológico reproduzível: [docs/reports/methodology_run.md](./docs/reports/methodology_run.md) · Proveniência IBGE: [docs/PROVENANCE.md](./docs/PROVENANCE.md).
 ---
 
 ## 📸 Screenshots
 
+Capturas reais da demo lab (2026-07-13). Roteiro: [docs/screenshots/CAPTURE_GUIDE.md](./docs/screenshots/CAPTURE_GUIDE.md).
+
 <table>
   <tr>
     <td width="50%">
-      <img src="./assets/screenshots/01-audit-summary.jpg" alt="Audit Summary" />
+      <img src="./assets/screenshots/01-audit-summary.png" alt="Audit Summary" />
       <br />
-      <sub><strong>Audit Summary</strong> — score geral, dimensões e recomendação executiva.</sub>
+      <sub><strong>Audit Summary</strong> — score 87.4 com 1 critical · 4 high (diagnóstico honesto).</sub>
     </td>
     <td width="50%">
-      <img src="./assets/screenshots/02-issues-register.jpg" alt="Issues Register" />
+      <img src="./assets/screenshots/02-issues-register.png" alt="Issues Register" />
       <br />
       <sub><strong>Issues Register</strong> — severidade, dimensão, amostra de linhas e recomendação.</sub>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="./assets/screenshots/03-column-profile.jpg" alt="Column Profile" />
+      <img src="./assets/screenshots/03-column-profile.png" alt="Column Profile" />
       <br />
-      <sub><strong>Column Profile</strong> — tipo inferido, nulos, distintos, exemplos e warnings.</sub>
+      <sub><strong>Column Profile</strong> — tipo inferido, nulos, distintos, exemplos e faixas.</sub>
     </td>
     <td width="50%">
       <img src="./assets/screenshots/04-data-dictionary.jpg" alt="Data Dictionary" />
       <br />
-      <sub><strong>Data Dictionary</strong> — descrições sugeridas, exemplos e notas de qualidade.</sub>
+      <sub><strong>Data Dictionary</strong> — descrições sugeridas (mockup legado até recaptura PNG).</sub>
     </td>
   </tr>
 </table>
@@ -185,7 +189,7 @@ O dataset demo de municípios é sintético-realista e inclui problemas intencio
 ### 📌 Case Study: Brazilian Municipalities (demo)
 The municipalities demo is synthetic-realistic and intentionally dirty: invalid UF, negative population, invalid dates, duplicated codes, accent variants and an empty row. In a validated local run, the audit processed **32 rows / 6 columns**, produced actionable issues and an overall score of **87.4/100**.
 
-Demos adicionais: **escolas** e **contratos públicos**, com nulos, categorias inconsistentes, CNPJ inválido, valores negativos e datas invertidas.
+Demos adicionais: **escolas**, **contratos públicos** e **IBGE municípios (amostra pública)** com proveniência em `docs/PROVENANCE.md`.
 
 ---
 
@@ -238,19 +242,18 @@ Descrições sugeridas, exemplos, notas de qualidade e descriptor `datapackage.j
 - **Linguagem:** TypeScript
 - **Estilização:** Tailwind CSS
 - **Gráficos:** Recharts
-- **Ícones:** Lucide Icons
 
 ### Backend
 - **API:** FastAPI & Uvicorn (Python 3.12)
 - **Validação:** Pydantic v2
 - **Dados:** Pandas
-- **Testes:** Pytest + httpx / TestClient
+- **Testes:** Pytest + httpx / TestClient · Playwright (E2E lab)
 
 ### Dados & Ops
-- CSVs demo em `data/demo/`
+- CSVs demo em `data/demo/` + amostra pública em `data/public/`
 - Outputs de auditoria em `data/audit_outputs/`
-- `docker-compose.yml` opcional
-
+- CI GitHub Actions · `docker-compose.yml` opcional
+- Deploy lab: Vercel (`apps/web`, snapshots embutidos)
 ---
 
 ## 🧱 Arquitetura / Architecture
@@ -319,9 +322,11 @@ Dashboard / Markdown-HTML report / datapackage.json
 
 ### Live demo (one-click)
 
-**https://public-data-quality-auditor-br.vercel.app**
+**https://public-data-quality-auditor-br-nu.vercel.app**
 
-Demo pública no padrão DataOps Control Tower: frontend Next.js com **snapshots pré-computados** dos demos (municípios / escolas / contratos). Sem FastAPI no Vercel. Banner **Lab / portfolio demo**. Upload CSV fica para a stack local.
+Demo pública no padrão lab: frontend Next.js com **snapshots pré-computados** (municípios / escolas / contratos / amostra IBGE). Sem FastAPI no Vercel. Banner **Lab / portfolio demo**. Upload CSV fica para a stack local.
+
+> A URL `public-data-quality-auditor-br.vercel.app` (projeto em outra conta/time) pode estar **desatualizada**. Use a URL `-nu` acima até consolidar o domínio.
 
 ### Pré-requisitos (local)
 - **Node.js** 20+ (testado com 24)
@@ -371,10 +376,21 @@ docker compose up --build
 ```bash
 cd apps/api
 .venv\Scripts\python -m pytest tests -q
+
+cd ../web
+npx tsc --noEmit
+npm run build
+npm run test:e2e
 ```
 
-Cobertura do MVP inclui: nulos, coluna vazia, duplicatas, ID duplicado, data/número inválidos, categoria inconsistente, scores, dicionário, relatório, datapackage e fluxo de API (demo + upload).
+Regenerar snapshots / relatório:
 
+```bash
+apps/api/.venv/Scripts/python scripts/refresh_lab_snapshots.py
+apps/api/.venv/Scripts/python scripts/generate_methodology_report.py
+```
+
+Cobertura do MVP inclui: nulos, coluna vazia, duplicatas, ID duplicado, data/número inválidos, categoria inconsistente, scores, dicionário, relatório, datapackage, fluxo de API (demo + upload), regressões de encoding/delimiter e E2E do caminho lab.
 ---
 
 ## 📊 Metodologia de Qualidade / Quality Methodology
@@ -389,11 +405,14 @@ Cobertura do MVP inclui: nulos, coluna vazia, duplicatas, ID duplicado, data/nú
 
 Documentação completa:
 - [docs/methodology.md](./docs/methodology.md)
+- [docs/reports/methodology_run.md](./docs/reports/methodology_run.md) (saída reproduzível)
+- [docs/PROVENANCE.md](./docs/PROVENANCE.md)
 - [docs/quality-dimensions.md](./docs/quality-dimensions.md)
 - [docs/data-package-notes.md](./docs/data-package-notes.md)
 - [docs/limitations.md](./docs/limitations.md)
 - [docs/public-data-sources.md](./docs/public-data-sources.md)
-
+- [docs/PORTFOLIO_HANDOFF.md](./docs/PORTFOLIO_HANDOFF.md)
+- [docs/DEMO_SCRIPT.md](./docs/DEMO_SCRIPT.md)
 ---
 
 ## 🛡️ Limitações e responsabilidade
@@ -403,17 +422,16 @@ Documentação completa:
 * CNPJ validado por formato (14 dígitos), não por algoritmo completo.
 * Limites do MVP: 5 MB e 50 mil linhas.
 * Sem autenticação, crawler ou correção automática irreversível.
-* Fontes públicas reais são opcionais; demos locais bastam.
+* Fontes: demos sintéticos + amostra pública IBGE documentada (não é dump completo).
 
 ---
 
 ## 🧭 Roadmap do Produto
 
-* **MVP atual:** demo + upload, profiling, checks, score, issues, dicionário, relatório, datapackage, testes e docs.
-* **Próximo:** histórico SQLite e comparação de versões (score delta).
+* **MVP atual:** demo lab + full-stack local, profiling, checks, score, issues, dicionário, relatório, datapackage, testes, E2E, docs.
+* **Próximo:** consolidar domínio Vercel canônico; histórico SQLite e comparação de versões (score delta).
 * **Depois:** validadores BR mais fortes (CNPJ/CPF/IBGE), CLI (`pdqa audit arquivo.csv`), export PDF.
 * **Escala:** persistência relacional, filas e suporte a XLSX/Parquet.
-
 ---
 
 ## 💼 Valor para Portfólio / Portfolio Value
@@ -425,19 +443,18 @@ Demonstra competências de:
 - **Frontend Analítico** — Next.js + Recharts + tabelas de auditoria
 - **Responsabilidade metodológica** — limitações explícitas e handoff de portfólio
 
-Roteiro de apresentação: [HANDOFF_PORTFOLIO.md](./HANDOFF_PORTFOLIO.md)
+Roteiro de apresentação: [docs/DEMO_SCRIPT.md](./docs/DEMO_SCRIPT.md) · Handoff: [docs/PORTFOLIO_HANDOFF.md](./docs/PORTFOLIO_HANDOFF.md)
 
 ---
 
 ## 📌 Status atual
 
-- **MVP portfolio-ready** com demo pública (lab/snapshots) em Vercel
+- **Lab/MVP portfolio-ready** com demo pública atualizada (snapshots UTF-8 + amostra IBGE)
 - Motor FastAPI + UI Next.js; upload CSV no modo full-stack local
-- CI: pytest + typecheck + `next build`
+- CI: pytest + typecheck + `next build` + Playwright E2E
 - Score: **diagnóstico explicável**, não certificação
 
-Live: https://public-data-quality-auditor-br.vercel.app
-
+Live (canônica): https://public-data-quality-auditor-br-nu.vercel.app
 ---
 
 ## 💼 O que este projeto demonstra
