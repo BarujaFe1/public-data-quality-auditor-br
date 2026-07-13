@@ -1,1 +1,809 @@
-{"id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","dataset_name":"Escolas BR (demo)","uploaded_filename":"escolas_demo.csv","row_count":26,"column_count":8,"overall_score":82.44,"completeness_score":100.0,"uniqueness_score":77.0,"validity_score":68.0,"consistency_score":75.2,"documentation_score":100.0,"created_at":"2026-07-09T18:53:38.075803Z","status":"completed","executive_recommendation":"A base ├® utiliz├ível com ressalvas. Priorize corre├º├úo de issues de severidade alta/cr├¡tica e normalize categorias e datas antes de an├ílises sens├¡veis.","columns":[{"id":"cf0882ae-d159-4316-8067-0c2b92d4fe6a","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"id_escola","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":25,"distinct_rate":0.9615,"sample_values":["ESC001","ESC002","ESC003","ESC004","ESC005"],"min_value":null,"max_value":null,"most_common_values":[{"value":"ESC002","count":2},{"value":"ESC001","count":1},{"value":"ESC003","count":1},{"value":"ESC004","count":1},{"value":"ESC005","count":1}],"warnings":[]},{"id":"e17112f9-5fae-4707-ba60-9057ca6c557f","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"nome_escola","inferred_type":"string","null_count":1,"null_rate":0.0385,"distinct_count":24,"distinct_rate":0.9231,"sample_values":["Escola Municipal Jo├úo Silva","Col├®gio Estadual Maria Santos","EMEF Centro","Instituto Federal Norte","Escola Particular Horizonte"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Col├®gio Estadual Maria Santos","count":2},{"value":"Escola Municipal Jo├úo Silva","count":1},{"value":"EMEF Centro","count":1},{"value":"Instituto Federal Norte","count":1},{"value":"Escola Particular Horizonte","count":1}],"warnings":[]},{"id":"27350397-a7ad-4645-b360-7ebe9bc58526","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"municipio","inferred_type":"string","null_count":2,"null_rate":0.0769,"distinct_count":23,"distinct_rate":0.8846,"sample_values":["S├úo Paulo","Rio de Janeiro","Belo Horizonte","Manaus","Curitiba"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Rio de Janeiro","count":2},{"value":"S├úo Paulo","count":1},{"value":"Belo Horizonte","count":1},{"value":"Manaus","count":1},{"value":"Curitiba","count":1}],"warnings":[]},{"id":"60537d1a-6d17-4f6a-94aa-9fc7491f7777","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"uf","inferred_type":"category","null_count":0,"null_rate":0.0,"distinct_count":22,"distinct_rate":0.8462,"sample_values":["SP","RJ","MG","AM","PR"],"min_value":null,"max_value":null,"most_common_values":[{"value":"SP","count":4},{"value":"RJ","count":2},{"value":"MG","count":1},{"value":"AM","count":1},{"value":"PR","count":1}],"warnings":[]},{"id":"7ca1931a-4662-47d5-8820-ee983747860c","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"rede","inferred_type":"string","null_count":0,"null_rate":0.0,"distinct_count":6,"distinct_rate":0.2308,"sample_values":["Municipal","Estadual","municipal","Federal","Privada"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Municipal","count":10},{"value":"Estadual","count":7},{"value":"Privada","count":4},{"value":"Federal","count":3},{"value":"municipal","count":1}],"warnings":[]},{"id":"0baa67d8-d4df-4906-9010-fb70e5f3c7ee","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"alunos_matriculados","inferred_type":"integer","null_count":1,"null_rate":0.0385,"distinct_count":23,"distinct_rate":0.8846,"sample_values":["450","820","320","1100","280"],"min_value":-50.0,"max_value":1100.0,"most_common_values":[{"value":"820","count":2},{"value":"410","count":2},{"value":"450","count":1},{"value":"1100","count":1},{"value":"280","count":1}],"warnings":[]},{"id":"f15f0b68-e98f-4d3c-870e-cd9874583084","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"etapa_ensino","inferred_type":"category","null_count":0,"null_rate":0.0,"distinct_count":5,"distinct_rate":0.1923,"sample_values":["Fundamental","M├®dio","Fundamental","T├®cnico","Fundamental"],"min_value":null,"max_value":null,"most_common_values":[{"value":"Fundamental","count":13},{"value":"M├®dio","count":6},{"value":"T├®cnico","count":5},{"value":"fundamental","count":1},{"value":"m├®dio","count":1}],"warnings":[]},{"id":"07705a4f-9bf1-4423-9564-7750b6117b6d","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"data_censo","inferred_type":"date","null_count":0,"null_rate":0.0,"distinct_count":2,"distinct_rate":0.0769,"sample_values":["2023-05-01","2023-05-01","2023-05-01","2023-05-01","2023-05-01"],"min_value":"2023-05-01T00:00:00","max_value":"2023-05-01T00:00:00","most_common_values":[{"value":"2023-05-01","count":25},{"value":"2023-13-99","count":1}],"warnings":[]}],"issues":[{"id":"3cad2e94-bbf8-47bb-b804-095074b1b249","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":null,"issue_type":"duplicate_rows","dimension":"uniqueness","severity":"high","message":"H├í 2 linha(s) envolvida(s) em duplicidade completa.","affected_rows_count":2,"affected_rows_sample":[{"_row_index":1,"id_escola":"ESC002","nome_escola":"Col├®gio Estadual Maria Santos","municipio":"Rio de Janeiro","uf":"RJ","rede":"Estadual","alunos_matriculados":"820","etapa_ensino":"M├®dio","data_censo":"2023-05-01"},{"_row_index":15,"id_escola":"ESC002","nome_escola":"Col├®gio Estadual Maria Santos","municipio":"Rio de Janeiro","uf":"RJ","rede":"Estadual","alunos_matriculados":"820","etapa_ensino":"M├®dio","data_censo":"2023-05-01"}],"recommendation":"Deduplique com chave de neg├│cio ou remova c├│pias exatas.","created_at":"2026-07-09T18:53:38.365094Z"},{"id":"83f79a7a-0ede-4b3c-b012-66071a57b028","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"id_escola","issue_type":"duplicate_id","dimension":"uniqueness","severity":"critical","message":"Poss├¡vel chave 'id_escola' com 2 valor(es) duplicado(s).","affected_rows_count":2,"affected_rows_sample":[{"_row_index":1,"id_escola":"ESC002","nome_escola":"Col├®gio Estadual Maria Santos","municipio":"Rio de Janeiro","uf":"RJ","rede":"Estadual","alunos_matriculados":"820","etapa_ensino":"M├®dio","data_censo":"2023-05-01"},{"_row_index":15,"id_escola":"ESC002","nome_escola":"Col├®gio Estadual Maria Santos","municipio":"Rio de Janeiro","uf":"RJ","rede":"Estadual","alunos_matriculados":"820","etapa_ensino":"M├®dio","data_censo":"2023-05-01"}],"recommendation":"Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.","created_at":"2026-07-09T18:53:38.372148Z"},{"id":"b94b3c64-33a0-4c2a-91cd-2a7056f9b3d4","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"data_censo","issue_type":"invalid_date","dimension":"validity","severity":"high","message":"A coluna 'data_censo' tem 1 data(s) inv├ílida(s).","affected_rows_count":1,"affected_rows_sample":[{"_row_index":18,"id_escola":"ESC018","nome_escola":"Escola Municipal Leste","municipio":"Vit├│ria","uf":"ES","rede":"Municipal","alunos_matriculados":"275","etapa_ensino":"Fundamental","data_censo":"2023-13-99"}],"recommendation":"Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores n├úo parse├íveis.","created_at":"2026-07-09T18:53:38.752190Z"},{"id":"6c7b00c2-d060-4250-a918-e8b2b194badb","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"alunos_matriculados","issue_type":"invalid_number","dimension":"validity","severity":"high","message":"A coluna 'alunos_matriculados' tem 1 valor(es) num├®rico(s) inv├ílido(s).","affected_rows_count":1,"affected_rows_sample":[{"_row_index":17,"id_escola":"ESC017","nome_escola":"Col├®gio Futuro","municipio":"Campinas","uf":"SP","rede":"PRIVADA","alunos_matriculados":"abc","etapa_ensino":"M├®dio","data_censo":"2023-05-01"}],"recommendation":"Converta para n├║mero e trate separadores BR (1.234,56) de forma consistente.","created_at":"2026-07-09T18:53:38.775864Z"},{"id":"e67f521d-e6b4-4ba7-84ab-dc2364dfd397","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"alunos_matriculados","issue_type":"negative_quantity","dimension":"validity","severity":"high","message":"A coluna 'alunos_matriculados' tem 1 valor(es) negativo(s) suspeito(s).","affected_rows_count":1,"affected_rows_sample":[{"_row_index":25,"id_escola":"ESC025","nome_escola":null,"municipio":null,"uf":"XX","rede":"Municipal","alunos_matriculados":"-50","etapa_ensino":"Fundamental","data_censo":"2023-05-01"}],"recommendation":"Valide se negativos fazem sentido; para popula├º├úo/valor/quantidade, corrija ou documente.","created_at":"2026-07-09T18:53:38.785934Z"},{"id":"24eebd68-f75a-4f7c-9c5b-ea369c879365","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"uf","issue_type":"invalid_uf","dimension":"validity","severity":"high","message":"A coluna 'uf' tem 1 UF(s) inv├ílida(s).","affected_rows_count":1,"affected_rows_sample":[{"_row_index":25,"id_escola":"ESC025","nome_escola":null,"municipio":null,"uf":"XX","rede":"Municipal","alunos_matriculados":"-50","etapa_ensino":"Fundamental","data_censo":"2023-05-01"}],"recommendation":"Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).","created_at":"2026-07-09T18:53:38.806153Z"},{"id":"91b90fd7-290b-4e1e-91a1-66cc55072f88","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"rede","issue_type":"inconsistent_category","dimension":"consistency","severity":"warning","message":"A coluna 'rede' tem categorias com varia├º├úo de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Municipal', 'municipal'], ['PRIVADA', 'Privada']].","affected_rows_count":16,"affected_rows_sample":[],"recommendation":"Normalize categorias (caixa, acentos) com um dicion├írio can├┤nico.","created_at":"2026-07-09T18:53:38.857630Z"},{"id":"615bd2cf-943a-4f44-8fbd-c8dde1bea60b","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"etapa_ensino","issue_type":"inconsistent_category","dimension":"consistency","severity":"warning","message":"A coluna 'etapa_ensino' tem categorias com varia├º├úo de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Fundamental', 'fundamental'], ['M├®dio', 'm├®dio']].","affected_rows_count":21,"affected_rows_sample":[],"recommendation":"Normalize categorias (caixa, acentos) com um dicion├írio can├┤nico.","created_at":"2026-07-09T18:53:38.887164Z"},{"id":"2aab6205-8ec2-4d02-a0ef-49251d67f5cc","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"alunos_matriculados","issue_type":"mixed_types","dimension":"consistency","severity":"warning","message":"A coluna 'alunos_matriculados' parece misturar tipos (n├║meros e texto).","affected_rows_count":25,"affected_rows_sample":[],"recommendation":"Separe tipos ou force convers├úo com tratamento de erros.","created_at":"2026-07-09T18:53:38.943833Z"}],"data_dictionary":[{"id":"b81be120-6cd3-493c-8c70-fff3fb2b3f62","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"id_escola","inferred_type":"string","nullable":false,"description_suggestion":"Identificador da escola.","example_values":["ESC001","ESC002","ESC003"],"quality_notes":"Issues: duplicate_id"},{"id":"30dafa9b-705a-4198-b223-9a0d46502438","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"nome_escola","inferred_type":"string","nullable":true,"description_suggestion":"Nome da unidade escolar.","example_values":["Escola Municipal Jo├úo Silva","Col├®gio Estadual Maria Santos","EMEF Centro"],"quality_notes":""},{"id":"1b3460de-1916-4e39-87b6-34d4ed40d9fb","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"municipio","inferred_type":"string","nullable":true,"description_suggestion":"Nome do munic├¡pio.","example_values":["S├úo Paulo","Rio de Janeiro","Belo Horizonte"],"quality_notes":""},{"id":"f6f57afe-8bcf-4914-8c17-303afc3e1b97","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"uf","inferred_type":"category","nullable":false,"description_suggestion":"Sigla da Unidade Federativa.","example_values":["SP","RJ","MG"],"quality_notes":"Issues: invalid_uf"},{"id":"567c1dbc-dd02-4046-a6cb-12cdd90f8865","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"rede","inferred_type":"string","nullable":false,"description_suggestion":"Rede de ensino (Municipal, Estadual, Federal, Privada).","example_values":["Municipal","Estadual","municipal"],"quality_notes":"Issues: inconsistent_category"},{"id":"075f40a4-11de-4d67-97b5-a0cfd6292f72","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"alunos_matriculados","inferred_type":"integer","nullable":true,"description_suggestion":"Quantidade de alunos matriculados.","example_values":["450","820","320"],"quality_notes":"Issues: invalid_number, mixed_types, negative_quantity"},{"id":"26545de0-1beb-4c2b-b6e0-56f80249b6cc","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"etapa_ensino","inferred_type":"category","nullable":false,"description_suggestion":"Etapa/modalidade de ensino.","example_values":["Fundamental","M├®dio","Fundamental"],"quality_notes":"Issues: inconsistent_category"},{"id":"ef3806bf-d1d1-4a5b-adf6-981cb38f9656","audit_run_id":"e7c9b6bc-cd35-40e2-aea9-e9d149c935a7","column_name":"data_censo","inferred_type":"date","nullable":false,"description_suggestion":"Data de refer├¬ncia do censo escolar.","example_values":["2023-05-01","2023-05-01","2023-05-01"],"quality_notes":"Issues: invalid_date"}],"report_markdown":"# Relat├│rio de Qualidade ÔÇö Escolas BR (demo)\n\n- **Arquivo:** `escolas_demo.csv`\n- **Data da auditoria:** 2026-07-09T18:53:38.075803+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 82.44/100\n\n## Scores por dimens├úo\n\n| Dimens├úo | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 77.0 |\n| Validade | 68.0 |\n| Consist├¬ncia | 75.2 |\n| Documentabilidade | 100.0 |\n\n## Recomenda├º├úo executiva\n\nA base ├® utiliz├ível com ressalvas. Priorize corre├º├úo de issues de severidade alta/cr├¡tica e normalize categorias e datas antes de an├ílises sens├¡veis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `id_escola` (uniqueness) ÔÇö Poss├¡vel chave 'id_escola' com 2 valor(es) duplicado(s).\n   - Recomenda├º├úo: Garanta unicidade da chave prim├íria ou revise a granularidade do dataset.\n2. **[high]** `duplicate_rows` em `ÔÇö` (uniqueness) ÔÇö H├í 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomenda├º├úo: Deduplique com chave de neg├│cio ou remova c├│pias exatas.\n3. **[high]** `invalid_date` em `data_censo` (validity) ÔÇö A coluna 'data_censo' tem 1 data(s) inv├ílida(s).\n   - Recomenda├º├úo: Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores n├úo parse├íveis.\n4. **[high]** `invalid_number` em `alunos_matriculados` (validity) ÔÇö A coluna 'alunos_matriculados' tem 1 valor(es) num├®rico(s) inv├ílido(s).\n   - Recomenda├º├úo: Converta para n├║mero e trate separadores BR (1.234,56) de forma consistente.\n5. **[high]** `negative_quantity` em `alunos_matriculados` (validity) ÔÇö A coluna 'alunos_matriculados' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomenda├º├úo: Valide se negativos fazem sentido; para popula├º├úo/valor/quantidade, corrija ou documente.\n6. **[high]** `invalid_uf` em `uf` (validity) ÔÇö A coluna 'uf' tem 1 UF(s) inv├ílida(s).\n   - Recomenda├º├úo: Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).\n7. **[warning]** `mixed_types` em `alunos_matriculados` (consistency) ÔÇö A coluna 'alunos_matriculados' parece misturar tipos (n├║meros e texto).\n   - Recomenda├º├úo: Separe tipos ou force convers├úo com tratamento de erros.\n8. **[warning]** `inconsistent_category` em `etapa_ensino` (consistency) ÔÇö A coluna 'etapa_ensino' tem categorias com varia├º├úo de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Fundamental', 'fundamental'], ['M├®dio', 'm├®dio']].\n   - Recomenda├º├úo: Normalize categorias (caixa, acentos) com um dicion├írio can├┤nico.\n9. **[warning]** `inconsistent_category` em `rede` (consistency) ÔÇö A coluna 'rede' tem categorias com varia├º├úo de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Municipal', 'municipal'], ['PRIVADA', 'Privada']].\n   - Recomenda├º├úo: Normalize categorias (caixa, acentos) com um dicion├írio can├┤nico.\n\n## Colunas mais problem├íticas\n\n- `alunos_matriculados`: 3 issue(s)\n- `id_escola`: 1 issue(s)\n- `data_censo`: 1 issue(s)\n- `uf`: 1 issue(s)\n- `rede`: 1 issue(s)\n- `etapa_ensino`: 1 issue(s)\n\n## Recomenda├º├Áes gerais\n\n1. Trate issues cr├¡ticos e de alta severidade antes de an├ílises p├║blicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicion├írio de dados revisado por um humano.\n4. Documente licen├ºa, frequ├¬ncia de atualiza├º├úo e origem.\n5. Reexecute a auditoria ap├│s limpeza.\n\n## Dicion├írio resumido\n\n| Coluna | Tipo | Nullable | Descri├º├úo sugerida |\n|---|---|---|---|\n| `id_escola` | string | n├úo | Identificador da escola. |\n| `nome_escola` | string | sim | Nome da unidade escolar. |\n| `municipio` | string | sim | Nome do munic├¡pio. |\n| `uf` | category | n├úo | Sigla da Unidade Federativa. |\n| `rede` | string | n├úo | Rede de ensino (Municipal, Estadual, Federal, Privada). |\n| `alunos_matriculados` | integer | sim | Quantidade de alunos matriculados. |\n| `etapa_ensino` | category | n├úo | Etapa/modalidade de ensino. |\n| `data_censo` | date | n├úo | Data de refer├¬ncia do censo escolar. |\n\n## Limita├º├Áes\n\n- O score ├® **diagn├│stico**, n├úo certifica├º├úo absoluta.\n- A auditoria **n├úo valida a verdade factual** dos dados.\n- Checks s├úo heur├¡sticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Pr├│ximos passos\n\n1. Exportar este relat├│rio e o `datapackage.json`.\n2. Corrigir issues priorit├írios na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n","datapackage":{"name":"escolas-br-(demo)","title":"Escolas BR (demo)","description":"Descriptor gerado automaticamente pela auditoria e7c9b6bc-cd35-40e2-aea9-e9d149c935a7. Revise tipos e descri├º├Áes antes de publicar.","profile":"tabular-data-package","resources":[{"name":"escolas-br-(demo)","path":"escolas_demo.csv","format":"csv","mediatype":"text/csv","schema":{"fields":[{"name":"id_escola","type":"string","description":"Identificador da escola.","constraints":{"required":true},"examples":["ESC001","ESC002","ESC003"]},{"name":"nome_escola","type":"string","description":"Nome da unidade escolar.","constraints":{"required":false},"examples":["Escola Municipal Jo├úo Silva","Col├®gio Estadual Maria Santos","EMEF Centro"]},{"name":"municipio","type":"string","description":"Nome do munic├¡pio.","constraints":{"required":false},"examples":["S├úo Paulo","Rio de Janeiro","Belo Horizonte"]},{"name":"uf","type":"string","description":"Sigla da Unidade Federativa.","constraints":{"required":true},"examples":["SP","RJ","MG"]},{"name":"rede","type":"string","description":"Rede de ensino (Municipal, Estadual, Federal, Privada).","constraints":{"required":true},"examples":["Municipal","Estadual","municipal"]},{"name":"alunos_matriculados","type":"integer","description":"Quantidade de alunos matriculados.","constraints":{"required":false},"examples":["450","820","320"]},{"name":"etapa_ensino","type":"string","description":"Etapa/modalidade de ensino.","constraints":{"required":true},"examples":["Fundamental","M├®dio","Fundamental"]},{"name":"data_censo","type":"date","description":"Data de refer├¬ncia do censo escolar.","constraints":{"required":true},"examples":["2023-05-01","2023-05-01","2023-05-01"]}]},"dialect":{"delimiter":",","header":true}}],"licenses":[{"name":"UNKNOWN","title":"Licen├ºa n├úo informada no MVP","path":""}],"contributors":[{"title":"Public Data Quality Auditor BR","role":"author"}]}}
+{
+  "id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+  "dataset_name": "Escolas BR (demo)",
+  "uploaded_filename": "escolas_demo.csv",
+  "row_count": 26,
+  "column_count": 8,
+  "overall_score": 82.44,
+  "completeness_score": 100.0,
+  "uniqueness_score": 77.0,
+  "validity_score": 68.0,
+  "consistency_score": 75.2,
+  "documentation_score": 100.0,
+  "created_at": "2026-07-13T17:46:57.635072Z",
+  "status": "completed",
+  "executive_recommendation": "A base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.",
+  "columns": [
+    {
+      "id": "8e3daf2c-31f1-4997-aadd-3945ba574e20",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "id_escola",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 25,
+      "distinct_rate": 0.9615,
+      "sample_values": [
+        "ESC001",
+        "ESC002",
+        "ESC003",
+        "ESC004",
+        "ESC005"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "ESC002",
+          "count": 2
+        },
+        {
+          "value": "ESC001",
+          "count": 1
+        },
+        {
+          "value": "ESC003",
+          "count": 1
+        },
+        {
+          "value": "ESC004",
+          "count": 1
+        },
+        {
+          "value": "ESC005",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "60d96ed9-3cf0-477a-8dcc-13c153bce265",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "nome_escola",
+      "inferred_type": "string",
+      "null_count": 1,
+      "null_rate": 0.0385,
+      "distinct_count": 24,
+      "distinct_rate": 0.9231,
+      "sample_values": [
+        "Escola Municipal João Silva",
+        "Colégio Estadual Maria Santos",
+        "EMEF Centro",
+        "Instituto Federal Norte",
+        "Escola Particular Horizonte"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Colégio Estadual Maria Santos",
+          "count": 2
+        },
+        {
+          "value": "Escola Municipal João Silva",
+          "count": 1
+        },
+        {
+          "value": "EMEF Centro",
+          "count": 1
+        },
+        {
+          "value": "Instituto Federal Norte",
+          "count": 1
+        },
+        {
+          "value": "Escola Particular Horizonte",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "63a295f0-152a-4b8d-923c-a778fbbc9078",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "municipio",
+      "inferred_type": "string",
+      "null_count": 2,
+      "null_rate": 0.0769,
+      "distinct_count": 23,
+      "distinct_rate": 0.8846,
+      "sample_values": [
+        "São Paulo",
+        "Rio de Janeiro",
+        "Belo Horizonte",
+        "Manaus",
+        "Curitiba"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Rio de Janeiro",
+          "count": 2
+        },
+        {
+          "value": "São Paulo",
+          "count": 1
+        },
+        {
+          "value": "Belo Horizonte",
+          "count": 1
+        },
+        {
+          "value": "Manaus",
+          "count": 1
+        },
+        {
+          "value": "Curitiba",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "92d87d5e-0d36-4d7c-887f-226c96d95ecb",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "uf",
+      "inferred_type": "category",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 22,
+      "distinct_rate": 0.8462,
+      "sample_values": [
+        "SP",
+        "RJ",
+        "MG",
+        "AM",
+        "PR"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "SP",
+          "count": 4
+        },
+        {
+          "value": "RJ",
+          "count": 2
+        },
+        {
+          "value": "MG",
+          "count": 1
+        },
+        {
+          "value": "AM",
+          "count": 1
+        },
+        {
+          "value": "PR",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "fb5d2cd0-e515-477b-bd1a-28900dfcdbbc",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "rede",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 6,
+      "distinct_rate": 0.2308,
+      "sample_values": [
+        "Municipal",
+        "Estadual",
+        "municipal",
+        "Federal",
+        "Privada"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Municipal",
+          "count": 10
+        },
+        {
+          "value": "Estadual",
+          "count": 7
+        },
+        {
+          "value": "Privada",
+          "count": 4
+        },
+        {
+          "value": "Federal",
+          "count": 3
+        },
+        {
+          "value": "municipal",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "b83ee547-eb54-4fc8-8e63-31f44cb7c734",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "alunos_matriculados",
+      "inferred_type": "integer",
+      "null_count": 1,
+      "null_rate": 0.0385,
+      "distinct_count": 23,
+      "distinct_rate": 0.8846,
+      "sample_values": [
+        "450",
+        "820",
+        "320",
+        "1100",
+        "280"
+      ],
+      "min_value": -50.0,
+      "max_value": 1100.0,
+      "most_common_values": [
+        {
+          "value": "820",
+          "count": 2
+        },
+        {
+          "value": "410",
+          "count": 2
+        },
+        {
+          "value": "450",
+          "count": 1
+        },
+        {
+          "value": "1100",
+          "count": 1
+        },
+        {
+          "value": "280",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "276868a6-bea0-4972-a196-23c8f47e8051",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "etapa_ensino",
+      "inferred_type": "category",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 5,
+      "distinct_rate": 0.1923,
+      "sample_values": [
+        "Fundamental",
+        "Médio",
+        "Fundamental",
+        "Técnico",
+        "Fundamental"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Fundamental",
+          "count": 13
+        },
+        {
+          "value": "Médio",
+          "count": 6
+        },
+        {
+          "value": "Técnico",
+          "count": 5
+        },
+        {
+          "value": "fundamental",
+          "count": 1
+        },
+        {
+          "value": "médio",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "2b56a0a8-7b80-4a60-b20f-c9aa7220e2e1",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "data_censo",
+      "inferred_type": "date",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 2,
+      "distinct_rate": 0.0769,
+      "sample_values": [
+        "2023-05-01",
+        "2023-05-01",
+        "2023-05-01",
+        "2023-05-01",
+        "2023-05-01"
+      ],
+      "min_value": "2023-05-01T00:00:00",
+      "max_value": "2023-05-01T00:00:00",
+      "most_common_values": [
+        {
+          "value": "2023-05-01",
+          "count": 25
+        },
+        {
+          "value": "2023-13-99",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "issues": [
+    {
+      "id": "fa785ae9-aa85-44d9-b8b4-5ec7bebb8342",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": null,
+      "issue_type": "duplicate_rows",
+      "dimension": "uniqueness",
+      "severity": "high",
+      "message": "Há 2 linha(s) envolvida(s) em duplicidade completa.",
+      "affected_rows_count": 2,
+      "affected_rows_sample": [
+        {
+          "_row_index": 1,
+          "id_escola": "ESC002",
+          "nome_escola": "Colégio Estadual Maria Santos",
+          "municipio": "Rio de Janeiro",
+          "uf": "RJ",
+          "rede": "Estadual",
+          "alunos_matriculados": "820",
+          "etapa_ensino": "Médio",
+          "data_censo": "2023-05-01"
+        },
+        {
+          "_row_index": 15,
+          "id_escola": "ESC002",
+          "nome_escola": "Colégio Estadual Maria Santos",
+          "municipio": "Rio de Janeiro",
+          "uf": "RJ",
+          "rede": "Estadual",
+          "alunos_matriculados": "820",
+          "etapa_ensino": "Médio",
+          "data_censo": "2023-05-01"
+        }
+      ],
+      "recommendation": "Deduplique com chave de negócio ou remova cópias exatas.",
+      "created_at": "2026-07-13T17:46:57.698052Z"
+    },
+    {
+      "id": "f0f985e6-b0af-4e37-81ba-79cc9af91ef6",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "id_escola",
+      "issue_type": "duplicate_id",
+      "dimension": "uniqueness",
+      "severity": "critical",
+      "message": "Possível chave 'id_escola' com 2 valor(es) duplicado(s).",
+      "affected_rows_count": 2,
+      "affected_rows_sample": [
+        {
+          "_row_index": 1,
+          "id_escola": "ESC002",
+          "nome_escola": "Colégio Estadual Maria Santos",
+          "municipio": "Rio de Janeiro",
+          "uf": "RJ",
+          "rede": "Estadual",
+          "alunos_matriculados": "820",
+          "etapa_ensino": "Médio",
+          "data_censo": "2023-05-01"
+        },
+        {
+          "_row_index": 15,
+          "id_escola": "ESC002",
+          "nome_escola": "Colégio Estadual Maria Santos",
+          "municipio": "Rio de Janeiro",
+          "uf": "RJ",
+          "rede": "Estadual",
+          "alunos_matriculados": "820",
+          "etapa_ensino": "Médio",
+          "data_censo": "2023-05-01"
+        }
+      ],
+      "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
+      "created_at": "2026-07-13T17:46:57.698052Z"
+    },
+    {
+      "id": "7e46efaa-dae1-4f38-803c-ec2bb2cd9538",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "data_censo",
+      "issue_type": "invalid_date",
+      "dimension": "validity",
+      "severity": "high",
+      "message": "A coluna 'data_censo' tem 1 data(s) inválida(s).",
+      "affected_rows_count": 1,
+      "affected_rows_sample": [
+        {
+          "_row_index": 18,
+          "id_escola": "ESC018",
+          "nome_escola": "Escola Municipal Leste",
+          "municipio": "Vitória",
+          "uf": "ES",
+          "rede": "Municipal",
+          "alunos_matriculados": "275",
+          "etapa_ensino": "Fundamental",
+          "data_censo": "2023-13-99"
+        }
+      ],
+      "recommendation": "Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.",
+      "created_at": "2026-07-13T17:46:57.730168Z"
+    },
+    {
+      "id": "27da9829-5d37-4733-87ff-e261445afbd7",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "alunos_matriculados",
+      "issue_type": "invalid_number",
+      "dimension": "validity",
+      "severity": "high",
+      "message": "A coluna 'alunos_matriculados' tem 1 valor(es) numérico(s) inválido(s).",
+      "affected_rows_count": 1,
+      "affected_rows_sample": [
+        {
+          "_row_index": 17,
+          "id_escola": "ESC017",
+          "nome_escola": "Colégio Futuro",
+          "municipio": "Campinas",
+          "uf": "SP",
+          "rede": "PRIVADA",
+          "alunos_matriculados": "abc",
+          "etapa_ensino": "Médio",
+          "data_censo": "2023-05-01"
+        }
+      ],
+      "recommendation": "Converta para número e trate separadores BR (1.234,56) de forma consistente.",
+      "created_at": "2026-07-13T17:46:57.731178Z"
+    },
+    {
+      "id": "eb56df3c-b9e3-4f32-b7db-9dc9f7389007",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "alunos_matriculados",
+      "issue_type": "negative_quantity",
+      "dimension": "validity",
+      "severity": "high",
+      "message": "A coluna 'alunos_matriculados' tem 1 valor(es) negativo(s) suspeito(s).",
+      "affected_rows_count": 1,
+      "affected_rows_sample": [
+        {
+          "_row_index": 25,
+          "id_escola": "ESC025",
+          "nome_escola": null,
+          "municipio": null,
+          "uf": "XX",
+          "rede": "Municipal",
+          "alunos_matriculados": "-50",
+          "etapa_ensino": "Fundamental",
+          "data_censo": "2023-05-01"
+        }
+      ],
+      "recommendation": "Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.",
+      "created_at": "2026-07-13T17:46:57.731178Z"
+    },
+    {
+      "id": "7747fb54-aef4-4d7f-b77f-ae3f56dbda8d",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "uf",
+      "issue_type": "invalid_uf",
+      "dimension": "validity",
+      "severity": "high",
+      "message": "A coluna 'uf' tem 1 UF(s) inválida(s).",
+      "affected_rows_count": 1,
+      "affected_rows_sample": [
+        {
+          "_row_index": 25,
+          "id_escola": "ESC025",
+          "nome_escola": null,
+          "municipio": null,
+          "uf": "XX",
+          "rede": "Municipal",
+          "alunos_matriculados": "-50",
+          "etapa_ensino": "Fundamental",
+          "data_censo": "2023-05-01"
+        }
+      ],
+      "recommendation": "Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).",
+      "created_at": "2026-07-13T17:46:57.732185Z"
+    },
+    {
+      "id": "2f9891cb-c439-4cdc-965a-e89d2ea9c4d1",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "rede",
+      "issue_type": "inconsistent_category",
+      "dimension": "consistency",
+      "severity": "warning",
+      "message": "A coluna 'rede' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Municipal', 'municipal'], ['PRIVADA', 'Privada']].",
+      "affected_rows_count": 16,
+      "affected_rows_sample": [],
+      "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
+      "created_at": "2026-07-13T17:46:57.733193Z"
+    },
+    {
+      "id": "716a5b5b-e825-4f65-ba3d-23f62c4142b8",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "etapa_ensino",
+      "issue_type": "inconsistent_category",
+      "dimension": "consistency",
+      "severity": "warning",
+      "message": "A coluna 'etapa_ensino' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Fundamental', 'fundamental'], ['Médio', 'médio']].",
+      "affected_rows_count": 21,
+      "affected_rows_sample": [],
+      "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
+      "created_at": "2026-07-13T17:46:57.735195Z"
+    },
+    {
+      "id": "feae57fd-527d-4a92-9376-f761e8b7aed9",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "alunos_matriculados",
+      "issue_type": "mixed_types",
+      "dimension": "consistency",
+      "severity": "warning",
+      "message": "A coluna 'alunos_matriculados' parece misturar tipos (números e texto).",
+      "affected_rows_count": 25,
+      "affected_rows_sample": [],
+      "recommendation": "Separe tipos ou force conversão com tratamento de erros.",
+      "created_at": "2026-07-13T17:46:57.739236Z"
+    }
+  ],
+  "data_dictionary": [
+    {
+      "id": "9abef9d3-4c75-47ed-b503-0d36018f620c",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "id_escola",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Identificador da escola.",
+      "example_values": [
+        "ESC001",
+        "ESC002",
+        "ESC003"
+      ],
+      "quality_notes": "Issues: duplicate_id"
+    },
+    {
+      "id": "2e5fc2d3-c290-4787-b70e-73eacb725af5",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "nome_escola",
+      "inferred_type": "string",
+      "nullable": true,
+      "description_suggestion": "Nome da unidade escolar.",
+      "example_values": [
+        "Escola Municipal João Silva",
+        "Colégio Estadual Maria Santos",
+        "EMEF Centro"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "d52d812e-190e-4b6c-bb22-c6b0792772a1",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "municipio",
+      "inferred_type": "string",
+      "nullable": true,
+      "description_suggestion": "Nome do município.",
+      "example_values": [
+        "São Paulo",
+        "Rio de Janeiro",
+        "Belo Horizonte"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "9b3de9ec-2d30-4d5a-9536-4ed6181ea3b3",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "uf",
+      "inferred_type": "category",
+      "nullable": false,
+      "description_suggestion": "Sigla da Unidade Federativa.",
+      "example_values": [
+        "SP",
+        "RJ",
+        "MG"
+      ],
+      "quality_notes": "Issues: invalid_uf"
+    },
+    {
+      "id": "53993101-d511-481e-b9ed-d19a12519ace",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "rede",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Rede de ensino (Municipal, Estadual, Federal, Privada).",
+      "example_values": [
+        "Municipal",
+        "Estadual",
+        "municipal"
+      ],
+      "quality_notes": "Issues: inconsistent_category"
+    },
+    {
+      "id": "7ddae9d0-9502-4b5d-ad8d-642abc7943c9",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "alunos_matriculados",
+      "inferred_type": "integer",
+      "nullable": true,
+      "description_suggestion": "Quantidade de alunos matriculados.",
+      "example_values": [
+        "450",
+        "820",
+        "320"
+      ],
+      "quality_notes": "Issues: invalid_number, mixed_types, negative_quantity"
+    },
+    {
+      "id": "409c0c6c-dc83-4ee6-9fea-93346069eddc",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "etapa_ensino",
+      "inferred_type": "category",
+      "nullable": false,
+      "description_suggestion": "Etapa/modalidade de ensino.",
+      "example_values": [
+        "Fundamental",
+        "Médio",
+        "Fundamental"
+      ],
+      "quality_notes": "Issues: inconsistent_category"
+    },
+    {
+      "id": "0119bc5c-cc0a-4f5f-b37a-0598518905a1",
+      "audit_run_id": "53a5c7cd-2124-47bb-9353-2df0245a4995",
+      "column_name": "data_censo",
+      "inferred_type": "date",
+      "nullable": false,
+      "description_suggestion": "Data de referência do censo escolar.",
+      "example_values": [
+        "2023-05-01",
+        "2023-05-01",
+        "2023-05-01"
+      ],
+      "quality_notes": "Issues: invalid_date"
+    }
+  ],
+  "report_markdown": "# Relatório de Qualidade — Escolas BR (demo)\n\n- **Arquivo:** `escolas_demo.csv`\n- **Data da auditoria:** 2026-07-13T17:46:57.635072+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 82.44/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 77.0 |\n| Validade | 68.0 |\n| Consistência | 75.2 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `id_escola` (uniqueness) — Possível chave 'id_escola' com 2 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[high]** `duplicate_rows` em `—` (uniqueness) — Há 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomendação: Deduplique com chave de negócio ou remova cópias exatas.\n3. **[high]** `invalid_date` em `data_censo` (validity) — A coluna 'data_censo' tem 1 data(s) inválida(s).\n   - Recomendação: Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.\n4. **[high]** `invalid_number` em `alunos_matriculados` (validity) — A coluna 'alunos_matriculados' tem 1 valor(es) numérico(s) inválido(s).\n   - Recomendação: Converta para número e trate separadores BR (1.234,56) de forma consistente.\n5. **[high]** `negative_quantity` em `alunos_matriculados` (validity) — A coluna 'alunos_matriculados' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n6. **[high]** `invalid_uf` em `uf` (validity) — A coluna 'uf' tem 1 UF(s) inválida(s).\n   - Recomendação: Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).\n7. **[warning]** `mixed_types` em `alunos_matriculados` (consistency) — A coluna 'alunos_matriculados' parece misturar tipos (números e texto).\n   - Recomendação: Separe tipos ou force conversão com tratamento de erros.\n8. **[warning]** `inconsistent_category` em `etapa_ensino` (consistency) — A coluna 'etapa_ensino' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Fundamental', 'fundamental'], ['Médio', 'médio']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n9. **[warning]** `inconsistent_category` em `rede` (consistency) — A coluna 'rede' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Municipal', 'municipal'], ['PRIVADA', 'Privada']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `alunos_matriculados`: 3 issue(s)\n- `id_escola`: 1 issue(s)\n- `data_censo`: 1 issue(s)\n- `uf`: 1 issue(s)\n- `rede`: 1 issue(s)\n- `etapa_ensino`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `id_escola` | string | não | Identificador da escola. |\n| `nome_escola` | string | sim | Nome da unidade escolar. |\n| `municipio` | string | sim | Nome do município. |\n| `uf` | category | não | Sigla da Unidade Federativa. |\n| `rede` | string | não | Rede de ensino (Municipal, Estadual, Federal, Privada). |\n| `alunos_matriculados` | integer | sim | Quantidade de alunos matriculados. |\n| `etapa_ensino` | category | não | Etapa/modalidade de ensino. |\n| `data_censo` | date | não | Data de referência do censo escolar. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "datapackage": {
+    "name": "escolas-br-(demo)",
+    "title": "Escolas BR (demo)",
+    "description": "Descriptor gerado automaticamente pela auditoria 53a5c7cd-2124-47bb-9353-2df0245a4995. Revise tipos e descrições antes de publicar.",
+    "profile": "tabular-data-package",
+    "resources": [
+      {
+        "name": "escolas-br-(demo)",
+        "path": "escolas_demo.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+          "fields": [
+            {
+              "name": "id_escola",
+              "type": "string",
+              "description": "Identificador da escola.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "ESC001",
+                "ESC002",
+                "ESC003"
+              ]
+            },
+            {
+              "name": "nome_escola",
+              "type": "string",
+              "description": "Nome da unidade escolar.",
+              "constraints": {
+                "required": false
+              },
+              "examples": [
+                "Escola Municipal João Silva",
+                "Colégio Estadual Maria Santos",
+                "EMEF Centro"
+              ]
+            },
+            {
+              "name": "municipio",
+              "type": "string",
+              "description": "Nome do município.",
+              "constraints": {
+                "required": false
+              },
+              "examples": [
+                "São Paulo",
+                "Rio de Janeiro",
+                "Belo Horizonte"
+              ]
+            },
+            {
+              "name": "uf",
+              "type": "string",
+              "description": "Sigla da Unidade Federativa.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "SP",
+                "RJ",
+                "MG"
+              ]
+            },
+            {
+              "name": "rede",
+              "type": "string",
+              "description": "Rede de ensino (Municipal, Estadual, Federal, Privada).",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Municipal",
+                "Estadual",
+                "municipal"
+              ]
+            },
+            {
+              "name": "alunos_matriculados",
+              "type": "integer",
+              "description": "Quantidade de alunos matriculados.",
+              "constraints": {
+                "required": false
+              },
+              "examples": [
+                "450",
+                "820",
+                "320"
+              ]
+            },
+            {
+              "name": "etapa_ensino",
+              "type": "string",
+              "description": "Etapa/modalidade de ensino.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Fundamental",
+                "Médio",
+                "Fundamental"
+              ]
+            },
+            {
+              "name": "data_censo",
+              "type": "date",
+              "description": "Data de referência do censo escolar.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "2023-05-01",
+                "2023-05-01",
+                "2023-05-01"
+              ]
+            }
+          ]
+        },
+        "dialect": {
+          "delimiter": ",",
+          "header": true
+        }
+      }
+    ],
+    "licenses": [
+      {
+        "name": "UNKNOWN",
+        "title": "Licença não informada no MVP",
+        "path": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Public Data Quality Auditor BR",
+        "role": "author"
+      }
+    ]
+  }
+}

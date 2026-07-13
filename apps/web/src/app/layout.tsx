@@ -5,7 +5,16 @@ import { PageShell } from "@/components/layout";
 export const metadata: Metadata = {
   title: "Public Data Quality Auditor BR",
   description:
-    "Audite qualidade de bases públicas brasileiras em CSV: profiling, validações, score e relatório.",
+    "Audite qualidade de bases públicas brasileiras em CSV: profiling, validações, score e relatório. Diagnóstico explicável, não certificação.",
+  openGraph: {
+    title: "Public Data Quality Auditor BR",
+    description:
+      "Profiling, checks, dimensional score, issues register and datapackage for Brazilian public CSVs.",
+    url: "https://public-data-quality-auditor-br.vercel.app",
+    siteName: "Public Data Quality Auditor BR",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

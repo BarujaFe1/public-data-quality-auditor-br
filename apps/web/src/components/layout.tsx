@@ -22,7 +22,7 @@ export function SiteHeader() {
             Metodologia
           </Link>
           {IS_LAB ? (
-            <Link href="/methodology" className="hover:text-forest transition-colors">
+            <Link href="/methodology#limitations" className="hover:text-forest transition-colors">
               Limitações
             </Link>
           ) : (

@@ -47,9 +47,9 @@ export function IssueTable({
           onChange={(e) => onSeverity(e.target.value)}
         >
           <option value="">Todas severidades</option>
-          <option value="critical">critical</option>
-          <option value="high">high</option>
-          <option value="warning">warning</option>
+          <option value="critical">crítica</option>
+          <option value="high">alta</option>
+          <option value="warning">alerta</option>
           <option value="info">info</option>
         </select>
         <select
@@ -58,11 +58,11 @@ export function IssueTable({
           onChange={(e) => onDimension(e.target.value)}
         >
           <option value="">Todas dimensões</option>
-          <option value="completeness">completeness</option>
-          <option value="uniqueness">uniqueness</option>
-          <option value="validity">validity</option>
-          <option value="consistency">consistency</option>
-          <option value="documentation">documentation</option>
+          <option value="completeness">completude</option>
+          <option value="uniqueness">unicidade</option>
+          <option value="validity">validade</option>
+          <option value="consistency">consistência</option>
+          <option value="documentation">documentação</option>
         </select>
         <select
           className="rounded-xl border border-ink/15 bg-white px-3 py-2 text-sm"

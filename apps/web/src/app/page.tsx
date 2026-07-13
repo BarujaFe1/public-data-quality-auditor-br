@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IS_LAB } from "@/lib/api";
 
 export default function HomePage() {
   return (
@@ -21,7 +22,8 @@ export default function HomePage() {
           </h1>
           <p className="mt-4 max-w-xl text-slate">
             Profiling, checks explicáveis, score por dimensão, registro de problemas e relatório
-            executivo — para CSV de dados abertos brasileiros.
+            executivo — para CSV de dados abertos brasileiros. O score é diagnóstico, não
+            certificação.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -30,12 +32,21 @@ export default function HomePage() {
             >
               Rodar demo
             </Link>
-            <Link
-              href="/audit#upload"
-              className="rounded-full border border-ink/20 bg-white/70 px-6 py-3 text-ink hover:border-forest transition-colors"
-            >
-              Enviar CSV
-            </Link>
+            {IS_LAB ? (
+              <Link
+                href="/methodology#limitations"
+                className="rounded-full border border-ink/20 bg-white/70 px-6 py-3 text-ink hover:border-forest transition-colors"
+              >
+                Ver limitações
+              </Link>
+            ) : (
+              <Link
+                href="/audit#upload"
+                className="rounded-full border border-ink/20 bg-white/70 px-6 py-3 text-ink hover:border-forest transition-colors"
+              >
+                Enviar CSV
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -48,7 +59,9 @@ export default function HomePage() {
           },
           {
             title: "Produto, não notebook",
-            body: "API FastAPI + interface analítica com exportação de relatório e datapackage.json.",
+            body: IS_LAB
+              ? "Demo pública com snapshots do motor FastAPI/Pandas. Upload live exige stack local."
+              : "API FastAPI + interface analítica com exportação de relatório e datapackage.json.",
           },
           {
             title: "Utilidade pública",

@@ -14,6 +14,13 @@ from app.schemas.audit import AuditRun
 from app.services.store import save_audit
 
 
+def _candidate_score(df: pd.DataFrame) -> tuple[int, int]:
+    """Prefer parses with more columns, then more non-empty rows."""
+    cols = int(df.shape[1])
+    rows = int(df.dropna(how="all").shape[0]) if cols else 0
+    return cols, rows
+
+
 def _read_csv_bytes(content: bytes, filename: str) -> pd.DataFrame:
     if not content:
         raise HTTPException(status_code=400, detail="Arquivo CSV vazio.")
@@ -24,6 +31,9 @@ def _read_csv_bytes(content: bytes, filename: str) -> pd.DataFrame:
         )
 
     last_error: Exception | None = None
+    best: pd.DataFrame | None = None
+    best_score = (-1, -1)
+
     for encoding in ("utf-8-sig", "utf-8", "latin-1", "cp1252"):
         for sep in (",", ";", "\t"):
             try:
@@ -37,21 +47,26 @@ def _read_csv_bytes(content: bytes, filename: str) -> pd.DataFrame:
                     on_bad_lines="skip",
                     engine="python",
                 )
-                # Heuristic: if only 1 column and sep might be wrong, try next
-                if df.shape[1] == 1 and sep != ",":
-                    sample = content[:2000].decode(encoding, errors="ignore")
-                    if sample.count(",") > sample.count(sep):
-                        continue
                 if df.shape[1] == 0:
                     continue
-                return df
+                score = _candidate_score(df)
+                # Never accept a 1-column parse when another sep yields more columns
+                if score > best_score:
+                    best = df
+                    best_score = score
             except Exception as exc:  # noqa: BLE001
                 last_error = exc
                 continue
 
+    if best is not None and best_score[0] >= 1:
+        return best
+
     raise HTTPException(
         status_code=400,
-        detail=f"Não foi possível ler o CSV '{filename}'. Verifique encoding/separador. Erro: {last_error}",
+        detail=(
+            f"Não foi possível ler o CSV '{filename}'. "
+            f"Verifique encoding/separador. Erro: {last_error}"
+        ),
     )
 
 
@@ -61,9 +76,11 @@ def _validate_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     if len(df) > MAX_ROWS:
         raise HTTPException(
             status_code=400,
-            detail=f"CSV excede o limite de {MAX_ROWS} linhas no MVP. Filtre ou amostragem antes do upload.",
+            detail=(
+                f"CSV excede o limite de {MAX_ROWS} linhas no MVP. "
+                "Filtre ou amostragem antes do upload."
+            ),
         )
-    # strip column names
     df = df.copy()
     df.columns = [str(c).strip() for c in df.columns]
     return df

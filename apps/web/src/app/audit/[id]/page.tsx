@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 import type { AuditRun } from "@/types/audit";
-import { QualityScoreCard } from "@/components/QualityScoreCard";
+import { QualityScoreCard, countBySeverity } from "@/components/QualityScoreCard";
 import { DimensionScoreChart } from "@/components/DimensionScoreChart";
 import { IssueTable } from "@/components/IssueTable";
 import { ColumnProfileTable } from "@/components/ColumnProfileTable";
@@ -16,8 +16,16 @@ import {
   RecommendationPanel,
   ReportExportButton,
 } from "@/components/panels";
+import type { Severity } from "@/types/audit";
 
 type Tab = "summary" | "columns" | "issues" | "dictionary";
+
+const SEVERITY_RANK: Record<Severity, number> = {
+  critical: 0,
+  high: 1,
+  warning: 2,
+  info: 3,
+};
 
 export default function AuditDetailPage() {
   const params = useParams<{ id: string }>();
@@ -66,6 +74,15 @@ export default function AuditDetailPage() {
     { id: "dictionary", label: "Dicionário" },
   ];
 
+  const severityCounts = countBySeverity(audit.issues);
+  const topIssues = [...audit.issues]
+    .sort(
+      (a, b) =>
+        (SEVERITY_RANK[a.severity] ?? 9) - (SEVERITY_RANK[b.severity] ?? 9) ||
+        b.affected_rows_count - a.affected_rows_count
+    )
+    .slice(0, 6);
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 space-y-8">
       <div className="flex flex-wrap items-end justify-between gap-4 animate-rise">
@@ -103,7 +120,12 @@ export default function AuditDetailPage() {
         <div className="space-y-6 animate-rise">
           <div className="grid lg:grid-cols-[280px_1fr] gap-6">
             <div className="animate-score">
-              <QualityScoreCard score={audit.overall_score} />
+              <QualityScoreCard
+                score={audit.overall_score}
+                criticalCount={severityCounts.critical}
+                highCount={severityCounts.high}
+                recommendation={audit.executive_recommendation}
+              />
             </div>
             <DimensionScoreChart dimensions={dimensions} />
           </div>
@@ -112,7 +134,7 @@ export default function AuditDetailPage() {
           <div>
             <h2 className="font-display text-2xl text-ink mb-3">Principais problemas</h2>
             <ul className="space-y-3">
-              {audit.issues.slice(0, 6).map((issue) => (
+              {topIssues.map((issue) => (
                 <li
                   key={issue.id}
                   className="rounded-xl border border-ink/10 bg-white/70 px-4 py-3 text-sm"

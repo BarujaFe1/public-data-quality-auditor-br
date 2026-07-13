@@ -14,9 +14,9 @@ AUDIT_OUTPUT_DIR = Path(
     os.environ.get("AUDIT_OUTPUT_DIR", PROJECT_ROOT / "data" / "audit_outputs")
 )
 
-MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB
-MAX_ROWS = 50_000
-NULL_RATE_THRESHOLD = 0.20
+MAX_UPLOAD_BYTES = int(os.environ.get("MAX_UPLOAD_MB", "5")) * 1024 * 1024
+MAX_ROWS = int(os.environ.get("MAX_ROWS", "50000"))
+NULL_RATE_THRESHOLD = float(os.environ.get("NULL_RATE_THRESHOLD", "0.20"))
 SAMPLE_SIZE = 5
 
 VALID_UFS = {

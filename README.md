@@ -429,14 +429,55 @@ Roteiro de apresentação: [HANDOFF_PORTFOLIO.md](./HANDOFF_PORTFOLIO.md)
 
 ---
 
+## 📌 Status atual
+
+- **MVP portfolio-ready** com demo pública (lab/snapshots) em Vercel
+- Motor FastAPI + UI Next.js; upload CSV no modo full-stack local
+- CI: pytest + typecheck + `next build`
+- Score: **diagnóstico explicável**, não certificação
+
+Live: https://public-data-quality-auditor-br.vercel.app
+
+---
+
+## 💼 O que este projeto demonstra
+
+- Data quality engineering com checks testáveis e score ponderado
+- Analytics engineering / profiling e dicionário gerado
+- API design (FastAPI, Pydantic, OpenAPI)
+- Frontend analítico (Next.js, Recharts, issues register)
+- Responsabilidade metodológica (limitações explícitas, lab vs certificação)
+- DX de portfólio: demo one-click sem backend obrigatório
+
+---
+
+## 🎤 Como apresentar em entrevista
+
+1. **Problema:** dados públicos sujos quebram análises silenciosamente.
+2. **Demo:** abrir municípios → score 87.4 **com** issue crítica de ID duplicado — o card não mente.
+3. **Método:** pesos das dimensões + penalidades por severidade.
+4. **Engenharia:** checks pytest + datapackage + lab snapshots no Vercel.
+5. **Trade-off:** demo pública sem upload; full stack local com `USE_API=true`.
+
+Roteiro expandido: [HANDOFF_PORTFOLIO.md](./HANDOFF_PORTFOLIO.md)
+
+---
+
 ## 📚 Documentação Complementar
 
-- [HANDOFF_PORTFOLIO.md](./HANDOFF_PORTFOLIO.md) — pitch, LinkedIn e guia de entrevista
+- [docs/HANDOFF.md](./docs/HANDOFF.md) — handoff do quality pass
+- [docs/AUDIT_REPORT.md](./docs/AUDIT_REPORT.md) — auditoria e nota
+- [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) — arquitetura
+- [docs/TECHNICAL_DECISIONS.md](./docs/TECHNICAL_DECISIONS.md) — decisões e trade-offs
+- [docs/TESTING.md](./docs/TESTING.md) — como testar
+- [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md) — Vercel / local / Docker
+- [HANDOFF_PORTFOLIO.md](./HANDOFF_PORTFOLIO.md) — pitch e LinkedIn
 - [docs/methodology.md](./docs/methodology.md) — pipeline e premissas
 - [docs/quality-dimensions.md](./docs/quality-dimensions.md) — pesos e penalidades
-- [docs/public-data-sources.md](./docs/public-data-sources.md) — fontes futuras (IBGE, INEP, Transparência…)
+- [docs/public-data-sources.md](./docs/public-data-sources.md) — fontes futuras
 - [docs/data-package-notes.md](./docs/data-package-notes.md) — descriptor gerado
 - [docs/limitations.md](./docs/limitations.md) — limites honestos do MVP
+- [SECURITY_NOTES.md](./SECURITY_NOTES.md) — notas de segurança
 
 ---
 
