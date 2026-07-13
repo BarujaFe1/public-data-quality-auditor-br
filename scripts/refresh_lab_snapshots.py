@@ -10,20 +10,25 @@ ROOT = Path(__file__).resolve().parents[1]
 API_ROOT = ROOT / "apps" / "api"
 sys.path.insert(0, str(API_ROOT))
 
-from app.config import DEMO_DATASETS, DEMO_DIR  # noqa: E402
-from app.services.audit_service import _read_csv_bytes, audit_dataframe  # noqa: E402
+from app.config import DEMO_DATASETS  # noqa: E402
+from app.services.audit_service import (  # noqa: E402
+    _demo_path,
+    _read_csv_bytes,
+    audit_dataframe,
+)
 
 OUT = ROOT / "apps" / "web" / "src" / "lib" / "snapshots"
 
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+
     for key, meta in DEMO_DATASETS.items():
-        path = DEMO_DIR / meta["filename"]
+        path = _demo_path(meta)
+        if not path.exists():
+            raise SystemExit(f"Missing demo file: {path}")
         content = path.read_bytes()
         df = _read_csv_bytes(content, meta["filename"])
-        # Avoid writing to audit_outputs during refresh: call engine via audit_dataframe
-        # which saves — that's fine for local refresh.
         audit = audit_dataframe(df, dataset_name=meta["title"], filename=meta["filename"])
         out_path = OUT / f"{key}.json"
         payload = json.loads(audit.model_dump_json())
@@ -31,9 +36,8 @@ def main() -> None:
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
-        # Sanity: Portuguese accents must survive
         text = out_path.read_text(encoding="utf-8")
-        if "Municípios" not in text and key == "municipios":
+        if key == "municipios" and "Municípios" not in text:
             raise SystemExit(f"Encoding check failed for {out_path}")
         if "├" in text or "┬" in text:
             raise SystemExit(f"Mojibake detected in {out_path}")

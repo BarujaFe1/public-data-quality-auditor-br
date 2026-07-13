@@ -1,5 +1,5 @@
 {
-  "id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+  "id": "a35f4457-e948-4514-9d66-7f12be811187",
   "dataset_name": "Contratos públicos (demo)",
   "uploaded_filename": "contratos_demo.csv",
   "row_count": 26,
@@ -10,13 +10,13 @@
   "validity_score": 84.0,
   "consistency_score": 87.6,
   "documentation_score": 100.0,
-  "created_at": "2026-07-13T17:46:57.817932Z",
+  "created_at": "2026-07-13T20:26:37.190521Z",
   "status": "completed",
   "executive_recommendation": "A base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.",
   "columns": [
     {
-      "id": "8ca67d17-e054-45f0-845a-d21f0a875ce5",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "d96e2bfe-d14f-4d3e-b2e2-995cb325ab7e",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "id_contrato",
       "inferred_type": "string",
       "null_count": 0,
@@ -57,8 +57,8 @@
       "warnings": []
     },
     {
-      "id": "0db799c6-818b-40b9-853a-c50f83afac39",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "a740d7b2-0407-4edd-a13e-35f45db010fd",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "orgao",
       "inferred_type": "string",
       "null_count": 0,
@@ -99,8 +99,8 @@
       "warnings": []
     },
     {
-      "id": "2050aa05-6a64-4499-b6ed-c4153ee4e001",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "0c18cbd6-bd42-40f0-a888-163e8dae5934",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "fornecedor",
       "inferred_type": "string",
       "null_count": 0,
@@ -141,8 +141,8 @@
       "warnings": []
     },
     {
-      "id": "c7c8cc2d-5c64-484d-b193-b65dd7ca62ae",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "c087485b-0d38-498c-a4fd-0284045355ff",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "cnpj",
       "inferred_type": "string",
       "null_count": 0,
@@ -183,8 +183,8 @@
       "warnings": []
     },
     {
-      "id": "ae847153-3900-453b-8a2c-31806bc94ab0",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "62020ce7-9c5a-43b9-b040-683e061ac704",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "valor_contrato",
       "inferred_type": "number",
       "null_count": 0,
@@ -225,8 +225,8 @@
       "warnings": []
     },
     {
-      "id": "0ede73b8-a618-4b6d-b277-f9e129ee5454",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "0bc06384-0a59-4be9-86fb-80850b55e35f",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "data_inicio",
       "inferred_type": "date",
       "null_count": 0,
@@ -267,8 +267,8 @@
       "warnings": []
     },
     {
-      "id": "f30ee3bb-4c41-4c81-a660-da205db5d898",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "8a2c5909-9e3a-4c1c-a18a-24d07d7d87ab",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "data_fim",
       "inferred_type": "date",
       "null_count": 0,
@@ -309,8 +309,8 @@
       "warnings": []
     },
     {
-      "id": "9eb3e3dc-25b5-457e-899a-c1d9e82f2d77",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "1b2658ec-9ba9-49da-a3b8-1a6d8a453a6b",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "modalidade",
       "inferred_type": "string",
       "null_count": 0,
@@ -353,8 +353,8 @@
   ],
   "issues": [
     {
-      "id": "5f3baeb2-aa50-498f-ae67-84cfbe5a84be",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "0ac0072c-f0b9-41f1-81b0-8565f12251b1",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": null,
       "issue_type": "duplicate_rows",
       "dimension": "uniqueness",
@@ -386,11 +386,11 @@
         }
       ],
       "recommendation": "Deduplique com chave de negócio ou remova cópias exatas.",
-      "created_at": "2026-07-13T17:46:57.909385Z"
+      "created_at": "2026-07-13T20:26:37.752566Z"
     },
     {
-      "id": "37385e33-c916-46e1-ab2a-bfe9aec94acb",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "557f6d98-64e8-4ab8-84d1-79c410d1369e",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "id_contrato",
       "issue_type": "duplicate_id",
       "dimension": "uniqueness",
@@ -422,11 +422,11 @@
         }
       ],
       "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
-      "created_at": "2026-07-13T17:46:57.911972Z"
+      "created_at": "2026-07-13T20:26:37.761120Z"
     },
     {
-      "id": "0b2b10e0-af6c-468a-aac7-cf204269007b",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "5e63bb79-dc3f-4038-a68a-24258c50c938",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "cnpj",
       "issue_type": "duplicate_id",
       "dimension": "uniqueness",
@@ -469,11 +469,11 @@
         }
       ],
       "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
-      "created_at": "2026-07-13T17:46:57.913974Z"
+      "created_at": "2026-07-13T20:26:37.771168Z"
     },
     {
-      "id": "80289208-ae74-4a46-ba9e-08fa5e433e1e",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "4d008405-001a-430c-a92f-f51072c7fa88",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "modalidade",
       "issue_type": "duplicate_id",
       "dimension": "uniqueness",
@@ -538,11 +538,11 @@
         }
       ],
       "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
-      "created_at": "2026-07-13T17:46:57.915971Z"
+      "created_at": "2026-07-13T20:26:37.870822Z"
     },
     {
-      "id": "45b81b56-5883-4bfa-b6e8-6a77aff4ced2",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "60c1f66a-aaca-4b8b-958c-82936c413f4c",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "valor_contrato",
       "issue_type": "negative_quantity",
       "dimension": "validity",
@@ -563,11 +563,11 @@
         }
       ],
       "recommendation": "Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.",
-      "created_at": "2026-07-13T17:46:57.972349Z"
+      "created_at": "2026-07-13T20:26:38.207726Z"
     },
     {
-      "id": "04466242-4c71-4ac6-b075-08d405abaf15",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "f6fee685-fc79-47a3-b9c0-8269881896a6",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "cnpj",
       "issue_type": "invalid_cnpj",
       "dimension": "validity",
@@ -588,11 +588,11 @@
         }
       ],
       "recommendation": "Armazene CNPJ com 14 dígitos e valide dígitos verificadores quando possível.",
-      "created_at": "2026-07-13T17:46:57.974354Z"
+      "created_at": "2026-07-13T20:26:38.208742Z"
     },
     {
-      "id": "f4dc5803-7ade-4e08-8b32-24ea2e4b61a7",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "0561a109-1064-4d0a-8fa4-0dc271989455",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "modalidade",
       "issue_type": "inconsistent_category",
       "dimension": "consistency",
@@ -601,11 +601,11 @@
       "affected_rows_count": 11,
       "affected_rows_sample": [],
       "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
-      "created_at": "2026-07-13T17:46:57.980861Z"
+      "created_at": "2026-07-13T20:26:38.225356Z"
     },
     {
-      "id": "a47aa3c9-ba65-429b-bab7-99f91fd6bdd7",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "ebe0a36d-e6c9-4cf1-bf3d-ed45bdfce1e0",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "data_fim",
       "issue_type": "date_order_violation",
       "dimension": "consistency",
@@ -637,13 +637,13 @@
         }
       ],
       "recommendation": "Corrija a ordem temporal ou revise o cadastro da vigência.",
-      "created_at": "2026-07-13T17:46:58.055590Z"
+      "created_at": "2026-07-13T20:26:38.447352Z"
     }
   ],
   "data_dictionary": [
     {
-      "id": "924d06a6-7605-4ca1-941a-b6a9cd9eb344",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "6a6f290f-9043-4eed-967b-1ba42a2feb87",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "id_contrato",
       "inferred_type": "string",
       "nullable": false,
@@ -656,8 +656,8 @@
       "quality_notes": "Issues: duplicate_id"
     },
     {
-      "id": "4caef736-6fcc-4e06-8303-a7f5095e4176",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "327a4c41-b4a8-4b0e-9fa4-2f2907942591",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "orgao",
       "inferred_type": "string",
       "nullable": false,
@@ -670,8 +670,8 @@
       "quality_notes": ""
     },
     {
-      "id": "0934a72c-4e45-43dc-aa91-58aabec8c82f",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "04775b99-a9ff-468c-b051-da48d271876d",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "fornecedor",
       "inferred_type": "string",
       "nullable": false,
@@ -684,8 +684,8 @@
       "quality_notes": ""
     },
     {
-      "id": "15cef538-0bce-4238-954a-74379caa7de7",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "f19f3a35-29d0-443a-aafe-48d1a6addefc",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "cnpj",
       "inferred_type": "string",
       "nullable": false,
@@ -698,8 +698,8 @@
       "quality_notes": "Issues: duplicate_id, invalid_cnpj"
     },
     {
-      "id": "729b8c22-ba13-43a3-bba7-94afcd52398e",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "ecb84425-a647-4594-9944-e4bfc803fb22",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "valor_contrato",
       "inferred_type": "number",
       "nullable": false,
@@ -712,8 +712,8 @@
       "quality_notes": "Issues: negative_quantity"
     },
     {
-      "id": "d627eb63-ce08-45cb-84cd-d8559558071d",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "0403ac32-05ac-409b-bde2-713da9407ebd",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "data_inicio",
       "inferred_type": "date",
       "nullable": false,
@@ -726,8 +726,8 @@
       "quality_notes": ""
     },
     {
-      "id": "9f0cc2a5-9fb8-45db-92a3-b22ca4e25fc4",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "800bee4f-0ae2-42ff-9e51-0c025a8cd446",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "data_fim",
       "inferred_type": "date",
       "nullable": false,
@@ -740,8 +740,8 @@
       "quality_notes": "Issues: date_order_violation"
     },
     {
-      "id": "505719eb-5cd4-40cd-91ff-b734abb47ac0",
-      "audit_run_id": "58c0dc3c-f873-49ce-aea3-6f6443ec8231",
+      "id": "8a994682-3764-4c0e-a43e-8854419957ca",
+      "audit_run_id": "a35f4457-e948-4514-9d66-7f12be811187",
       "column_name": "modalidade",
       "inferred_type": "string",
       "nullable": false,
@@ -754,11 +754,11 @@
       "quality_notes": "Issues: duplicate_id, inconsistent_category"
     }
   ],
-  "report_markdown": "# Relatório de Qualidade — Contratos públicos (demo)\n\n- **Arquivo:** `contratos_demo.csv`\n- **Data da auditoria:** 2026-07-13T17:46:57.817932+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 78.72/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 26.0 |\n| Validade | 84.0 |\n| Consistência | 87.6 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `modalidade` (uniqueness) — Possível chave 'modalidade' com 24 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[critical]** `duplicate_id` em `cnpj` (uniqueness) — Possível chave 'cnpj' com 3 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n3. **[critical]** `duplicate_id` em `id_contrato` (uniqueness) — Possível chave 'id_contrato' com 2 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n4. **[high]** `duplicate_rows` em `—` (uniqueness) — Há 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomendação: Deduplique com chave de negócio ou remova cópias exatas.\n5. **[high]** `date_order_violation` em `data_fim` (consistency) — Há 2 registro(s) com 'data_fim' anterior a 'data_inicio'.\n   - Recomendação: Corrija a ordem temporal ou revise o cadastro da vigência.\n6. **[high]** `negative_quantity` em `valor_contrato` (validity) — A coluna 'valor_contrato' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n7. **[high]** `invalid_cnpj` em `cnpj` (validity) — A coluna 'cnpj' tem 1 CNPJ(s) com formato inválido.\n   - Recomendação: Armazene CNPJ com 14 dígitos e valide dígitos verificadores quando possível.\n8. **[warning]** `inconsistent_category` em `modalidade` (consistency) — A coluna 'modalidade' tem categorias com variação de caixa/acento (3 variantes em 1 grupo(s)). Exemplos: [['PREGAO ELETRONICO', 'Pregão Eletrônico', 'pregão eletrônico']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `cnpj`: 2 issue(s)\n- `modalidade`: 2 issue(s)\n- `id_contrato`: 1 issue(s)\n- `valor_contrato`: 1 issue(s)\n- `data_fim`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `id_contrato` | string | não | Identificador do contrato. |\n| `orgao` | string | não | Órgão contratante. |\n| `fornecedor` | string | não | Razão social do fornecedor. |\n| `cnpj` | string | não | CNPJ do fornecedor. |\n| `valor_contrato` | number | não | Valor contratado em reais. |\n| `data_inicio` | date | não | Data de início da vigência. |\n| `data_fim` | date | não | Data de fim da vigência. |\n| `modalidade` | string | não | Modalidade de licitação/contratação. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "report_markdown": "# Relatório de Qualidade — Contratos públicos (demo)\n\n- **Arquivo:** `contratos_demo.csv`\n- **Data da auditoria:** 2026-07-13T20:26:37.190521+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 78.72/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 26.0 |\n| Validade | 84.0 |\n| Consistência | 87.6 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `modalidade` (uniqueness) — Possível chave 'modalidade' com 24 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[critical]** `duplicate_id` em `cnpj` (uniqueness) — Possível chave 'cnpj' com 3 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n3. **[critical]** `duplicate_id` em `id_contrato` (uniqueness) — Possível chave 'id_contrato' com 2 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n4. **[high]** `duplicate_rows` em `—` (uniqueness) — Há 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomendação: Deduplique com chave de negócio ou remova cópias exatas.\n5. **[high]** `date_order_violation` em `data_fim` (consistency) — Há 2 registro(s) com 'data_fim' anterior a 'data_inicio'.\n   - Recomendação: Corrija a ordem temporal ou revise o cadastro da vigência.\n6. **[high]** `negative_quantity` em `valor_contrato` (validity) — A coluna 'valor_contrato' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n7. **[high]** `invalid_cnpj` em `cnpj` (validity) — A coluna 'cnpj' tem 1 CNPJ(s) com formato inválido.\n   - Recomendação: Armazene CNPJ com 14 dígitos e valide dígitos verificadores quando possível.\n8. **[warning]** `inconsistent_category` em `modalidade` (consistency) — A coluna 'modalidade' tem categorias com variação de caixa/acento (3 variantes em 1 grupo(s)). Exemplos: [['PREGAO ELETRONICO', 'Pregão Eletrônico', 'pregão eletrônico']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `cnpj`: 2 issue(s)\n- `modalidade`: 2 issue(s)\n- `id_contrato`: 1 issue(s)\n- `valor_contrato`: 1 issue(s)\n- `data_fim`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `id_contrato` | string | não | Identificador do contrato. |\n| `orgao` | string | não | Órgão contratante. |\n| `fornecedor` | string | não | Razão social do fornecedor. |\n| `cnpj` | string | não | CNPJ do fornecedor. |\n| `valor_contrato` | number | não | Valor contratado em reais. |\n| `data_inicio` | date | não | Data de início da vigência. |\n| `data_fim` | date | não | Data de fim da vigência. |\n| `modalidade` | string | não | Modalidade de licitação/contratação. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
   "datapackage": {
     "name": "contratos-públicos-(demo)",
     "title": "Contratos públicos (demo)",
-    "description": "Descriptor gerado automaticamente pela auditoria 58c0dc3c-f873-49ce-aea3-6f6443ec8231. Revise tipos e descrições antes de publicar.",
+    "description": "Descriptor gerado automaticamente pela auditoria a35f4457-e948-4514-9d66-7f12be811187. Revise tipos e descrições antes de publicar.",
     "profile": "tabular-data-package",
     "resources": [
       {

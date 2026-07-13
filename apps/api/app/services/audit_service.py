@@ -104,6 +104,12 @@ async def audit_upload(file: UploadFile) -> AuditRun:
     return audit_dataframe(df, dataset_name=name, filename=file.filename)
 
 
+def _demo_path(meta: dict) -> Path:
+    folder = meta.get("dir", "demo")
+    base = DEMO_DIR if folder == "demo" else DEMO_DIR.parent / folder
+    return base / meta["filename"]
+
+
 def audit_demo(dataset_name: str) -> AuditRun:
     meta = DEMO_DATASETS.get(dataset_name)
     if not meta:
@@ -111,7 +117,7 @@ def audit_demo(dataset_name: str) -> AuditRun:
             status_code=404,
             detail=f"Dataset demo '{dataset_name}' não encontrado. Opções: {list(DEMO_DATASETS)}",
         )
-    path = DEMO_DIR / meta["filename"]
+    path = _demo_path(meta)
     if not path.exists():
         raise HTTPException(status_code=500, detail=f"Arquivo demo ausente: {path}")
     content = path.read_bytes()
@@ -122,7 +128,7 @@ def audit_demo(dataset_name: str) -> AuditRun:
 def list_demos() -> list[dict]:
     items = []
     for key, meta in DEMO_DATASETS.items():
-        path = DEMO_DIR / meta["filename"]
+        path = _demo_path(meta)
         items.append(
             {
                 "id": key,
@@ -130,6 +136,7 @@ def list_demos() -> list[dict]:
                 "description": meta["description"],
                 "filename": meta["filename"],
                 "available": path.exists(),
+                "kind": meta.get("kind", "synthetic"),
             }
         )
     return items

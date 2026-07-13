@@ -2,6 +2,7 @@ import type { AuditRun, DemoDataset } from "@/types/audit";
 import municipios from "./snapshots/municipios.json";
 import escolas from "./snapshots/escolas.json";
 import contratos from "./snapshots/contratos.json";
+import ibgeMunicipios from "./snapshots/ibge_municipios.json";
 
 export const DEMO_CATALOG: DemoDataset[] = [
   {
@@ -11,6 +12,7 @@ export const DEMO_CATALOG: DemoDataset[] = [
       "Dataset sintético-realista de municípios com problemas intencionais de qualidade.",
     filename: "municipios_demo.csv",
     available: true,
+    kind: "synthetic",
   },
   {
     id: "escolas",
@@ -19,6 +21,7 @@ export const DEMO_CATALOG: DemoDataset[] = [
       "Dataset sintético-realista de escolas com nulos, categorias inconsistentes e duplicidades.",
     filename: "escolas_demo.csv",
     available: true,
+    kind: "synthetic",
   },
   {
     id: "contratos",
@@ -27,6 +30,16 @@ export const DEMO_CATALOG: DemoDataset[] = [
       "Dataset sintético-realista de contratos com valores negativos, datas invertidas e CNPJ inválido.",
     filename: "contratos_demo.csv",
     available: true,
+    kind: "synthetic",
+  },
+  {
+    id: "ibge_municipios",
+    title: "IBGE municípios (amostra pública)",
+    description:
+      "Amostra curada de códigos oficiais IBGE com proveniência documentada (não é o dump completo).",
+    filename: "ibge_municipios_amostra.csv",
+    available: true,
+    kind: "public_sample",
   },
 ];
 
@@ -34,6 +47,7 @@ const SNAPSHOTS: Record<string, AuditRun> = {
   municipios: municipios as AuditRun,
   escolas: escolas as AuditRun,
   contratos: contratos as AuditRun,
+  ibge_municipios: ibgeMunicipios as AuditRun,
 };
 
 const STORAGE_KEY = "pdqa-lab-audits";

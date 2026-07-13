@@ -43,6 +43,7 @@ export function QualityScoreCard({
 
   return (
     <div
+      data-testid="quality-score-card"
       className={clsx(
         "rounded-2xl border border-ink/10 bg-white/70 shadow-soft",
         size === "lg" ? "p-8" : "p-4"
@@ -50,6 +51,7 @@ export function QualityScoreCard({
     >
       <p className="text-xs uppercase tracking-[0.2em] text-slate">{label}</p>
       <p
+        data-testid="overall-score"
         className={clsx(
           "font-display tabular-nums leading-none mt-3",
           tone,

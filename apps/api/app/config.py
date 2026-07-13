@@ -38,16 +38,26 @@ DEMO_DATASETS = {
         "filename": "municipios_demo.csv",
         "title": "Municípios BR (demo)",
         "description": "Dataset sintético-realista de municípios com problemas intencionais de qualidade.",
+        "kind": "synthetic",
     },
     "escolas": {
         "filename": "escolas_demo.csv",
         "title": "Escolas BR (demo)",
         "description": "Dataset sintético-realista de escolas com nulos, categorias inconsistentes e duplicidades.",
+        "kind": "synthetic",
     },
     "contratos": {
         "filename": "contratos_demo.csv",
         "title": "Contratos públicos (demo)",
         "description": "Dataset sintético-realista de contratos com valores negativos, datas invertidas e CNPJ inválido.",
+        "kind": "synthetic",
+    },
+    "ibge_municipios": {
+        "filename": "ibge_municipios_amostra.csv",
+        "title": "IBGE municípios (amostra pública)",
+        "description": "Amostra curada de códigos oficiais IBGE com proveniência documentada (não é o dump completo).",
+        "kind": "public_sample",
+        "dir": "public",
     },
 }
 

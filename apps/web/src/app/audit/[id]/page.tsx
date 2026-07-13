@@ -104,6 +104,7 @@ export default function AuditDetailPage() {
           <button
             key={item.id}
             type="button"
+            data-testid={`tab-${item.id}`}
             onClick={() => setTab(item.id)}
             className={
               tab === item.id

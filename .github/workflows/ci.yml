@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, "chore/**"]
+    branches: [main, "chore/**", "feat/**"]
   pull_request:
 
 jobs:
@@ -41,5 +41,11 @@ jobs:
         run: npx tsc --noEmit
       - name: Build (lab mode)
         run: npm run build
+        env:
+          NEXT_PUBLIC_USE_API: ""
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: E2E critical path
+        run: npm run test:e2e
         env:
           NEXT_PUBLIC_USE_API: ""

@@ -67,8 +67,8 @@ export default function AuditEntryPage() {
         <h1 className="font-display text-4xl text-ink">Auditar dataset</h1>
         <p className="mt-3 max-w-2xl text-slate">
           {IS_LAB
-            ? "Escolha um dataset demo sintético-realista. Nesta demo pública o resultado vem de snapshots pré-computados (mesmo motor de qualidade do MVP)."
-            : "Escolha um dataset demo sintético-realista ou envie um CSV (até 5 MB / 50 mil linhas). Encoding UTF-8 ou Latin-1; separador vírgula, ponto-e-vírgula ou tab."}
+            ? "Escolha um demo sintético (intencionalmente sujo) ou a amostra pública IBGE. Nesta demo o resultado vem de snapshots pré-computados pelo mesmo motor da API."
+            : "Escolha um demo sintético, a amostra pública IBGE, ou envie um CSV (até 5 MB / 50 mil linhas). Encoding UTF-8 ou Latin-1; separador vírgula, ponto-e-vírgula ou tab."}
         </p>
       </div>
 
@@ -82,16 +82,20 @@ export default function AuditEntryPage() {
             body={IS_LAB ? "Carregando catálogo lab…" : "Consultando a API local."}
           />
         ) : (
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {demos.map((demo) => (
               <button
                 key={demo.id}
                 type="button"
                 disabled={loading || !demo.available}
                 onClick={() => runDemo(demo.id)}
+                data-testid={`demo-${demo.id}`}
                 className="text-left rounded-2xl border border-ink/10 bg-white/70 p-5 shadow-soft hover:border-forest transition-colors disabled:opacity-60"
               >
-                <p className="font-display text-xl text-ink">{demo.title}</p>
+                <p className="text-[10px] uppercase tracking-wider text-slate/80">
+                  {demo.kind === "public_sample" ? "Amostra pública" : "Sintético"}
+                </p>
+                <p className="font-display text-xl text-ink mt-1">{demo.title}</p>
                 <p className="mt-2 text-sm text-slate leading-relaxed">{demo.description}</p>
                 <p className="mt-4 text-xs uppercase tracking-wider text-forest">
                   {busyLabel === demo.id ? "Processando…" : "Auditar agora"}

@@ -1,0 +1,333 @@
+{
+  "id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+  "dataset_name": "IBGE municípios (amostra pública)",
+  "uploaded_filename": "ibge_municipios_amostra.csv",
+  "row_count": 31,
+  "column_count": 4,
+  "overall_score": 100.0,
+  "completeness_score": 100.0,
+  "uniqueness_score": 100.0,
+  "validity_score": 100.0,
+  "consistency_score": 100.0,
+  "documentation_score": 100.0,
+  "created_at": "2026-07-13T20:26:38.863283Z",
+  "status": "completed",
+  "executive_recommendation": "A base apresenta qualidade boa para exploração inicial. Revise os avisos restantes e documente o dicionário antes de publicar análises.",
+  "columns": [
+    {
+      "id": "7af2852a-d947-4b83-a6af-256bf795af10",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "codigo_municipio",
+      "inferred_type": "integer",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 31,
+      "distinct_rate": 1.0,
+      "sample_values": [
+        "1100015",
+        "1100023",
+        "1100049",
+        "1200013",
+        "1200401"
+      ],
+      "min_value": 1100015.0,
+      "max_value": 5300108.0,
+      "most_common_values": [
+        {
+          "value": "1100015",
+          "count": 1
+        },
+        {
+          "value": "1100023",
+          "count": 1
+        },
+        {
+          "value": "1100049",
+          "count": 1
+        },
+        {
+          "value": "1200013",
+          "count": 1
+        },
+        {
+          "value": "1200401",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "cfc946e2-efda-4dfa-8d14-4abbbafc14c6",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "municipio",
+      "inferred_type": "string",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 31,
+      "distinct_rate": 1.0,
+      "sample_values": [
+        "Alta Floresta D'Oeste",
+        "Ariquemes",
+        "Cacoal",
+        "Acrelândia",
+        "Rio Branco"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Alta Floresta D'Oeste",
+          "count": 1
+        },
+        {
+          "value": "Ariquemes",
+          "count": 1
+        },
+        {
+          "value": "Cacoal",
+          "count": 1
+        },
+        {
+          "value": "Acrelândia",
+          "count": 1
+        },
+        {
+          "value": "Rio Branco",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "00bced96-e62c-45a0-80db-0a411b17fe3e",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "uf",
+      "inferred_type": "category",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 27,
+      "distinct_rate": 0.871,
+      "sample_values": [
+        "RO",
+        "RO",
+        "RO",
+        "AC",
+        "AC"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "RO",
+          "count": 3
+        },
+        {
+          "value": "AC",
+          "count": 2
+        },
+        {
+          "value": "SP",
+          "count": 2
+        },
+        {
+          "value": "RR",
+          "count": 1
+        },
+        {
+          "value": "PA",
+          "count": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "50033dfd-ea63-481f-a06d-d39f99243595",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "regiao",
+      "inferred_type": "category",
+      "null_count": 0,
+      "null_rate": 0.0,
+      "distinct_count": 5,
+      "distinct_rate": 0.1613,
+      "sample_values": [
+        "Norte",
+        "Norte",
+        "Norte",
+        "Norte",
+        "Norte"
+      ],
+      "min_value": null,
+      "max_value": null,
+      "most_common_values": [
+        {
+          "value": "Norte",
+          "count": 10
+        },
+        {
+          "value": "Nordeste",
+          "count": 9
+        },
+        {
+          "value": "Sudeste",
+          "count": 5
+        },
+        {
+          "value": "Centro-Oeste",
+          "count": 4
+        },
+        {
+          "value": "Sul",
+          "count": 3
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "issues": [],
+  "data_dictionary": [
+    {
+      "id": "b8a99119-79c4-4bc0-a4df-96dd922eaf2e",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "codigo_municipio",
+      "inferred_type": "integer",
+      "nullable": false,
+      "description_suggestion": "Código IBGE do município (7 dígitos).",
+      "example_values": [
+        "1100015",
+        "1100023",
+        "1100049"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "88455c09-5941-4f71-b6c8-bee16d82386a",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "municipio",
+      "inferred_type": "string",
+      "nullable": false,
+      "description_suggestion": "Nome do município.",
+      "example_values": [
+        "Alta Floresta D'Oeste",
+        "Ariquemes",
+        "Cacoal"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "ec21c728-ff1f-4064-b23c-036ac6b2ddd8",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "uf",
+      "inferred_type": "category",
+      "nullable": false,
+      "description_suggestion": "Sigla da Unidade Federativa.",
+      "example_values": [
+        "RO",
+        "RO",
+        "RO"
+      ],
+      "quality_notes": ""
+    },
+    {
+      "id": "67614622-0796-4f7f-8b75-a11c380378b5",
+      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "column_name": "regiao",
+      "inferred_type": "category",
+      "nullable": false,
+      "description_suggestion": "Campo 'regiao' com tipo inferido category. Descrição automática — revise com o produtor dos dados.",
+      "example_values": [
+        "Norte",
+        "Norte",
+        "Norte"
+      ],
+      "quality_notes": ""
+    }
+  ],
+  "report_markdown": "# Relatório de Qualidade — IBGE municípios (amostra pública)\n\n- **Arquivo:** `ibge_municipios_amostra.csv`\n- **Data da auditoria:** 2026-07-13T20:26:38.863283+00:00\n- **Linhas:** 31\n- **Colunas:** 4\n- **Score geral:** 100.0/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 100.0 |\n| Validade | 100.0 |\n| Consistência | 100.0 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base apresenta qualidade boa para exploração inicial. Revise os avisos restantes e documente o dicionário antes de publicar análises.\n\n## Top 10 issues\n\n_Nenhum issue detectado._\n\n## Colunas mais problemáticas\n\n_Sem colunas com issues associados._\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `codigo_municipio` | integer | não | Código IBGE do município (7 dígitos). |\n| `municipio` | string | não | Nome do município. |\n| `uf` | category | não | Sigla da Unidade Federativa. |\n| `regiao` | category | não | Campo 'regiao' com tipo inferido category. Descrição automática — revise com o produtor dos dados. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "datapackage": {
+    "name": "ibge-municípios-(amostra-pública)",
+    "title": "IBGE municípios (amostra pública)",
+    "description": "Descriptor gerado automaticamente pela auditoria a6a2fbdd-2120-41d8-bb12-aded35791a7c. Revise tipos e descrições antes de publicar.",
+    "profile": "tabular-data-package",
+    "resources": [
+      {
+        "name": "ibge-municípios-(amostra-pública)",
+        "path": "ibge_municipios_amostra.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+          "fields": [
+            {
+              "name": "codigo_municipio",
+              "type": "integer",
+              "description": "Código IBGE do município (7 dígitos).",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "1100015",
+                "1100023",
+                "1100049"
+              ]
+            },
+            {
+              "name": "municipio",
+              "type": "string",
+              "description": "Nome do município.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Alta Floresta D'Oeste",
+                "Ariquemes",
+                "Cacoal"
+              ]
+            },
+            {
+              "name": "uf",
+              "type": "string",
+              "description": "Sigla da Unidade Federativa.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "RO",
+                "RO",
+                "RO"
+              ]
+            },
+            {
+              "name": "regiao",
+              "type": "string",
+              "description": "Campo 'regiao' com tipo inferido category. Descrição automática — revise com o produtor dos dados.",
+              "constraints": {
+                "required": true
+              },
+              "examples": [
+                "Norte",
+                "Norte",
+                "Norte"
+              ]
+            }
+          ]
+        },
+        "dialect": {
+          "delimiter": ",",
+          "header": true
+        }
+      }
+    ],
+    "licenses": [
+      {
+        "name": "UNKNOWN",
+        "title": "Licença não informada no MVP",
+        "path": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Public Data Quality Auditor BR",
+        "role": "author"
+      }
+    ]
+  }
+}

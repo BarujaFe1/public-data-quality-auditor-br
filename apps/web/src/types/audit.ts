@@ -91,4 +91,5 @@ export type DemoDataset = {
   description: string;
   filename: string;
   available: boolean;
+  kind?: "synthetic" | "public_sample";
 };
