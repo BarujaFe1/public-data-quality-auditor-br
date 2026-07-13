@@ -1,5 +1,5 @@
 {
-  "id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+  "id": "f81a0c35-a979-4330-8a26-75868aff87b4",
   "dataset_name": "Municípios BR (demo)",
   "uploaded_filename": "municipios_demo.csv",
   "row_count": 32,
@@ -10,13 +10,13 @@
   "validity_score": 76.0,
   "consistency_score": 92.0,
   "documentation_score": 100.0,
-  "created_at": "2026-07-13T17:46:57.321684Z",
+  "created_at": "2026-07-13T20:26:35.440792Z",
   "status": "completed",
   "executive_recommendation": "A base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.",
   "columns": [
     {
-      "id": "9ab4c2f7-8d47-42c2-b930-bebf77115101",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "bdfde437-9b16-4248-bbaf-1239966c52ce",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "codigo_municipio",
       "inferred_type": "integer",
       "null_count": 1,
@@ -57,8 +57,8 @@
       "warnings": []
     },
     {
-      "id": "d850714a-8092-43f8-ac82-1e44e5085a5d",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "c6a86377-8360-4f58-be38-47a95c75cf9e",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "municipio",
       "inferred_type": "string",
       "null_count": 1,
@@ -99,8 +99,8 @@
       "warnings": []
     },
     {
-      "id": "d8daf5a9-8570-41bd-93b9-0e43618716c8",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "b374b544-535c-423b-ac0e-a443b9ab08cf",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "uf",
       "inferred_type": "category",
       "null_count": 1,
@@ -141,8 +141,8 @@
       "warnings": []
     },
     {
-      "id": "532fe2bb-af38-4c1e-94b4-708249c7f071",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "9a53e670-b140-4f11-8c93-f76607e44e55",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "populacao",
       "inferred_type": "integer",
       "null_count": 1,
@@ -183,8 +183,8 @@
       "warnings": []
     },
     {
-      "id": "aee50610-b127-48d0-99c8-6fe25b71e343",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "d3987d09-4b63-4f38-a774-8d1331b6b94b",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "area_km2",
       "inferred_type": "number",
       "null_count": 1,
@@ -225,8 +225,8 @@
       "warnings": []
     },
     {
-      "id": "74320326-d5d6-4d3f-bbe5-e4196764992f",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "97856e63-011b-41df-8994-0eaf15065959",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "data_atualizacao",
       "inferred_type": "date",
       "null_count": 1,
@@ -269,8 +269,8 @@
   ],
   "issues": [
     {
-      "id": "18d6def1-9695-47d5-97fa-4f68b81d3181",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "bc5b0aae-b660-4c52-9986-c20dc394c6da",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": null,
       "issue_type": "empty_rows",
       "dimension": "completeness",
@@ -289,11 +289,11 @@
         }
       ],
       "recommendation": "Remova linhas vazias no pré-processamento.",
-      "created_at": "2026-07-13T17:46:57.480820Z"
+      "created_at": "2026-07-13T20:26:36.145661Z"
     },
     {
-      "id": "1121ed40-011c-4332-9f38-ae8c5dd885bf",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "342e40a1-91e2-4de4-bbe1-c3c4c68677a8",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "codigo_municipio",
       "issue_type": "duplicate_id",
       "dimension": "uniqueness",
@@ -339,11 +339,11 @@
         }
       ],
       "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
-      "created_at": "2026-07-13T17:46:57.483822Z"
+      "created_at": "2026-07-13T20:26:36.150221Z"
     },
     {
-      "id": "959455f3-5b3c-4820-9d60-d02ef68c7aa9",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "69d5530c-b262-4ff6-8a76-b20a59c538b9",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "data_atualizacao",
       "issue_type": "invalid_date",
       "dimension": "validity",
@@ -371,11 +371,11 @@
         }
       ],
       "recommendation": "Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.",
-      "created_at": "2026-07-13T17:46:57.545041Z"
+      "created_at": "2026-07-13T20:26:36.291715Z"
     },
     {
-      "id": "893286ca-fe16-45bf-900d-fa074f421aed",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "af18dc15-9b79-4ba2-ba56-3020317aa94a",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "populacao",
       "issue_type": "negative_quantity",
       "dimension": "validity",
@@ -394,11 +394,11 @@
         }
       ],
       "recommendation": "Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.",
-      "created_at": "2026-07-13T17:46:57.546042Z"
+      "created_at": "2026-07-13T20:26:36.294226Z"
     },
     {
-      "id": "51a85b91-2896-4676-9843-1171fd9f12c4",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "a4693cdb-33aa-4f14-8b62-08b1152b2542",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "uf",
       "issue_type": "invalid_uf",
       "dimension": "validity",
@@ -417,11 +417,11 @@
         }
       ],
       "recommendation": "Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).",
-      "created_at": "2026-07-13T17:46:57.547045Z"
+      "created_at": "2026-07-13T20:26:36.295238Z"
     },
     {
-      "id": "3ff73f7a-4569-490c-ad39-cb7585b43e46",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "1f8b414b-9287-4e79-bb96-c5cbda9d9d6d",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "municipio",
       "issue_type": "inconsistent_category",
       "dimension": "consistency",
@@ -430,11 +430,11 @@
       "affected_rows_count": 2,
       "affected_rows_sample": [],
       "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
-      "created_at": "2026-07-13T17:46:57.548045Z"
+      "created_at": "2026-07-13T20:26:36.310353Z"
     },
     {
-      "id": "385597c4-9062-4524-9803-fd466174aec5",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "ef357c6a-a5c9-40da-8592-c1801a32047e",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "uf",
       "issue_type": "inconsistent_category",
       "dimension": "consistency",
@@ -443,13 +443,13 @@
       "affected_rows_count": 2,
       "affected_rows_sample": [],
       "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
-      "created_at": "2026-07-13T17:46:57.548045Z"
+      "created_at": "2026-07-13T20:26:36.313353Z"
     }
   ],
   "data_dictionary": [
     {
-      "id": "94959f83-3b89-44b8-bf8f-6a6704ec119a",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "5ec1390d-dd4f-4d4d-9221-3b81218be2cc",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "codigo_municipio",
       "inferred_type": "integer",
       "nullable": true,
@@ -462,8 +462,8 @@
       "quality_notes": "Issues: duplicate_id"
     },
     {
-      "id": "2d959cc3-1278-4c08-af6e-af9a778410ec",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "e889cb3a-0714-4cef-902e-7763127b2ac0",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "municipio",
       "inferred_type": "string",
       "nullable": true,
@@ -476,8 +476,8 @@
       "quality_notes": "Issues: inconsistent_category"
     },
     {
-      "id": "85d9dad9-b53a-46ec-92db-a31f122ced1f",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "d27bfefe-fc21-4630-a7ef-a74e205d3584",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "uf",
       "inferred_type": "category",
       "nullable": true,
@@ -490,8 +490,8 @@
       "quality_notes": "Issues: inconsistent_category, invalid_uf"
     },
     {
-      "id": "40d75c39-791e-439b-86b1-fb8fd916d108",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "430abdd0-e6ee-404f-b8ba-92c5d147ad87",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "populacao",
       "inferred_type": "integer",
       "nullable": true,
@@ -504,8 +504,8 @@
       "quality_notes": "Issues: negative_quantity"
     },
     {
-      "id": "e4e7c599-f24d-4886-bddc-67cd0422bc72",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "f26dd1a6-753e-496c-86fd-25966a22d1b8",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "area_km2",
       "inferred_type": "number",
       "nullable": true,
@@ -518,8 +518,8 @@
       "quality_notes": ""
     },
     {
-      "id": "e06bb348-fbdc-4584-b6bf-910e14b723dc",
-      "audit_run_id": "6480e40b-26c0-4b3e-8d56-87ce56c7c3f7",
+      "id": "2ed9bd3e-9495-45e3-89c9-01dee3cfaf71",
+      "audit_run_id": "f81a0c35-a979-4330-8a26-75868aff87b4",
       "column_name": "data_atualizacao",
       "inferred_type": "date",
       "nullable": true,
@@ -532,11 +532,11 @@
       "quality_notes": "Issues: invalid_date"
     }
   ],
-  "report_markdown": "# Relatório de Qualidade — Municípios BR (demo)\n\n- **Arquivo:** `municipios_demo.csv`\n- **Data da auditoria:** 2026-07-13T17:46:57.321684+00:00\n- **Linhas:** 32\n- **Colunas:** 6\n- **Score geral:** 87.4/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 92.0 |\n| Unicidade | 85.0 |\n| Validade | 76.0 |\n| Consistência | 92.0 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `codigo_municipio` (uniqueness) — Possível chave 'codigo_municipio' com 4 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[high]** `invalid_date` em `data_atualizacao` (validity) — A coluna 'data_atualizacao' tem 2 data(s) inválida(s).\n   - Recomendação: Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.\n3. **[high]** `empty_rows` em `—` (completeness) — Há 1 linha(s) totalmente vazia(s).\n   - Recomendação: Remova linhas vazias no pré-processamento.\n4. **[high]** `negative_quantity` em `populacao` (validity) — A coluna 'populacao' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n5. **[high]** `invalid_uf` em `uf` (validity) — A coluna 'uf' tem 1 UF(s) inválida(s).\n   - Recomendação: Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).\n6. **[warning]** `inconsistent_category` em `municipio` (consistency) — A coluna 'municipio' tem categorias com variação de caixa/acento (2 variantes em 1 grupo(s)). Exemplos: [['Sao Paulo', 'São Paulo']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n7. **[warning]** `inconsistent_category` em `uf` (consistency) — A coluna 'uf' tem categorias com variação de caixa/acento (2 variantes em 1 grupo(s)). Exemplos: [['PR', 'pr']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `uf`: 2 issue(s)\n- `codigo_municipio`: 1 issue(s)\n- `data_atualizacao`: 1 issue(s)\n- `populacao`: 1 issue(s)\n- `municipio`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `codigo_municipio` | integer | sim | Código IBGE do município (7 dígitos). |\n| `municipio` | string | sim | Nome do município. |\n| `uf` | category | sim | Sigla da Unidade Federativa. |\n| `populacao` | integer | sim | População estimada ou censitária. |\n| `area_km2` | number | sim | Área territorial em km². |\n| `data_atualizacao` | date | sim | Data de atualização do registro. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "report_markdown": "# Relatório de Qualidade — Municípios BR (demo)\n\n- **Arquivo:** `municipios_demo.csv`\n- **Data da auditoria:** 2026-07-13T20:26:35.440792+00:00\n- **Linhas:** 32\n- **Colunas:** 6\n- **Score geral:** 87.4/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 92.0 |\n| Unicidade | 85.0 |\n| Validade | 76.0 |\n| Consistência | 92.0 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `codigo_municipio` (uniqueness) — Possível chave 'codigo_municipio' com 4 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[high]** `invalid_date` em `data_atualizacao` (validity) — A coluna 'data_atualizacao' tem 2 data(s) inválida(s).\n   - Recomendação: Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.\n3. **[high]** `empty_rows` em `—` (completeness) — Há 1 linha(s) totalmente vazia(s).\n   - Recomendação: Remova linhas vazias no pré-processamento.\n4. **[high]** `negative_quantity` em `populacao` (validity) — A coluna 'populacao' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n5. **[high]** `invalid_uf` em `uf` (validity) — A coluna 'uf' tem 1 UF(s) inválida(s).\n   - Recomendação: Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).\n6. **[warning]** `inconsistent_category` em `municipio` (consistency) — A coluna 'municipio' tem categorias com variação de caixa/acento (2 variantes em 1 grupo(s)). Exemplos: [['Sao Paulo', 'São Paulo']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n7. **[warning]** `inconsistent_category` em `uf` (consistency) — A coluna 'uf' tem categorias com variação de caixa/acento (2 variantes em 1 grupo(s)). Exemplos: [['PR', 'pr']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `uf`: 2 issue(s)\n- `codigo_municipio`: 1 issue(s)\n- `data_atualizacao`: 1 issue(s)\n- `populacao`: 1 issue(s)\n- `municipio`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `codigo_municipio` | integer | sim | Código IBGE do município (7 dígitos). |\n| `municipio` | string | sim | Nome do município. |\n| `uf` | category | sim | Sigla da Unidade Federativa. |\n| `populacao` | integer | sim | População estimada ou censitária. |\n| `area_km2` | number | sim | Área territorial em km². |\n| `data_atualizacao` | date | sim | Data de atualização do registro. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
   "datapackage": {
     "name": "municípios-br-(demo)",
     "title": "Municípios BR (demo)",
-    "description": "Descriptor gerado automaticamente pela auditoria 6480e40b-26c0-4b3e-8d56-87ce56c7c3f7. Revise tipos e descrições antes de publicar.",
+    "description": "Descriptor gerado automaticamente pela auditoria f81a0c35-a979-4330-8a26-75868aff87b4. Revise tipos e descrições antes de publicar.",
     "profile": "tabular-data-package",
     "resources": [
       {

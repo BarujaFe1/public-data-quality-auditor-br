@@ -63,3 +63,17 @@ def test_municipios_demo_utf8_name():
     assert "São Paulo" in str(audit.columns[1].sample_values) or any(
         "São" in str(v) or "Sao" in str(v) for v in audit.columns[1].sample_values
     )
+
+
+def test_ibge_public_sample_resolves_and_audits():
+    from app.config import DEMO_DATASETS
+    from app.services.audit_service import _demo_path, audit_demo
+
+    meta = DEMO_DATASETS["ibge_municipios"]
+    path = _demo_path(meta)
+    assert path.exists()
+    assert "public" in str(path).replace("\\", "/")
+    audit = audit_demo("ibge_municipios")
+    assert audit.row_count == 31
+    assert audit.overall_score >= 0
+    assert "IBGE" in audit.dataset_name
