@@ -15,28 +15,34 @@ from app.services.audit_service import _read_csv_bytes, audit_dataframe  # noqa:
 
 OUT = ROOT / "apps" / "web" / "src" / "lib" / "snapshots"
 
+_BOX = (chr(0x251C), chr(0x2510))
+_CLASSIC = ("Ã©", "Â ")
+
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     for key, meta in DEMO_DATASETS.items():
         path = DEMO_DIR / meta["filename"]
+        if not path.exists():
+            raise SystemExit(f"Missing demo file: {path}")
         content = path.read_bytes()
         df = _read_csv_bytes(content, meta["filename"])
-        # Avoid writing to audit_outputs during refresh: call engine via audit_dataframe
-        # which saves — that's fine for local refresh.
-        audit = audit_dataframe(df, dataset_name=meta["title"], filename=meta["filename"])
+        audit = audit_dataframe(
+            df, dataset_name=meta["title"], filename=meta["filename"]
+        )
         out_path = OUT / f"{key}.json"
-        payload = json.loads(audit.model_dump_json())
+        payload = audit.model_dump(mode="json")
         out_path.write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
+            newline="\n",
         )
-        # Sanity: Portuguese accents must survive
         text = out_path.read_text(encoding="utf-8")
-        if "Municípios" not in text and key == "municipios":
-            raise SystemExit(f"Encoding check failed for {out_path}")
-        if "├" in text or "┬" in text:
+        if any(m in text for m in _BOX) or any(m in text for m in _CLASSIC):
             raise SystemExit(f"Mojibake detected in {out_path}")
+        if key == "municipios":
+            if "utilizável" not in text or "São Paulo" not in text:
+                raise SystemExit(f"Encoding check failed for {out_path}")
         print(
             f"{key}: score={audit.overall_score} issues={len(audit.issues)} -> {out_path}"
         )
