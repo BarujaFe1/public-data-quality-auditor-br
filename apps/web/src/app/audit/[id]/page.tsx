@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
+import { useI18n } from "@/lib/i18n";
 import type { AuditRun } from "@/types/audit";
 import { QualityScoreCard, countBySeverity } from "@/components/QualityScoreCard";
 import { DimensionScoreChart } from "@/components/DimensionScoreChart";
@@ -29,6 +30,7 @@ const SEVERITY_RANK: Record<Severity, number> = {
 
 export default function AuditDetailPage() {
   const params = useParams<{ id: string }>();
+  const { locale, t } = useI18n();
   const auditId = params.id;
   const [audit, setAudit] = useState<AuditRun | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -55,7 +57,7 @@ export default function AuditDetailPage() {
 
   if (!audit) {
     return (
-      <div className="mx-auto max-w-6xl px-4 py-12 text-slate">Carregando auditoria…</div>
+      <div className="mx-auto max-w-6xl px-4 py-12 text-slate">{t("audit.loading")}</div>
     );
   }
 
@@ -68,10 +70,10 @@ export default function AuditDetailPage() {
   };
 
   const tabs: { id: Tab; label: string }[] = [
-    { id: "summary", label: "Resumo" },
-    { id: "columns", label: "Colunas" },
-    { id: "issues", label: "Issues" },
-    { id: "dictionary", label: "Dicionário" },
+    { id: "summary", label: t("tab.summary") },
+    { id: "columns", label: t("tab.columns") },
+    { id: "issues", label: t("tab.issues") },
+    { id: "dictionary", label: t("tab.dictionary") },
   ];
 
   const severityCounts = countBySeverity(audit.issues);
@@ -87,15 +89,15 @@ export default function AuditDetailPage() {
     <div className="mx-auto max-w-6xl px-4 py-10 space-y-8">
       <div className="flex flex-wrap items-end justify-between gap-4 animate-rise">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-slate">Auditoria</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-slate">{t("audit.label")}</p>
           <h1 className="font-display text-4xl text-ink mt-1">{audit.dataset_name}</h1>
           <p className="mt-2 text-sm text-slate">
-            {audit.uploaded_filename} · {audit.row_count} linhas · {audit.column_count} colunas ·{" "}
-            {new Date(audit.created_at).toLocaleString("pt-BR")}
+            {audit.uploaded_filename} · {audit.row_count} {t("audit.rows")} · {audit.column_count}{" "}
+            {t("audit.columns")} · {new Date(audit.created_at).toLocaleString(locale)}
           </p>
         </div>
         <Link href="/audit" className="text-sm text-forest hover:underline">
-          Nova auditoria
+          {t("audit.new")}
         </Link>
       </div>
 
@@ -123,6 +125,7 @@ export default function AuditDetailPage() {
             <div className="animate-score">
               <QualityScoreCard
                 score={audit.overall_score}
+                label={t("score.label")}
                 criticalCount={severityCounts.critical}
                 highCount={severityCounts.high}
                 recommendation={audit.executive_recommendation}
@@ -133,7 +136,7 @@ export default function AuditDetailPage() {
           <RecommendationPanel text={audit.executive_recommendation} />
           <MethodologyCallout />
           <div>
-            <h2 className="font-display text-2xl text-ink mb-3">Principais problemas</h2>
+            <h2 className="font-display text-2xl text-ink mb-3">{t("issues.top")}</h2>
             <ul className="space-y-3">
               {topIssues.map((issue) => (
                 <li

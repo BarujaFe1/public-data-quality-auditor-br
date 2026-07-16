@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api, IS_LAB } from "@/lib/api";
 import { DEMO_CATALOG } from "@/lib/demo-store";
+import { useI18n } from "@/lib/i18n";
 import type { DemoDataset } from "@/types/audit";
 import { EmptyState, ErrorState } from "@/components/panels";
 
 export default function AuditEntryPage() {
   const router = useRouter();
+  const { t } = useI18n();
   const [demos, setDemos] = useState<DemoDataset[]>(IS_LAB ? DEMO_CATALOG : []);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -25,7 +27,7 @@ export default function AuditEntryPage() {
       .catch((err: Error) =>
         setError(
           err.message ||
-            `Não foi possível carregar demos. Confirme se a API está em ${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}.`
+            `${t("audit.loadError")} ${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}.`
         )
       );
   }, []);
@@ -38,7 +40,7 @@ export default function AuditEntryPage() {
       const audit = await api.runDemo(id);
       router.push(`/audit/${audit.id}`);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Falha ao auditar demo.");
+      setError(err instanceof Error ? err.message : t("audit.runError"));
     } finally {
       setLoading(false);
       setBusyLabel(null);
@@ -54,7 +56,7 @@ export default function AuditEntryPage() {
       const audit = await api.upload(file);
       router.push(`/audit/${audit.id}`);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Falha no upload.");
+      setError(err instanceof Error ? err.message : t("audit.uploadError"));
     } finally {
       setLoading(false);
       setBusyLabel(null);
@@ -64,22 +66,22 @@ export default function AuditEntryPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 space-y-10">
       <div className="animate-rise">
-        <h1 className="font-display text-4xl text-ink">Auditar dataset</h1>
+        <h1 className="font-display text-4xl text-ink">{t("audit.title")}</h1>
         <p className="mt-3 max-w-2xl text-slate">
           {IS_LAB
-            ? "Escolha um demo sintético (intencionalmente sujo) ou a amostra pública IBGE. Nesta demo o resultado vem de snapshots pré-computados pelo mesmo motor da API."
-            : "Escolha um demo sintético, a amostra pública IBGE, ou envie um CSV (até 5 MB / 50 mil linhas). Encoding UTF-8 ou Latin-1; separador vírgula, ponto-e-vírgula ou tab."}
+            ? t("audit.labDescription")
+            : t("audit.description")}
         </p>
       </div>
 
       {error && <ErrorState message={error} />}
 
       <section>
-        <h2 className="font-display text-2xl text-ink mb-4">Datasets demo</h2>
+        <h2 className="font-display text-2xl text-ink mb-4">{t("audit.demos")}</h2>
         {demos.length === 0 && !error ? (
           <EmptyState
-            title="Carregando demos…"
-            body={IS_LAB ? "Carregando catálogo lab…" : "Consultando a API local."}
+            title={t("audit.loadingDemos")}
+            body={IS_LAB ? t("audit.loadingLab") : t("audit.loadingApi")}
           />
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -93,12 +95,12 @@ export default function AuditEntryPage() {
                 className="text-left rounded-2xl border border-ink/10 bg-white/70 p-5 shadow-soft hover:border-forest transition-colors disabled:opacity-60"
               >
                 <p className="text-[10px] uppercase tracking-wider text-slate/80">
-                  {demo.kind === "public_sample" ? "Amostra pública" : "Sintético"}
+                  {demo.kind === "public_sample" ? t("audit.publicSample") : t("audit.synthetic")}
                 </p>
                 <p className="font-display text-xl text-ink mt-1">{demo.title}</p>
                 <p className="mt-2 text-sm text-slate leading-relaxed">{demo.description}</p>
                 <p className="mt-4 text-xs uppercase tracking-wider text-forest">
-                  {busyLabel === demo.id ? "Processando…" : "Auditar agora"}
+                  {busyLabel === demo.id ? t("audit.processing") : t("audit.runNow")}
                 </p>
               </button>
             ))}
@@ -107,22 +109,20 @@ export default function AuditEntryPage() {
       </section>
 
       <section id="upload" className="rounded-2xl border border-ink/10 bg-white/70 p-6 shadow-soft">
-        <h2 className="font-display text-2xl text-ink">Upload de CSV</h2>
+        <h2 className="font-display text-2xl text-ink">{t("audit.uploadTitle")}</h2>
         {IS_LAB ? (
           <p className="mt-2 text-sm text-slate">
-            Upload está desabilitado nesta demo pública (lab/snapshot). Para auditar um CSV próprio,
-            rode a stack local com{" "}
+            {t("audit.uploadDisabled")}{" "}
             <code className="rounded bg-sand px-1">NEXT_PUBLIC_USE_API=true</code> e a API FastAPI.
           </p>
         ) : (
           <>
             <p className="mt-2 text-sm text-slate">
-              Preferencialmente com cabeçalho na primeira linha. O MVP não corrige dados — apenas
-              diagnostica.
+              {t("audit.uploadHelp")}
             </p>
             <label className="mt-6 flex cursor-pointer flex-col items-start gap-3 rounded-xl border border-dashed border-ink/25 bg-sand/30 px-5 py-8 hover:border-forest transition-colors">
               <span className="text-sm font-medium text-ink">
-                {busyLabel === "upload" ? "Enviando e auditando…" : "Selecionar arquivo .csv"}
+                {busyLabel === "upload" ? t("audit.uploading") : t("audit.selectFile")}
               </span>
               <input
                 type="file"

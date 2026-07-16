@@ -1,7 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import { IS_LAB } from "@/lib/api";
+import { useI18n } from "@/lib/i18n";
 
 export default function HomePage() {
+  const { t } = useI18n();
+  const highlights = [
+    {
+      title: t("home.transparent.title"),
+      body: t("home.transparent.body"),
+    },
+    {
+      title: t("home.product.title"),
+      body: IS_LAB ? t("home.product.labBody") : t("home.product.body"),
+    },
+    {
+      title: t("home.public.title"),
+      body: t("home.public.body"),
+    },
+  ];
+
   return (
     <div>
       <section className="relative overflow-hidden border-b border-ink/10">
@@ -18,12 +37,10 @@ export default function HomePage() {
             Public Data Quality Auditor BR
           </p>
           <h1 className="mt-6 max-w-2xl text-xl md:text-2xl text-ink/80 leading-snug">
-            Antes de usar dados públicos, audite se eles sustentam a análise.
+            {t("home.headline")}
           </h1>
           <p className="mt-4 max-w-xl text-slate">
-            Profiling, checks explicáveis, score por dimensão, registro de problemas e relatório
-            executivo — para CSV de dados abertos brasileiros. O score é diagnóstico, não
-            certificação.
+            {t("home.description")}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -31,21 +48,21 @@ export default function HomePage() {
               data-testid="cta-run-demo"
               className="rounded-full bg-forest px-6 py-3 text-paper shadow-soft hover:bg-ink transition-colors"
             >
-              Rodar demo
+              {t("home.runDemo")}
             </Link>
             {IS_LAB ? (
               <Link
                 href="/methodology#limitations"
                 className="rounded-full border border-ink/20 bg-white/70 px-6 py-3 text-ink hover:border-forest transition-colors"
               >
-                Ver limitações
+                {t("home.limitations")}
               </Link>
             ) : (
               <Link
                 href="/audit#upload"
                 className="rounded-full border border-ink/20 bg-white/70 px-6 py-3 text-ink hover:border-forest transition-colors"
               >
-                Enviar CSV
+                {t("home.upload")}
               </Link>
             )}
           </div>
@@ -53,22 +70,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-3 gap-6">
-        {[
-          {
-            title: "Diagnóstico transparente",
-            body: "Cinco dimensões ponderadas, penalidades por severidade e amostras de linhas afetadas.",
-          },
-          {
-            title: "Produto, não notebook",
-            body: IS_LAB
-              ? "Demo pública com snapshots do motor FastAPI/Pandas. Upload live exige stack local."
-              : "API FastAPI + interface analítica com exportação de relatório e datapackage.json.",
-          },
-          {
-            title: "Utilidade pública",
-            body: "Feito para jornalistas, pesquisadores e analistas que consomem bases abertas.",
-          },
-        ].map((item, idx) => (
+        {highlights.map((item, idx) => (
           <article
             key={item.title}
             className="rounded-2xl border border-ink/10 bg-white/60 p-6 animate-rise"

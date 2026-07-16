@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { ReactNode } from "react";
 import { IS_LAB } from "@/lib/api";
 import { LabBanner } from "@/components/LabBanner";
+import { locales, useI18n } from "@/lib/i18n";
 
 export function SiteHeader() {
+  const { locale, setLocale, t } = useI18n();
+
   return (
     <header className="border-b border-ink/10 bg-paper/80 backdrop-blur-md sticky top-0 z-40">
       <LabBanner />
@@ -12,18 +17,18 @@ export function SiteHeader() {
           <p className="font-display text-xl tracking-tight text-ink group-hover:text-forest transition-colors">
             Public Data Quality Auditor BR
           </p>
-          <p className="text-xs uppercase tracking-[0.18em] text-slate">auditoria de dados abertos</p>
+          <p className="text-xs uppercase tracking-[0.18em] text-slate">{t("brand.tagline")}</p>
         </Link>
         <nav className="flex items-center gap-5 text-sm text-ink/80">
           <Link href="/audit" className="hover:text-forest transition-colors">
-            Auditar
+            {t("nav.audit")}
           </Link>
           <Link href="/methodology" className="hover:text-forest transition-colors">
-            Metodologia
+            {t("nav.methodology")}
           </Link>
           {IS_LAB ? (
             <Link href="/methodology#limitations" className="hover:text-forest transition-colors">
-              Limitações
+              {t("nav.limitations")}
             </Link>
           ) : (
             <a
@@ -32,23 +37,33 @@ export function SiteHeader() {
               rel="noreferrer"
               className="hover:text-forest transition-colors"
             >
-              API
+              {t("nav.api")}
             </a>
           )}
         </nav>
+        <button
+          type="button"
+          data-testid="locale-toggle"
+          aria-label={t("lang.label")}
+          onClick={() => setLocale(locale === "pt-BR" ? "en" : "pt-BR")}
+          className="rounded-full border border-ink/20 px-3 py-1.5 text-xs font-medium hover:border-forest hover:text-forest transition-colors"
+        >
+          {locales.map((item) => t(`lang.${item}`)).join(" / ")}
+        </button>
       </div>
     </header>
   );
 }
 
 export function SiteFooter() {
+  const { t } = useI18n();
+
   return (
     <footer className="mt-auto border-t border-ink/10 bg-ink text-paper">
       <div className="mx-auto max-w-6xl px-4 py-8 text-sm leading-relaxed text-paper/80">
-        <p className="font-display text-lg text-paper">Diagnóstico, não certificação.</p>
+        <p className="font-display text-lg text-paper">{t("footer.title")}</p>
         <p className="mt-2 max-w-2xl">
-          O score indica riscos de qualidade observáveis no CSV. Não valida verdade factual,
-          licença legal nem adequação política do conteúdo.
+          {t("footer.body")}
         </p>
       </div>
     </footer>
