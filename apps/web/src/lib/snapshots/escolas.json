@@ -1,5 +1,5 @@
 {
-  "id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+  "id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
   "dataset_name": "Escolas BR (demo)",
   "uploaded_filename": "escolas_demo.csv",
   "row_count": 26,
@@ -10,13 +10,13 @@
   "validity_score": 68.0,
   "consistency_score": 75.2,
   "documentation_score": 100.0,
-  "created_at": "2026-07-13T20:26:36.608071Z",
+  "created_at": "2026-07-16T19:37:40.159570Z",
   "status": "completed",
   "executive_recommendation": "A base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.",
   "columns": [
     {
-      "id": "86262dc5-e138-4310-a14b-e2cf7750fb38",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "493ad108-2d06-4947-a725-473b0ca239be",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "id_escola",
       "inferred_type": "string",
       "null_count": 0,
@@ -57,8 +57,8 @@
       "warnings": []
     },
     {
-      "id": "89ab3fb0-2c76-4e6f-8a59-8516d2fa16b8",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "cf96cd80-cd14-4b6d-91b1-e59a7cb5ff74",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "nome_escola",
       "inferred_type": "string",
       "null_count": 1,
@@ -99,8 +99,8 @@
       "warnings": []
     },
     {
-      "id": "bb7db890-f394-4d22-9db3-a07374b75228",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "d52730de-44e1-4cf7-9984-34cd92495458",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "municipio",
       "inferred_type": "string",
       "null_count": 2,
@@ -141,8 +141,8 @@
       "warnings": []
     },
     {
-      "id": "b47be579-56ac-4617-ac28-c19657328cbf",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "44500b2a-8a16-4353-aaad-9c998491dd73",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "uf",
       "inferred_type": "category",
       "null_count": 0,
@@ -183,8 +183,8 @@
       "warnings": []
     },
     {
-      "id": "0bfd2bb3-8409-4267-8c1d-0da40976a2d0",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "b04b23fb-34ab-4095-8917-ce302a1145a9",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "rede",
       "inferred_type": "string",
       "null_count": 0,
@@ -225,8 +225,8 @@
       "warnings": []
     },
     {
-      "id": "ab45db34-ff3a-4de8-ad1d-221920350039",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "7cd2f465-5f9f-4d98-9be1-79e0398248c4",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "alunos_matriculados",
       "inferred_type": "integer",
       "null_count": 1,
@@ -267,8 +267,8 @@
       "warnings": []
     },
     {
-      "id": "9096558a-4a1c-4bd4-a327-72cadad5bd63",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "5392486f-9e4e-49ea-9226-92acd47d3823",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "etapa_ensino",
       "inferred_type": "category",
       "null_count": 0,
@@ -309,8 +309,8 @@
       "warnings": []
     },
     {
-      "id": "522dd5d7-f55c-4960-a253-9ad522e34682",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "16fe82aa-ae90-4bc2-a0b8-b9cff788409c",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "data_censo",
       "inferred_type": "date",
       "null_count": 0,
@@ -341,8 +341,8 @@
   ],
   "issues": [
     {
-      "id": "24a96b49-7e14-4385-9754-c3b7a148603a",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "6d0ab5c3-6e3b-42e5-b9a0-cacdc52c9739",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": null,
       "issue_type": "duplicate_rows",
       "dimension": "uniqueness",
@@ -374,11 +374,11 @@
         }
       ],
       "recommendation": "Deduplique com chave de negócio ou remova cópias exatas.",
-      "created_at": "2026-07-13T20:26:36.768168Z"
+      "created_at": "2026-07-16T19:37:40.220694Z"
     },
     {
-      "id": "30c550b2-0ede-47b9-a464-1054b0361e7a",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "96612e1d-d85d-4455-b17f-8d9fbcccdeb3",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "id_escola",
       "issue_type": "duplicate_id",
       "dimension": "uniqueness",
@@ -410,11 +410,11 @@
         }
       ],
       "recommendation": "Garanta unicidade da chave primária ou revise a granularidade do dataset.",
-      "created_at": "2026-07-13T20:26:36.771907Z"
+      "created_at": "2026-07-16T19:37:40.222232Z"
     },
     {
-      "id": "ccd0faa9-fbbf-4891-8281-b1963ad22cc9",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "1b191ece-dc39-496d-8ccb-2e15ab099e92",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "data_censo",
       "issue_type": "invalid_date",
       "dimension": "validity",
@@ -435,11 +435,11 @@
         }
       ],
       "recommendation": "Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.",
-      "created_at": "2026-07-13T20:26:36.842875Z"
+      "created_at": "2026-07-16T19:37:40.250735Z"
     },
     {
-      "id": "6d9231e4-1a7e-4892-b45f-44e8695597fd",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "6b967734-a46d-441e-8cc7-cc6764f591e4",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "alunos_matriculados",
       "issue_type": "invalid_number",
       "dimension": "validity",
@@ -460,11 +460,11 @@
         }
       ],
       "recommendation": "Converta para número e trate separadores BR (1.234,56) de forma consistente.",
-      "created_at": "2026-07-13T20:26:36.846401Z"
+      "created_at": "2026-07-16T19:37:40.254772Z"
     },
     {
-      "id": "bbead829-a927-4ee8-8592-e04b0639a037",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "0f573a85-57a3-434f-aa36-a95328111c58",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "alunos_matriculados",
       "issue_type": "negative_quantity",
       "dimension": "validity",
@@ -485,11 +485,11 @@
         }
       ],
       "recommendation": "Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.",
-      "created_at": "2026-07-13T20:26:36.848409Z"
+      "created_at": "2026-07-16T19:37:40.255773Z"
     },
     {
-      "id": "14b8bd97-772a-4ddf-8f4b-54645185e7c7",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "ad6f1d84-3a25-42e1-9631-614b7c15ad6b",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "uf",
       "issue_type": "invalid_uf",
       "dimension": "validity",
@@ -510,11 +510,11 @@
         }
       ],
       "recommendation": "Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).",
-      "created_at": "2026-07-13T20:26:36.858221Z"
+      "created_at": "2026-07-16T19:37:40.256776Z"
     },
     {
-      "id": "58bc9b7d-4715-4559-b49c-25c15b86c7c6",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "cd03e7ff-5eab-42b5-8b31-91533d4723c7",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "rede",
       "issue_type": "inconsistent_category",
       "dimension": "consistency",
@@ -523,11 +523,11 @@
       "affected_rows_count": 16,
       "affected_rows_sample": [],
       "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
-      "created_at": "2026-07-13T20:26:36.886989Z"
+      "created_at": "2026-07-16T19:37:40.266401Z"
     },
     {
-      "id": "c1d4cd6b-c97a-4116-af2b-85a0f3aa571b",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "99772b17-8ccd-4c5c-a713-eb17a1284c76",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "etapa_ensino",
       "issue_type": "inconsistent_category",
       "dimension": "consistency",
@@ -536,11 +536,11 @@
       "affected_rows_count": 21,
       "affected_rows_sample": [],
       "recommendation": "Normalize categorias (caixa, acentos) com um dicionário canônico.",
-      "created_at": "2026-07-13T20:26:36.888508Z"
+      "created_at": "2026-07-16T19:37:40.266401Z"
     },
     {
-      "id": "720edd7d-0f48-4e2c-8138-244f372419b8",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "adfd33ea-2ce8-445c-8264-c7336709e598",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "alunos_matriculados",
       "issue_type": "mixed_types",
       "dimension": "consistency",
@@ -549,13 +549,13 @@
       "affected_rows_count": 25,
       "affected_rows_sample": [],
       "recommendation": "Separe tipos ou force conversão com tratamento de erros.",
-      "created_at": "2026-07-13T20:26:36.898815Z"
+      "created_at": "2026-07-16T19:37:40.269399Z"
     }
   ],
   "data_dictionary": [
     {
-      "id": "28d70554-7ef6-4480-849b-4987f4712afe",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "9357b935-286f-4104-b456-80b338499dc6",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "id_escola",
       "inferred_type": "string",
       "nullable": false,
@@ -568,8 +568,8 @@
       "quality_notes": "Issues: duplicate_id"
     },
     {
-      "id": "40856d06-d1fe-41c1-a49b-9fdaaa13f1ec",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "b270eee7-961d-4cfe-92af-505786fdfcdc",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "nome_escola",
       "inferred_type": "string",
       "nullable": true,
@@ -582,8 +582,8 @@
       "quality_notes": ""
     },
     {
-      "id": "1f231aa1-4451-4b4d-9808-2331d13e4d4b",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "f7c0a872-e99d-4229-afc9-6f9128878d22",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "municipio",
       "inferred_type": "string",
       "nullable": true,
@@ -596,8 +596,8 @@
       "quality_notes": ""
     },
     {
-      "id": "cd336ee3-8bd7-44e6-a0e7-358bd5641f63",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "396a7601-9271-4643-b8d1-1c5773213b74",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "uf",
       "inferred_type": "category",
       "nullable": false,
@@ -610,8 +610,8 @@
       "quality_notes": "Issues: invalid_uf"
     },
     {
-      "id": "6a4a68f5-69f6-4414-87dc-c1d037370e3c",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "1d51d37a-8d68-41b8-ae77-306ceebb4d06",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "rede",
       "inferred_type": "string",
       "nullable": false,
@@ -624,8 +624,8 @@
       "quality_notes": "Issues: inconsistent_category"
     },
     {
-      "id": "dc04a14e-7645-4a8a-9015-d188e82e7d58",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "66118f02-ab9e-435a-b4d4-91ca4fc8b847",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "alunos_matriculados",
       "inferred_type": "integer",
       "nullable": true,
@@ -638,8 +638,8 @@
       "quality_notes": "Issues: invalid_number, mixed_types, negative_quantity"
     },
     {
-      "id": "726d68b6-dbd3-49e8-a889-08e35cc14dd5",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "026821e5-77e3-428a-bc19-842fa3b25598",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "etapa_ensino",
       "inferred_type": "category",
       "nullable": false,
@@ -652,8 +652,8 @@
       "quality_notes": "Issues: inconsistent_category"
     },
     {
-      "id": "94c0884c-8b37-47e4-8a2d-d0fd7aebcb34",
-      "audit_run_id": "2c9f1385-75ca-45eb-997f-923e6988d29d",
+      "id": "e6a139ef-98cb-4ead-b480-aee9a0d946e0",
+      "audit_run_id": "3025df9a-503d-4eab-bc07-0d7c243284ad",
       "column_name": "data_censo",
       "inferred_type": "date",
       "nullable": false,
@@ -666,11 +666,11 @@
       "quality_notes": "Issues: invalid_date"
     }
   ],
-  "report_markdown": "# Relatório de Qualidade — Escolas BR (demo)\n\n- **Arquivo:** `escolas_demo.csv`\n- **Data da auditoria:** 2026-07-13T20:26:36.608071+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 82.44/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 77.0 |\n| Validade | 68.0 |\n| Consistência | 75.2 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `id_escola` (uniqueness) — Possível chave 'id_escola' com 2 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[high]** `duplicate_rows` em `—` (uniqueness) — Há 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomendação: Deduplique com chave de negócio ou remova cópias exatas.\n3. **[high]** `invalid_date` em `data_censo` (validity) — A coluna 'data_censo' tem 1 data(s) inválida(s).\n   - Recomendação: Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.\n4. **[high]** `invalid_number` em `alunos_matriculados` (validity) — A coluna 'alunos_matriculados' tem 1 valor(es) numérico(s) inválido(s).\n   - Recomendação: Converta para número e trate separadores BR (1.234,56) de forma consistente.\n5. **[high]** `negative_quantity` em `alunos_matriculados` (validity) — A coluna 'alunos_matriculados' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n6. **[high]** `invalid_uf` em `uf` (validity) — A coluna 'uf' tem 1 UF(s) inválida(s).\n   - Recomendação: Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).\n7. **[warning]** `mixed_types` em `alunos_matriculados` (consistency) — A coluna 'alunos_matriculados' parece misturar tipos (números e texto).\n   - Recomendação: Separe tipos ou force conversão com tratamento de erros.\n8. **[warning]** `inconsistent_category` em `etapa_ensino` (consistency) — A coluna 'etapa_ensino' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Fundamental', 'fundamental'], ['Médio', 'médio']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n9. **[warning]** `inconsistent_category` em `rede` (consistency) — A coluna 'rede' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Municipal', 'municipal'], ['PRIVADA', 'Privada']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `alunos_matriculados`: 3 issue(s)\n- `id_escola`: 1 issue(s)\n- `data_censo`: 1 issue(s)\n- `uf`: 1 issue(s)\n- `rede`: 1 issue(s)\n- `etapa_ensino`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `id_escola` | string | não | Identificador da escola. |\n| `nome_escola` | string | sim | Nome da unidade escolar. |\n| `municipio` | string | sim | Nome do município. |\n| `uf` | category | não | Sigla da Unidade Federativa. |\n| `rede` | string | não | Rede de ensino (Municipal, Estadual, Federal, Privada). |\n| `alunos_matriculados` | integer | sim | Quantidade de alunos matriculados. |\n| `etapa_ensino` | category | não | Etapa/modalidade de ensino. |\n| `data_censo` | date | não | Data de referência do censo escolar. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "report_markdown": "# Relatório de Qualidade — Escolas BR (demo)\n\n- **Arquivo:** `escolas_demo.csv`\n- **Data da auditoria:** 2026-07-16T19:37:40.159570+00:00\n- **Linhas:** 26\n- **Colunas:** 8\n- **Score geral:** 82.44/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 77.0 |\n| Validade | 68.0 |\n| Consistência | 75.2 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base é utilizável com ressalvas. Priorize correção de issues de severidade alta/crítica e normalize categorias e datas antes de análises sensíveis.\n\n## Top 10 issues\n\n1. **[critical]** `duplicate_id` em `id_escola` (uniqueness) — Possível chave 'id_escola' com 2 valor(es) duplicado(s).\n   - Recomendação: Garanta unicidade da chave primária ou revise a granularidade do dataset.\n2. **[high]** `duplicate_rows` em `—` (uniqueness) — Há 2 linha(s) envolvida(s) em duplicidade completa.\n   - Recomendação: Deduplique com chave de negócio ou remova cópias exatas.\n3. **[high]** `invalid_date` em `data_censo` (validity) — A coluna 'data_censo' tem 1 data(s) inválida(s).\n   - Recomendação: Padronize datas em ISO 8601 (YYYY-MM-DD) e rejeite valores não parseáveis.\n4. **[high]** `invalid_number` em `alunos_matriculados` (validity) — A coluna 'alunos_matriculados' tem 1 valor(es) numérico(s) inválido(s).\n   - Recomendação: Converta para número e trate separadores BR (1.234,56) de forma consistente.\n5. **[high]** `negative_quantity` em `alunos_matriculados` (validity) — A coluna 'alunos_matriculados' tem 1 valor(es) negativo(s) suspeito(s).\n   - Recomendação: Valide se negativos fazem sentido; para população/valor/quantidade, corrija ou documente.\n6. **[high]** `invalid_uf` em `uf` (validity) — A coluna 'uf' tem 1 UF(s) inválida(s).\n   - Recomendação: Normalize UFs para as 27 siglas oficiais (ex.: SP, RJ, MG).\n7. **[warning]** `mixed_types` em `alunos_matriculados` (consistency) — A coluna 'alunos_matriculados' parece misturar tipos (números e texto).\n   - Recomendação: Separe tipos ou force conversão com tratamento de erros.\n8. **[warning]** `inconsistent_category` em `etapa_ensino` (consistency) — A coluna 'etapa_ensino' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Fundamental', 'fundamental'], ['Médio', 'médio']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n9. **[warning]** `inconsistent_category` em `rede` (consistency) — A coluna 'rede' tem categorias com variação de caixa/acento (4 variantes em 2 grupo(s)). Exemplos: [['Municipal', 'municipal'], ['PRIVADA', 'Privada']].\n   - Recomendação: Normalize categorias (caixa, acentos) com um dicionário canônico.\n\n## Colunas mais problemáticas\n\n- `alunos_matriculados`: 3 issue(s)\n- `id_escola`: 1 issue(s)\n- `data_censo`: 1 issue(s)\n- `uf`: 1 issue(s)\n- `rede`: 1 issue(s)\n- `etapa_ensino`: 1 issue(s)\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `id_escola` | string | não | Identificador da escola. |\n| `nome_escola` | string | sim | Nome da unidade escolar. |\n| `municipio` | string | sim | Nome do município. |\n| `uf` | category | não | Sigla da Unidade Federativa. |\n| `rede` | string | não | Rede de ensino (Municipal, Estadual, Federal, Privada). |\n| `alunos_matriculados` | integer | sim | Quantidade de alunos matriculados. |\n| `etapa_ensino` | category | não | Etapa/modalidade de ensino. |\n| `data_censo` | date | não | Data de referência do censo escolar. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
   "datapackage": {
     "name": "escolas-br-(demo)",
     "title": "Escolas BR (demo)",
-    "description": "Descriptor gerado automaticamente pela auditoria 2c9f1385-75ca-45eb-997f-923e6988d29d. Revise tipos e descrições antes de publicar.",
+    "description": "Descriptor gerado automaticamente pela auditoria 3025df9a-503d-4eab-bc07-0d7c243284ad. Revise tipos e descrições antes de publicar.",
     "profile": "tabular-data-package",
     "resources": [
       {

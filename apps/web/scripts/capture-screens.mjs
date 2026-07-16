@@ -87,11 +87,10 @@ async function captureOne(context, baseUrl, route, outDir, mobile = false) {
 
     result.title = await page.title();
     const bodyText = await page.locator("body").innerText().catch(() => "");
-    // Fail on common UTF-8 mojibake (CP850 box / Latin-1 double-encoding)
-    // Matches user gate: /├.|Ã.|Â./
-    result.mojibake = /\u251c.|\u00c3\u00a9|\u00c2 /.test(bodyText);
+    // Practical form of /├.|Ã.|Â./ — catch CP850/Latin1 mojibake without false+ on PT "ÃO"
+    result.mojibake = /├.|Ã©|Ã¡|Ã­|Ã³|Ãº|Ã§|Ãµ|Ã¢|Ã£|Â /.test(bodyText);
     if (result.mojibake) {
-      result.errors.push("mojibake detected in page body (/├.|Ã.|Â./)");
+      result.errors.push("mojibake detected in page body");
     }
 
     await page.screenshot({ path: file, fullPage: Boolean(route.fullPage ?? true) });

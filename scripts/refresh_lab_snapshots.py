@@ -19,8 +19,16 @@ from app.services.audit_service import (  # noqa: E402
 
 OUT = ROOT / "apps" / "web" / "src" / "lib" / "snapshots"
 
-_BOX = (chr(0x251C), chr(0x2510))
-_CLASSIC = ("Ã©", "Â ")
+_MOJIBAKE_MARKERS = ("├", "┬", "Ã©", "Ã¡", "Ã£", "Â ")
+
+
+def _write_utf8_json(path: Path, payload: object) -> str:
+    text = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    path.write_text(text, encoding="utf-8", newline="\n")
+    decoded = path.read_bytes().decode("utf-8")
+    if decoded != text:
+        raise SystemExit(f"UTF-8 round-trip mismatch for {path}")
+    return decoded
 
 
 def main() -> None:
@@ -36,18 +44,16 @@ def main() -> None:
             df, dataset_name=meta["title"], filename=meta["filename"]
         )
         out_path = OUT / f"{key}.json"
-        payload = audit.model_dump(mode="json")
-        out_path.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-            newline="\n",
-        )
-        text = out_path.read_text(encoding="utf-8")
-        if any(m in text for m in _BOX) or any(m in text for m in _CLASSIC):
+        text = _write_utf8_json(out_path, audit.model_dump(mode="json"))
+
+        if any(m in text for m in _MOJIBAKE_MARKERS):
             raise SystemExit(f"Mojibake detected in {out_path}")
         if key == "municipios":
             if "utilizável" not in text or "São Paulo" not in text:
-                raise SystemExit(f"Encoding check failed for {out_path}")
+                raise SystemExit(
+                    f"Encoding check failed for {out_path}: "
+                    "expected 'utilizável' and 'São Paulo'"
+                )
         print(
             f"{key}: score={audit.overall_score} issues={len(audit.issues)} -> {out_path}"
         )

@@ -1,26 +1,20 @@
 {
   "name": "public-data-quality-auditor-br",
-  "baseUrl": "https://public-data-quality-auditor-br.vercel.app",
+  "baseUrl": "https://public-data-quality-auditor-br-nu.vercel.app",
+  "viewport": { "width": 1440, "height": 900 },
   "locale": "pt-BR",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
   "routes": [
-    {
-      "path": "/",
-      "name": "home",
-      "fullPage": true
-    },
+    { "path": "/", "name": "home", "fullPage": true },
+    { "path": "/audit", "name": "audit", "fullPage": true },
+    { "path": "/methodology", "name": "methodology", "fullPage": true },
     {
       "path": "/audit",
-      "name": "audit",
-      "fullPage": true
-    },
-    {
-      "path": "/methodology",
-      "name": "methodology",
-      "fullPage": true
+      "name": "audit-municipios-detail",
+      "fullPage": true,
+      "waitMs": 1500,
+      "actions": [
+        { "click": "text=Auditar agora", "waitMs": 2500 }
+      ]
     }
   ]
 }

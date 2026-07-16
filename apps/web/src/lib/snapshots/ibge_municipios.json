@@ -1,5 +1,5 @@
 {
-  "id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+  "id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
   "dataset_name": "IBGE municípios (amostra pública)",
   "uploaded_filename": "ibge_municipios_amostra.csv",
   "row_count": 31,
@@ -10,13 +10,13 @@
   "validity_score": 100.0,
   "consistency_score": 100.0,
   "documentation_score": 100.0,
-  "created_at": "2026-07-13T20:26:38.863283Z",
+  "created_at": "2026-07-16T19:37:40.562797Z",
   "status": "completed",
   "executive_recommendation": "A base apresenta qualidade boa para exploração inicial. Revise os avisos restantes e documente o dicionário antes de publicar análises.",
   "columns": [
     {
-      "id": "7af2852a-d947-4b83-a6af-256bf795af10",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "28f61cad-bf69-4df1-9021-dabea9875657",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "codigo_municipio",
       "inferred_type": "integer",
       "null_count": 0,
@@ -57,8 +57,8 @@
       "warnings": []
     },
     {
-      "id": "cfc946e2-efda-4dfa-8d14-4abbbafc14c6",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "95ad3393-1ed7-44ec-a316-07c8e83ce4ad",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "municipio",
       "inferred_type": "string",
       "null_count": 0,
@@ -99,8 +99,8 @@
       "warnings": []
     },
     {
-      "id": "00bced96-e62c-45a0-80db-0a411b17fe3e",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "a65c382b-6770-4a5d-99d0-38087acb072c",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "uf",
       "inferred_type": "category",
       "null_count": 0,
@@ -141,8 +141,8 @@
       "warnings": []
     },
     {
-      "id": "50033dfd-ea63-481f-a06d-d39f99243595",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "11cde603-1f3e-456a-9899-8ac6ae1318ba",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "regiao",
       "inferred_type": "category",
       "null_count": 0,
@@ -186,8 +186,8 @@
   "issues": [],
   "data_dictionary": [
     {
-      "id": "b8a99119-79c4-4bc0-a4df-96dd922eaf2e",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "15d82613-c6ac-4ff9-b921-ebcc850a537a",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "codigo_municipio",
       "inferred_type": "integer",
       "nullable": false,
@@ -200,8 +200,8 @@
       "quality_notes": ""
     },
     {
-      "id": "88455c09-5941-4f71-b6c8-bee16d82386a",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "c13d998b-1fb6-44b9-9d5b-9a8399b73529",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "municipio",
       "inferred_type": "string",
       "nullable": false,
@@ -214,8 +214,8 @@
       "quality_notes": ""
     },
     {
-      "id": "ec21c728-ff1f-4064-b23c-036ac6b2ddd8",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "e993ecc5-e1cc-418c-8568-fc17413455f2",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "uf",
       "inferred_type": "category",
       "nullable": false,
@@ -228,8 +228,8 @@
       "quality_notes": ""
     },
     {
-      "id": "67614622-0796-4f7f-8b75-a11c380378b5",
-      "audit_run_id": "a6a2fbdd-2120-41d8-bb12-aded35791a7c",
+      "id": "e3eec2a2-7afc-492d-b833-1892d5032bf0",
+      "audit_run_id": "95c81fc7-2f7a-4c6b-8135-7db7ef20a32a",
       "column_name": "regiao",
       "inferred_type": "category",
       "nullable": false,
@@ -242,11 +242,11 @@
       "quality_notes": ""
     }
   ],
-  "report_markdown": "# Relatório de Qualidade — IBGE municípios (amostra pública)\n\n- **Arquivo:** `ibge_municipios_amostra.csv`\n- **Data da auditoria:** 2026-07-13T20:26:38.863283+00:00\n- **Linhas:** 31\n- **Colunas:** 4\n- **Score geral:** 100.0/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 100.0 |\n| Validade | 100.0 |\n| Consistência | 100.0 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base apresenta qualidade boa para exploração inicial. Revise os avisos restantes e documente o dicionário antes de publicar análises.\n\n## Top 10 issues\n\n_Nenhum issue detectado._\n\n## Colunas mais problemáticas\n\n_Sem colunas com issues associados._\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `codigo_municipio` | integer | não | Código IBGE do município (7 dígitos). |\n| `municipio` | string | não | Nome do município. |\n| `uf` | category | não | Sigla da Unidade Federativa. |\n| `regiao` | category | não | Campo 'regiao' com tipo inferido category. Descrição automática — revise com o produtor dos dados. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
+  "report_markdown": "# Relatório de Qualidade — IBGE municípios (amostra pública)\n\n- **Arquivo:** `ibge_municipios_amostra.csv`\n- **Data da auditoria:** 2026-07-16T19:37:40.562797+00:00\n- **Linhas:** 31\n- **Colunas:** 4\n- **Score geral:** 100.0/100\n\n## Scores por dimensão\n\n| Dimensão | Score |\n|---|---:|\n| Completude | 100.0 |\n| Unicidade | 100.0 |\n| Validade | 100.0 |\n| Consistência | 100.0 |\n| Documentabilidade | 100.0 |\n\n## Recomendação executiva\n\nA base apresenta qualidade boa para exploração inicial. Revise os avisos restantes e documente o dicionário antes de publicar análises.\n\n## Top 10 issues\n\n_Nenhum issue detectado._\n\n## Colunas mais problemáticas\n\n_Sem colunas com issues associados._\n\n## Recomendações gerais\n\n1. Trate issues críticos e de alta severidade antes de análises públicas.\n2. Normalize categorias, datas e chaves.\n3. Publique dicionário de dados revisado por um humano.\n4. Documente licença, frequência de atualização e origem.\n5. Reexecute a auditoria após limpeza.\n\n## Dicionário resumido\n\n| Coluna | Tipo | Nullable | Descrição sugerida |\n|---|---|---|---|\n| `codigo_municipio` | integer | não | Código IBGE do município (7 dígitos). |\n| `municipio` | string | não | Nome do município. |\n| `uf` | category | não | Sigla da Unidade Federativa. |\n| `regiao` | category | não | Campo 'regiao' com tipo inferido category. Descrição automática — revise com o produtor dos dados. |\n\n## Limitações\n\n- O score é **diagnóstico**, não certificação absoluta.\n- A auditoria **não valida a verdade factual** dos dados.\n- Checks são heurísticos e podem gerar falsos positivos/negativos.\n- Formatos brasileiros e encoding podem exigir ajustes manuais.\n\n## Próximos passos\n\n1. Exportar este relatório e o `datapackage.json`.\n2. Corrigir issues prioritários na origem.\n3. Versionar o dataset limpo com metadados.\n4. Reauditar e comparar scores.\n",
   "datapackage": {
     "name": "ibge-municípios-(amostra-pública)",
     "title": "IBGE municípios (amostra pública)",
-    "description": "Descriptor gerado automaticamente pela auditoria a6a2fbdd-2120-41d8-bb12-aded35791a7c. Revise tipos e descrições antes de publicar.",
+    "description": "Descriptor gerado automaticamente pela auditoria 95c81fc7-2f7a-4c6b-8135-7db7ef20a32a. Revise tipos e descrições antes de publicar.",
     "profile": "tabular-data-package",
     "resources": [
       {

@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-const MOJIBAKE = /\u251c.|\u00c3\u00a9|\u00c2 /;
+// Practical form of /├.|Ã.|Â./ — avoids false positives on Portuguese ÃO/ÃE
+const MOJIBAKE = /├.|Ã©|Ã¡|Ã­|Ã³|Ãº|Ã§|Ãµ|Ã¢|Ã£|Â /;
 
 test.describe("critical lab path", () => {
   test("home to audit demo score and issues", async ({ page }) => {
@@ -32,6 +33,6 @@ test.describe("critical lab path", () => {
     await expect(page.getByTestId("quality-score-card")).toBeVisible({ timeout: 15_000 });
     const auditText = await page.locator("body").innerText();
     expect(auditText).not.toMatch(MOJIBAKE);
-    expect(auditText).toMatch(/utiliz\u00e1vel|S\u00e3o Paulo/);
+    expect(auditText).toMatch(/utilizável|São Paulo/);
   });
 });
