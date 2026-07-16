@@ -1,0 +1,26 @@
+{
+  "name": "public-data-quality-auditor-br",
+  "baseUrl": "https://public-data-quality-auditor-br.vercel.app",
+  "locale": "pt-BR",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "routes": [
+    {
+      "path": "/",
+      "name": "home",
+      "fullPage": true
+    },
+    {
+      "path": "/audit",
+      "name": "audit",
+      "fullPage": true
+    },
+    {
+      "path": "/methodology",
+      "name": "methodology",
+      "fullPage": true
+    }
+  ]
+}

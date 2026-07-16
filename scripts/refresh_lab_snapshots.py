@@ -19,6 +19,9 @@ from app.services.audit_service import (  # noqa: E402
 
 OUT = ROOT / "apps" / "web" / "src" / "lib" / "snapshots"
 
+_BOX = (chr(0x251C), chr(0x2510))
+_CLASSIC = ("Ã©", "Â ")
+
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
@@ -29,18 +32,22 @@ def main() -> None:
             raise SystemExit(f"Missing demo file: {path}")
         content = path.read_bytes()
         df = _read_csv_bytes(content, meta["filename"])
-        audit = audit_dataframe(df, dataset_name=meta["title"], filename=meta["filename"])
+        audit = audit_dataframe(
+            df, dataset_name=meta["title"], filename=meta["filename"]
+        )
         out_path = OUT / f"{key}.json"
-        payload = json.loads(audit.model_dump_json())
+        payload = audit.model_dump(mode="json")
         out_path.write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
+            newline="\n",
         )
         text = out_path.read_text(encoding="utf-8")
-        if key == "municipios" and "Municípios" not in text:
-            raise SystemExit(f"Encoding check failed for {out_path}")
-        if "├" in text or "┬" in text:
+        if any(m in text for m in _BOX) or any(m in text for m in _CLASSIC):
             raise SystemExit(f"Mojibake detected in {out_path}")
+        if key == "municipios":
+            if "utilizável" not in text or "São Paulo" not in text:
+                raise SystemExit(f"Encoding check failed for {out_path}")
         print(
             f"{key}: score={audit.overall_score} issues={len(audit.issues)} -> {out_path}"
         )

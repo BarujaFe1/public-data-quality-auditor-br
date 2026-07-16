@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any
 
 from app.config import AUDIT_OUTPUT_DIR
 from app.schemas.audit import AuditRun
@@ -12,19 +11,23 @@ from app.schemas.audit import AuditRun
 _STORE: dict[str, AuditRun] = {}
 
 
+def _write_json(path: Path, payload: object) -> None:
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
 def save_audit(audit: AuditRun) -> AuditRun:
     AUDIT_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     _STORE[audit.id] = audit
     path = AUDIT_OUTPUT_DIR / f"{audit.id}.json"
-    path.write_text(audit.model_dump_json(indent=2), encoding="utf-8")
-    # also write report and datapackage side files
+    _write_json(path, audit.model_dump(mode="json"))
     (AUDIT_OUTPUT_DIR / f"{audit.id}_report.md").write_text(
-        audit.report_markdown, encoding="utf-8"
+        audit.report_markdown, encoding="utf-8", newline="\n"
     )
-    (AUDIT_OUTPUT_DIR / f"{audit.id}_datapackage.json").write_text(
-        json.dumps(audit.datapackage, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    _write_json(AUDIT_OUTPUT_DIR / f"{audit.id}_datapackage.json", audit.datapackage)
     return audit
 
 
