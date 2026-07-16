@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install chromium",
-    "screenshots": "node scripts/capture-screens.mjs",
+    "screenshots": "node scripts/capture-screens.cjs",
     "screenshots:install": "npx playwright install chromium"
   },
   "dependencies": {
